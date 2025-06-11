@@ -4,7 +4,7 @@
     <section
       class="relative mt-24 pb-16 px-6 lg:px-12 min-h-[50vh] flex items-center bg-cover bg-center bg-fixed"
       style="
-        background-image: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+        background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
       "
     >
       <!-- Dark overlay for better text readability -->
@@ -23,603 +23,165 @@
           <h1
             class="text-3xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-wide"
           >
-            {{ t("servicesPageTitle") }}
+            趣遊台東
           </h1>
           <p
             class="text-white/95 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed"
           >
-            {{ t("servicesPageSubtitle") }}
+            探索台東的自然美景與人文風情，讓每一趟旅程都成為難忘的回憶
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Our Services Overview -->
+    <!-- Attractions Categories -->
     <section class="py-16 px-6 lg:px-12">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("ourServicesTitle") }}
-          </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("ourServicesSubtitle") }}
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Service Card 1 -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
-          >
-            <div
-              class="bg-amber-100 rounded-2xl inline-flex items-center justify-center mx-auto mb-6 p-4"
-            >
-              <Icon
-                name="heroicons:home-modern"
-                class="text-amber-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("roomServiceTitle") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("roomServiceDesc") }}
-            </p>
-          </div>
-
-          <!-- Service Card 2 -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
-          >
-            <div
-              class="bg-amber-100 rounded-2xl inline-flex items-center justify-center mx-auto mb-6 p-4"
-            >
-              <Icon
-                name="heroicons:sparkles"
-                class="text-amber-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("diningServiceTitle") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("diningServiceDesc") }}
-            </p>
-          </div>
-
-          <!-- Service Card 3 -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
-          >
-            <div
-              class="bg-amber-100 rounded-2xl inline-flex items-center justify-center mx-auto mb-6 p-4"
-            >
-              <Icon
-                name="heroicons:bell-alert"
-                class="text-amber-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("conciergeServiceTitle") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("conciergeServiceDesc") }}
-            </p>
-          </div>
-
-          <!-- Service Card 4 -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
-          >
-            <div
-              class="bg-amber-100 rounded-2xl inline-flex items-center justify-center mx-auto mb-6 p-4"
-            >
-              <Icon
-                name="heroicons:briefcase"
-                class="text-amber-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("businessServiceTitle") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("businessServiceDesc") }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fitness & Recreation Facilities -->
-    <section class="py-16 px-6 lg:px-12 bg-white">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("fitnessRecreationTitle") }}
+            旅遊資訊
           </h2>
           <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("fitnessRecreationSubtitle") }}
+            從市區漫遊到山海線探索，台東的每個角落都有著獨特的魅力等待您發現
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Fitness Center -->
-          <div
-            class="bg-stone-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('fitnessCenter')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:bolt"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("fitnessCenter") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("fitnessCenterDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>{{ t("available24Hours") }}</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Swimming Pool -->
-          <div
-            class="bg-stone-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('swimmingPool')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:sun"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("swimmingPool") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("swimmingPoolDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>06:00 - 22:00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- SPA & Wellness -->
-          <div
-            class="bg-stone-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('spaWellness')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:heart"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("spaWellness") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("spaWellnessDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>09:00 - 21:00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recreation Room -->
-          <div
-            class="bg-stone-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('recreationRoom')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:puzzle-piece"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("recreationRoom") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("recreationRoomDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>{{ t("available24Hours") }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business Facilities -->
-    <section class="py-16 px-6 lg:px-12 bg-stone-100">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("businessFacilitiesDetail") }}
-          </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("businessFacilitiesDetailSubtitle") }}
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Meeting Rooms -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            >
-              <Icon
-                name="heroicons:presentation-chart-line"
-                class="!w-8 !h-8 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("meetingRooms") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed mb-4">
-              {{ t("meetingRoomsDesc") }}
-            </p>
-            <div class="text-blue-600 text-sm">
-              {{ t("contactForDetails") }}
-            </div>
-          </div>
-
-          <!-- Business Center -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            >
-              <Icon
-                name="heroicons:computer-desktop"
-                class="!w-8 !h-8 text-green-600"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("businessCenter") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed mb-4">
-              {{ t("businessCenterDesc") }}
-            </p>
-            <div class="text-green-600 text-sm">
-              {{ t("available24Hours") }}
-            </div>
-          </div>
-
-          <!-- High-Speed Internet -->
-          <div
-            class="bg-white p-8 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            >
-              <Icon name="heroicons:wifi" class="!w-8 !h-8 text-purple-600" />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-4">
-              {{ t("highSpeedInternet") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed mb-4">
-              {{ t("highSpeedInternetDesc") }}
-            </p>
-            <div class="text-purple-600 text-sm">
-              {{ t("available24Hours") }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dining Services -->
-    <section class="py-16 px-6 lg:px-12 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("diningServicesDetail") }}
-          </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("diningServicesDetailSubtitle") }}
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Restaurant -->
-          <div
-            class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl overflow-hidden shadow-lg"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('restaurant')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:building-storefront"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("restaurant") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("restaurantDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>06:30 - 22:00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakfast Service -->
-          <div
-            class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-3xl overflow-hidden shadow-lg"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('breakfastService')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:sun"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("breakfastService") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("breakfastServiceDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>06:30 - 10:00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Room Service -->
-          <div
-            class="bg-gradient-to-br from-stone-50 to-gray-50 rounded-3xl overflow-hidden shadow-lg"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('roomServiceDetail')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:home"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("roomServiceDetail") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("roomServiceDetailDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>{{ t("available24Hours") }}</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lobby Bar -->
-          <div
-            class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl overflow-hidden shadow-lg"
-          >
-            <div class="h-64">
-              <img
-                src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                :alt="t('lobbyBar')"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <Icon
-                  name="heroicons:beaker"
-                  class="text-amber-600 !w-6 !h-6 mr-3"
-                />
-                <h3 class="text-xl font-bold text-stone-800">
-                  {{ t("lobbyBar") }}
-                </h3>
-              </div>
-              <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ t("lobbyBarDesc") }}
-              </p>
-              <div class="flex items-center text-amber-600 text-sm">
-                <Icon name="heroicons:clock" class="!w-4 !h-4 mr-2" />
-                <span>14:00 - 24:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Additional Services -->
-    <section class="py-16 px-6 lg:px-12 bg-stone-50">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("additionalServices") }}
-          </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("additionalServicesSubtitle") }}
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Laundry Service -->
-          <div
-            class="bg-white p-6 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
-            >
-              <Icon name="heroicons:sparkles" class="!w-7 !h-7 text-blue-600" />
-            </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("laundryService") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("laundryServiceDesc") }}
-            </p>
-          </div>
-
-          <!-- Airport Shuttle -->
-          <div
-            class="bg-white p-6 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
-            >
-              <Icon name="heroicons:truck" class="!w-7 !h-7 text-green-600" />
-            </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("airportShuttle") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("airportShuttleDesc") }}
-            </p>
-          </div>
-
-          <!-- Travel Consultation -->
-          <div
-            class="bg-white p-6 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
-            >
-              <Icon name="heroicons:map" class="!w-7 !h-7 text-purple-600" />
-            </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("tourGuide") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("tourGuideDesc") }}
-            </p>
-          </div>
-
-          <!-- Valet Parking -->
-          <div
-            class="bg-white p-6 rounded-3xl text-center hover:shadow-lg transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4"
-            >
-              <Icon name="heroicons:key" class="!w-7 !h-7 text-orange-600" />
-            </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("valetParking") }}
-            </h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("valetParkingDesc") }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section
-      class="relative py-20 px-6 lg:px-12 overflow-hidden min-h-[600px] bg-cover bg-center bg-fixed"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-      "
-    >
-      <!-- Dark Overlay -->
-      <div class="absolute inset-0 bg-black/50"></div>
-
-      <!-- Content -->
-      <div
-        ref="ctaSection"
-        class="relative z-10 max-w-5xl mx-auto text-center flex items-center justify-center min-h-[500px]"
-      >
+        <!-- Category Filters -->
         <div
+          ref="categoriesSection"
           :class="[
-            'transition-all duration-1000 ease-out',
-            ctaAnimated
+            'flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 ease-out',
+            categoriesAnimated
               ? 'translate-y-0 opacity-100'
               : 'translate-y-8 opacity-0',
           ]"
         >
-          <h2
-            class="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight"
+          <button
+            v-for="category in categories"
+            :key="category.id"
+            @click="selectedCategory = category.id"
+            :class="[
+              'px-6 py-3 rounded-full font-semibold transition-all duration-300',
+              selectedCategory === category.id
+                ? 'bg-amber-600 text-white shadow-lg'
+                : 'bg-white text-stone-600 hover:bg-amber-50 hover:text-amber-600',
+            ]"
           >
-            {{ t("newCtaTitle") }}
+            {{ category.name }}
+          </button>
+        </div>
+
+        <!-- Attractions Grid -->
+        <div
+          ref="attractionsSection"
+          :class="[
+            'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ease-out',
+            attractionsAnimated
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-8 opacity-0',
+          ]"
+        >
+          <div
+            v-for="attraction in filteredAttractions"
+            :key="attraction.id"
+            class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                :src="attraction.image"
+                :alt="attraction.name"
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  :class="[
+                    'px-3 py-1 rounded-full text-xs font-medium',
+                    getCategoryColor(attraction.category),
+                  ]"
+                >
+                  {{ getCategoryName(attraction.category) }}
+                </span>
+                <span class="text-stone-400 text-sm font-medium">
+                  NO.{{ attraction.id.toString().padStart(2, "0") }}
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">
+                {{ attraction.name }}
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                {{ attraction.description }}
+              </p>
+              <div class="flex items-center text-amber-600">
+                <Icon name="heroicons:map-pin" class="!w-4 !h-4 mr-1" />
+                <span class="text-xs">{{ attraction.distance }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Tips -->
+    <section class="py-16 px-6 lg:px-12 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div
+          ref="tipsSection"
+          :class="[
+            'text-center mb-12 transition-all duration-1000 ease-out',
+            tipsAnimated
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-8 opacity-0',
+          ]"
+        >
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-6">
+            旅遊小貼士
           </h2>
-          <p
-            class="text-white/95 text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed"
-          >
-            {{ t("newCtaDescription") }}
-          </p>
-          <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <button
-              class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105"
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl"
             >
-              {{ t("bookNowAction") }}
-            </button>
-            <button
-              class="bg-transparent border-3 border-white text-white hover:bg-white hover:text-stone-800 px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105"
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              >
+                <Icon name="heroicons:sun" class="text-blue-600 !w-8 !h-8" />
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">
+                最佳遊覽時間
+              </h3>
+              <p class="text-stone-600">
+                春秋兩季氣候宜人，夏季可欣賞金針花海，冬季則有溫暖的陽光陪伴
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl"
             >
-              {{ t("contactUs") }}
-            </button>
+              <div
+                class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              >
+                <Icon name="heroicons:map" class="text-green-600 !w-8 !h-8" />
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">交通建議</h3>
+              <p class="text-stone-600">
+                建議租車自駕或報名在地旅遊團，部分景點可搭乘大眾運輸工具前往
+              </p>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-3xl"
+            >
+              <div
+                class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
+              >
+                <Icon name="heroicons:heart" class="text-amber-600 !w-8 !h-8" />
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">在地體驗</h3>
+              <p class="text-stone-600">
+                品嚐原住民特色料理，體驗部落文化，感受台東獨有的人文風情
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -631,16 +193,149 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from "vue";
+import { ref, computed, onMounted, nextTick } from "vue";
 import { useLanguage } from "~/composables/useLanguage";
 
 const { t } = useLanguage();
 
 // 動畫狀態
 const heroSection = ref(null);
-const ctaSection = ref(null);
+const categoriesSection = ref(null);
+const attractionsSection = ref(null);
+const tipsSection = ref(null);
+
 const heroAnimated = ref(false);
-const ctaAnimated = ref(false);
+const categoriesAnimated = ref(false);
+const attractionsAnimated = ref(false);
+const tipsAnimated = ref(false);
+
+// 選擇的類別
+const selectedCategory = ref("all");
+
+// 景點類別
+const categories = [
+  { id: "all", name: "所有景點" },
+  { id: "downtown", name: "台東漫遊．市區" },
+  { id: "mountain", name: "台東漫遊．山線" },
+  { id: "coast", name: "台東漫遊．海線" },
+  { id: "south", name: "台東漫遊．南迴線" },
+];
+
+// 景點資料
+const attractions = [
+  {
+    id: 1,
+    name: "臺東森林公園",
+    category: "downtown",
+    image:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "開闊的臺東森林公園距離臺東市僅幾分鐘車程，沿著馬亨亨大道即可到達，是一處令人流連忘返的公園，沒有過多的人工造景，觸目所及盡是讓人心情舒暢的自在氛圍。",
+    distance: "距離酒店 5分鐘車程",
+  },
+  {
+    id: 2,
+    name: "臺東國際地標",
+    category: "downtown",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "國際地標靜靜佇立海岸，白天，它迎接清晨的第一道曙光，夜晚，暈黃燈光照耀，輝煌燦爛，彷彿期盼著世界的眼光。",
+    distance: "距離酒店 10分鐘車程",
+  },
+  {
+    id: 3,
+    name: "多良火車站",
+    category: "south",
+    image:
+      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "被譽為「全臺灣最美車站」，除了來欣賞一覽無遺的太平洋海景，也千萬別錯過附近的美食區，當地部落特色美食，搭配獨特的鐵道海景視野。",
+    distance: "距離酒店 45分鐘車程",
+  },
+  {
+    id: 4,
+    name: "關山米國學校",
+    category: "mountain",
+    image:
+      "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "來米國學校參觀和體驗，不只為知識充電，美麗的花海更為您的旅程增添一抹鮮艷。",
+    distance: "距離酒店 60分鐘車程",
+  },
+  {
+    id: 5,
+    name: "金針山休閒農業區",
+    category: "south",
+    image:
+      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "位於太麻里的金針山是座名聞遐邇的賞花名勝，除了金針花季之外，四季造訪皆能觀賞到滿山遍野的美景。",
+    distance: "距離酒店 50分鐘車程",
+  },
+  {
+    id: 6,
+    name: "池上伯朗大道",
+    category: "mountain",
+    image:
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "臺東縣池上鄉的一條田園小路，被譽為是一條「翠綠的天堂路」。兩旁無電線桿，加上筆直的道路，在此可觀賞一望無際的稻田風光。",
+    distance: "距離酒店 90分鐘車程",
+  },
+  {
+    id: 7,
+    name: "三仙台",
+    category: "coast",
+    image:
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "三仙台是由離岸小島和珊瑚礁海岸構成，島上奇石分布，其中有三塊巨大的岩石，傳說呂洞賓、李鐵拐、何仙姑曾登臨此島。",
+    distance: "距離酒店 70分鐘車程",
+  },
+  {
+    id: 8,
+    name: "知本溫泉",
+    category: "south",
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "知本溫泉是台東最知名的溫泉區，泉質優良，周圍環境清幽，是放鬆身心的絕佳去處。",
+    distance: "距離酒店 25分鐘車程",
+  },
+];
+
+// 過濾後的景點
+const filteredAttractions = computed(() => {
+  if (selectedCategory.value === "all") {
+    return attractions;
+  }
+  return attractions.filter(
+    (attraction) => attraction.category === selectedCategory.value
+  );
+});
+
+// 獲取類別名稱
+const getCategoryName = (category) => {
+  const categoryMap = {
+    downtown: "市區",
+    mountain: "山線",
+    coast: "海線",
+    south: "南迴線",
+  };
+  return categoryMap[category] || "其他";
+};
+
+// 獲取類別顏色
+const getCategoryColor = (category) => {
+  const colorMap = {
+    downtown: "bg-blue-100 text-blue-600",
+    mountain: "bg-green-100 text-green-600",
+    coast: "bg-cyan-100 text-cyan-600",
+    south: "bg-amber-100 text-amber-600",
+  };
+  return colorMap[category] || "bg-gray-100 text-gray-600";
+};
 
 // 設置動畫
 onMounted(() => {
@@ -651,31 +346,65 @@ onMounted(() => {
     }, 100);
   });
 
-  // CTA 區域觀察器
-  if (ctaSection.value) {
-    const ctaObserver = new IntersectionObserver(
+  // 類別觀察器
+  if (categoriesSection.value) {
+    const categoriesObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            ctaAnimated.value = true;
-            ctaObserver.unobserve(entry.target);
+            categoriesAnimated.value = true;
+            categoriesObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    categoriesObserver.observe(categoriesSection.value);
+  }
+
+  // 景點觀察器
+  if (attractionsSection.value) {
+    const attractionsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              attractionsAnimated.value = true;
+            }, 200);
+            attractionsObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    attractionsObserver.observe(attractionsSection.value);
+  }
+
+  // 貼士觀察器
+  if (tipsSection.value) {
+    const tipsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            tipsAnimated.value = true;
+            tipsObserver.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.3 }
     );
-    ctaObserver.observe(ctaSection.value);
+    tipsObserver.observe(tipsSection.value);
   }
 });
 
 // SEO Meta
 useHead({
-  title: "設施服務 - 又一宿精品旅宿",
+  title: "趣遊台東 - 又一宿精品旅宿",
   meta: [
     {
       name: "description",
       content:
-        "又一宿提供完善的設施與專業服務，包含健身中心、游泳池、SPA水療、商務設施、餐飲服務等，滿足您的每一個需求",
+        "探索台東的自然美景與人文風情，從市區漫遊到山海線探索，又一宿為您精選台東必訪景點",
     },
   ],
 });
