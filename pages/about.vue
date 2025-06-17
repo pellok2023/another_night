@@ -3,9 +3,7 @@
     <!-- Hero Section with Background Image -->
     <section
       class="relative mt-24 pb-16 px-6 lg:px-12 min-h-[50vh] flex items-center bg-cover bg-center bg-fixed"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-      "
+      style="background-image: url('images/hero/hero-1.jpeg')"
     >
       <!-- Dark overlay for better text readability -->
       <div class="absolute inset-0 bg-black/50"></div>
@@ -23,12 +21,12 @@
           <h1
             class="text-3xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-wide"
           >
-            {{ t("aboutPageTitle") }}
+            不完美，但真誠
           </h1>
           <p
             class="text-white/95 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed"
           >
-            {{ t("aboutPageSubtitle") }}
+            在又一宿，我們相信真實的體驗勝過完美的表象
           </p>
         </div>
       </div>
@@ -42,7 +40,7 @@
           <div ref="imageSection" class="space-y-6">
             <div class="relative">
               <img
-                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/images/hero/hero-5.jpeg"
                 alt="又一宿飯店外觀"
                 :class="[
                   'w-full h-72 object-cover rounded-2xl transition-all duration-1000 ease-out',
@@ -61,17 +59,17 @@
               <h2
                 class="text-3xl lg:text-4xl font-bold text-stone-800 leading-tight mb-6"
               >
-                {{ t("ourStoryTitle") }}<br />
-                {{ t("ourStorySubtitle") }}
+                我們的故事<br />
+                從不完美開始
               </h2>
             </div>
 
             <div>
               <p class="text-stone-600 text-base leading-relaxed mb-6">
-                {{ t("storyDescription1") }}
+                又一宿不是一家完美的旅館，但我們真誠地對待每一位客人。我們相信，真實的體驗來自於人與人之間的連結，而不是完美的設施或服務。
               </p>
               <p class="text-stone-600 text-base leading-relaxed mb-6">
-                {{ t("storyDescription2") }}
+                在這裡，我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。我們相信，正是這些不完美，讓又一宿變得獨特而真實。
               </p>
             </div>
 
@@ -80,7 +78,7 @@
               <div
                 class="text-center p-4 bg-white border border-amber-200 rounded-xl hover:bg-amber-50 transition duration-300"
               >
-                <div class="text-2xl font-bold text-amber-600 mb-2">2020</div>
+                <div class="text-2xl font-bold text-amber-600 mb-2">2025</div>
                 <h3 class="font-semibold text-stone-800 text-sm">
                   {{ t("establishedYear") }}
                 </h3>
@@ -110,10 +108,10 @@
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("coreValuesTitle") }}
+            我們的價值觀
           </h2>
           <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("coreValuesSubtitle") }}
+            在又一宿，我們相信真實的體驗勝過完美的表象
           </p>
         </div>
 
@@ -138,11 +136,9 @@
                 class="text-blue-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("integrityTitle") }}
-            </h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">真誠</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("integrityDesc") }}
+              我們相信，真誠的服務勝過完美的表象。我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。
             </p>
           </div>
 
@@ -163,11 +159,9 @@
                 class="text-green-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("professionalismTitle") }}
-            </h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">自在</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("professionalismDesc") }}
+              我們希望每一位客人都能在又一宿找到屬於自己的自在。我們不追求完美的服務，而是專注於創造一個讓客人感到放鬆、舒適的環境。
             </p>
           </div>
 
@@ -188,11 +182,9 @@
                 class="text-purple-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("innovationTitle") }}
-            </h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">連結</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("innovationDesc") }}
+              我們相信，真實的體驗來自於人與人之間的連結。我們不追求完美的設施，而是專注於創造一個讓客人與我們、與其他客人產生連結的空間。
             </p>
           </div>
 
@@ -210,175 +202,10 @@
             >
               <Icon name="heroicons:heart" class="text-amber-600 !w-6 !h-6" />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">
-              {{ t("careTitle") }}
-            </h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">成長</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              {{ t("careDesc") }}
+              我們相信，每一次的不完美都是一次成長的機會。我們不追求完美的結果，而是專注於在每一次的服務中學習、改進，為客人創造更好的體驗。
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Leadership Section -->
-    <section class="py-16 px-6 lg:px-12 bg-white">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("leadershipTeamTitle") }}
-          </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("leadershipTeamSubtitle") }}
-          </p>
-        </div>
-
-        <div
-          ref="teamSection"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- CEO -->
-          <div
-            :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
-              teamAnimated.member1
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-                alt="創辦人"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                {{ t("founderCEO") }}
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("founderName") }}
-              </h3>
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
-                {{ t("founderDesc") }}
-              </p>
-              <div class="flex items-center space-x-4">
-                <div class="flex items-center space-x-1">
-                  <Icon
-                    name="heroicons:academic-cap"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-xs">{{
-                    t("businessDegree")
-                  }}</span>
-                </div>
-                <div class="flex items-center space-x-1">
-                  <Icon name="heroicons:star" class="w-4 h-4 text-amber-600" />
-                  <span class="text-stone-600 text-xs"
-                    >15{{ t("yearsExp") }}</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 總經理 -->
-          <div
-            :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
-              teamAnimated.member2
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
-                alt="總經理"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-stone-800 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                {{ t("generalManager") }}
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("managerName") }}
-              </h3>
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
-                {{ t("generalManagerDesc") }}
-              </p>
-              <div class="flex items-center space-x-4">
-                <div class="flex items-center space-x-1">
-                  <Icon
-                    name="heroicons:building-office-2"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-xs">{{
-                    t("hospitalityDegree")
-                  }}</span>
-                </div>
-                <div class="flex items-center space-x-1">
-                  <Icon name="heroicons:star" class="w-4 h-4 text-amber-600" />
-                  <span class="text-stone-600 text-xs"
-                    >12{{ t("yearsExp") }}</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 營運總監 -->
-          <div
-            :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
-              teamAnimated.member3
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div class="relative h-64 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80"
-                alt="營運總監"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                {{ t("operationsDirector") }}
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("directorName") }}
-              </h3>
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
-                {{ t("operationsDirectorDesc") }}
-              </p>
-              <div class="flex items-center space-x-4">
-                <div class="flex items-center space-x-1">
-                  <Icon
-                    name="heroicons:cog-6-tooth"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-xs">{{
-                    t("operationsDegree")
-                  }}</span>
-                </div>
-                <div class="flex items-center space-x-1">
-                  <Icon name="heroicons:star" class="w-4 h-4 text-amber-600" />
-                  <span class="text-stone-600 text-xs"
-                    >10{{ t("yearsExp") }}</span
-                  >
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -447,7 +274,6 @@ const { t } = useLanguage();
 const heroSection = ref(null);
 const imageSection = ref(null);
 const valuesSection = ref(null);
-const teamSection = ref(null);
 const ctaSection = ref(null);
 
 const heroAnimated = ref(false);
@@ -460,11 +286,6 @@ const valuesAnimated = ref({
   value2: false,
   value3: false,
   value4: false,
-});
-const teamAnimated = ref({
-  member1: false,
-  member2: false,
-  member3: false,
 });
 const ctaAnimated = ref(false);
 
@@ -519,28 +340,6 @@ onMounted(() => {
       { threshold: 0.2 }
     );
     valuesObserver.observe(valuesSection.value);
-  }
-
-  // 團隊觀察器
-  if (teamSection.value) {
-    const teamObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            teamAnimated.value.member1 = true;
-            setTimeout(() => {
-              teamAnimated.value.member2 = true;
-            }, 200);
-            setTimeout(() => {
-              teamAnimated.value.member3 = true;
-            }, 400);
-            teamObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    teamObserver.observe(teamSection.value);
   }
 
   // CTA 區域觀察器

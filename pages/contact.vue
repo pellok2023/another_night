@@ -37,229 +37,243 @@
     <!-- Contact Info & Form -->
     <section class="py-16 px-6 lg:px-12">
       <div class="max-w-5xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16">
-          <!-- Contact Information -->
+        <!-- Contact Information Cards - 田字型排列 -->
+        <div
+          ref="contactInfoSection"
+          :class="[
+            'grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 transition-all duration-1000 ease-out',
+            contactInfoAnimated
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-8 opacity-0',
+          ]"
+        >
+          <!-- Address Card -->
           <div
-            ref="contactInfoSection"
-            :class="[
-              'space-y-8 transition-all duration-1000 ease-out',
-              contactInfoAnimated
-                ? 'translate-x-0 opacity-100'
-                : '-translate-x-8 opacity-0',
-            ]"
+            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <div>
-              <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-6">
-                {{ t("contactInfoTitle") }}
-              </h2>
-              <p class="text-stone-600 text-base leading-relaxed mb-8">
-                {{ t("contactInfoDesc") }}
-              </p>
-            </div>
-
-            <div class="bg-white rounded-3xl p-8 shadow-lg space-y-8">
-              <!-- Address -->
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center flex-shrink-0"
-                >
-                  <Icon
-                    name="heroicons:map-pin"
-                    class="text-amber-600 !w-6 !h-6"
-                  />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-stone-800 mb-2">
-                    {{ t("addressTitle") }}
-                  </h3>
-                  <p class="text-stone-600 mb-1">{{ t("addressText") }}</p>
-                  <p class="text-sm text-stone-500">{{ t("addressNote") }}</p>
-                </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <Icon
+                  name="heroicons:map-pin"
+                  class="text-amber-600 !w-6 !h-6"
+                />
               </div>
-
-              <!-- Phone -->
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0"
-                >
-                  <Icon
-                    name="heroicons:phone"
-                    class="text-green-600 !w-6 !h-6"
-                  />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-stone-800 mb-2">
-                    {{ t("phoneTitle") }}
-                  </h3>
-                  <p class="text-stone-600 mb-1">{{ t("phoneNumber") }}</p>
-                  <p class="text-sm text-stone-500">{{ t("phoneNote") }}</p>
-                </div>
-              </div>
-
-              <!-- Email -->
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0"
-                >
-                  <Icon
-                    name="heroicons:envelope"
-                    class="text-blue-600 !w-6 !h-6"
-                  />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-stone-800 mb-2">
-                    {{ t("emailTitle") }}
-                  </h3>
-                  <p class="text-stone-600 mb-1">{{ t("emailAddress") }}</p>
-                  <p class="text-sm text-stone-500">{{ t("emailNote") }}</p>
-                </div>
-              </div>
-
-              <!-- Service Hours -->
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0"
-                >
-                  <Icon
-                    name="heroicons:clock"
-                    class="text-purple-600 !w-6 !h-6"
-                  />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-stone-800 mb-2">
-                    {{ t("serviceHoursTitle") }}
-                  </h3>
-                  <p class="text-stone-600 mb-1">{{ t("checkInOut") }}</p>
-                  <p class="text-sm text-stone-500">{{ t("frontDesk24h") }}</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Maps -->
-            <div class="bg-white rounded-3xl p-8 shadow-lg">
-              <h3 class="text-xl font-bold text-stone-800 mb-6">
-                {{ t("locationMapTitle") }}
-              </h3>
-              <div class="h-64 rounded-2xl overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.5!2d121.1086!3d22.7569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f3134a0e8f4f1%3A0x6e5b4e7f8a1d3c2b!2s台東市!5e0!3m2!1szh-TW!2stw!4v1629788743123!5m2!1szh-TW!2stw"
-                  width="100%"
-                  height="100%"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="rounded-2xl"
-                ></iframe>
+              <div>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">地址</h3>
+                <p class="text-stone-600 leading-relaxed">
+                  台東縣台東市中華路一段1號
+                </p>
+                <p class="text-amber-600 text-sm mt-2 font-medium">
+                  近台東火車站，步行5分鐘
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Contact Form -->
+          <!-- Phone Card -->
           <div
-            ref="contactFormSection"
-            :class="[
-              'bg-white rounded-3xl p-8 lg:p-12 shadow-lg transition-all duration-1000 ease-out',
-              contactFormAnimated
-                ? 'translate-x-0 opacity-100'
-                : 'translate-x-8 opacity-0',
-            ]"
+            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-8">
-              {{ t("contactFormTitle") }}
-            </h2>
-
-            <form class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    class="block text-sm font-semibold text-stone-700 mb-3"
-                  >
-                    {{ t("nameLabel") }}
-                  </label>
-                  <input
-                    type="text"
-                    class="w-full px-4 py-4 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-300 bg-stone-50/50 hover:bg-white"
-                    :placeholder="t('namePlaceholder')"
-                  />
-                </div>
-                <div>
-                  <label
-                    class="block text-sm font-semibold text-stone-700 mb-3"
-                  >
-                    {{ t("phoneLabel") }}
-                  </label>
-                  <input
-                    type="tel"
-                    class="w-full px-4 py-4 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-300 bg-stone-50/50 hover:bg-white"
-                    :placeholder="t('phonePlaceholder')"
-                  />
-                </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <Icon name="heroicons:phone" class="text-green-600 !w-6 !h-6" />
               </div>
-
               <div>
-                <label class="block text-sm font-semibold text-stone-700 mb-3">
-                  {{ t("emailLabel") }}
-                </label>
-                <input
-                  type="email"
-                  class="w-full px-4 py-4 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-300 bg-stone-50/50 hover:bg-white"
-                  :placeholder="t('emailPlaceholder')"
+                <h3 class="text-lg font-bold text-stone-800 mb-2">電話</h3>
+                <p class="text-stone-600 text-lg font-semibold">089-123-456</p>
+                <p class="text-green-600 text-sm mt-2 font-medium">
+                  24小時服務專線
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <Icon
+                  name="heroicons:envelope"
+                  class="text-blue-600 !w-6 !h-6"
                 />
               </div>
-
               <div>
-                <label class="block text-sm font-semibold text-stone-700 mb-3">
-                  {{ t("inquiryTypeLabel") }}
-                </label>
-                <select
-                  class="w-full px-4 py-4 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-300 bg-stone-50/50 hover:bg-white"
-                >
-                  <option>{{ t("generalInquiry") }}</option>
-                  <option>{{ t("roomBooking") }}</option>
-                  <option>{{ t("eventVenue") }}</option>
-                  <option>{{ t("otherServices") }}</option>
-                </select>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">電子郵件</h3>
+                <p class="text-stone-600 text-lg font-semibold">
+                  info@anothernight.com
+                </p>
+                <p class="text-blue-600 text-sm mt-2 font-medium">
+                  一般詢問與預訂
+                </p>
               </div>
+            </div>
+          </div>
 
-              <div>
-                <label class="block text-sm font-semibold text-stone-700 mb-3">
-                  {{ t("messageLabel") }}
-                </label>
-                <textarea
-                  rows="6"
-                  class="w-full px-4 py-4 border-2 border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-300 bg-stone-50/50 hover:bg-white resize-none"
-                  :placeholder="t('messagePlaceholder')"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full bg-amber-600 hover:bg-amber-700 text-white py-4 px-8 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                {{ t("sendMessage") }}
-              </button>
-
-              <!-- Contact Form Notice -->
+          <!-- Service Hours Card -->
+          <div
+            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="flex items-start space-x-4">
               <div
-                class="mt-6 p-4 bg-stone-50 rounded-xl border border-stone-200"
+                class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0"
               >
-                <div class="text-base text-stone-600 space-y-2">
-                  <p class="font-medium text-stone-700 mb-3">
-                    <Icon
-                      name="heroicons:information-circle"
-                      class="inline !w-5 !h-5 mr-2 text-blue-500"
-                    />
-                    重要提醒
-                  </p>
-                  <ul class="space-y-1 text-sm text-stone-500">
-                    <li>• 我們將在24小時內回覆您的詢問</li>
-                    <li>• 您的個人資料將會被保密處理</li>
-                    <li>• 如有緊急事務，請直接來電聯絡</li>
-                  </ul>
+                <Icon
+                  name="heroicons:clock"
+                  class="text-purple-600 !w-6 !h-6"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">服務時間</h3>
+                <p class="text-stone-600">Check-in: 15:00 | Check-out: 11:00</p>
+                <p class="text-purple-600 text-sm mt-2 font-medium">
+                  前台24小時服務
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map Section -->
+        <div class="mb-16">
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="text-lg font-bold text-stone-800 mb-4">
+              {{ t("locationMapTitle") }}
+            </h3>
+            <div class="h-64 bg-stone-100 rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1187823!2d121.14539!3d22.755087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f31fd32e36527%3A0x8e5b6b4e8e1f1e90!2z5Y-w5p2x5pyo!5e0!3m2!1szh-TW!2stw!4v1623456789012!5m2!1szh-TW!2stw"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-2xl"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transportation Information - 田字型排列 -->
+        <div
+          ref="transportSection"
+          :class="[
+            'transition-all duration-1000 ease-out',
+            transportAnimated
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-8 opacity-0',
+          ]"
+        >
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-stone-800 mb-8 text-center"
+          >
+            {{ t("transportInfoTitle") }}
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 火車站 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <Icon
+                    name="heroicons:building-office-2"
+                    class="text-blue-600 !w-6 !h-6"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">火車站</h3>
+                  <div class="space-y-2 text-stone-600">
+                    <p>台東火車站 - 步行約5分鐘</p>
+                    <p>台東新站 - 計程車約10分鐘</p>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
+
+            <!-- 機場交通 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <Icon
+                    name="heroicons:paper-airplane"
+                    class="text-green-600 !w-6 !h-6"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">
+                    機場交通
+                  </h3>
+                  <div class="space-y-2 text-stone-600">
+                    <p>台東豐年機場 - 計程車約20分鐘</p>
+                    <p>機場接駁服務 - 提前預約</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 公車 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <Icon
+                    name="heroicons:truck"
+                    class="text-amber-600 !w-6 !h-6"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">公車</h3>
+                  <div class="space-y-2 text-stone-600">
+                    <p>台東轉運站：8101、8102、8109、8110</p>
+                    <p>中華路站：市區公車、觀光巴士</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 停車資訊 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0"
+                >
+                  <Icon
+                    name="heroicons:square-3-stack-3d"
+                    class="text-purple-600 !w-6 !h-6"
+                  />
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">
+                    停車資訊
+                  </h3>
+                  <div class="space-y-2 text-stone-600">
+                    <p>館內提供24小時停車場 - 每日NT$300</p>
+                    <p>周邊收費停車格 - 每小時NT$30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -285,7 +299,7 @@
           </p>
         </div>
 
-        <div ref="quickActionsSection" class="grid md:grid-cols-3 gap-8">
+        <div ref="quickActionsSection" class="grid md:grid-cols-2 gap-8">
           <!-- Phone Booking -->
           <div
             :class="[
@@ -308,34 +322,6 @@
               class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {{ t("callNow") }}
-            </button>
-          </div>
-
-          <!-- Online Chat -->
-          <div
-            :class="[
-              'bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-1000 ease-out transform hover:-translate-y-2',
-              quickActionsAnimated.action2
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div
-              class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            >
-              <Icon
-                name="heroicons:chat-bubble-left-ellipsis"
-                class="text-blue-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-3">
-              {{ t("onlineChat") }}
-            </h3>
-            <p class="text-stone-600 mb-6">{{ t("onlineChatDesc") }}</p>
-            <button
-              class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {{ t("startChat") }}
             </button>
           </div>
 
@@ -370,109 +356,6 @@
       </div>
     </section>
 
-    <!-- Transportation Info -->
-    <section class="py-16 px-6 lg:px-12 bg-stone-100">
-      <div class="max-w-5xl mx-auto">
-        <div
-          ref="transportSection"
-          :class="[
-            'text-center mb-12 transition-all duration-1000 ease-out',
-            transportAnimated
-              ? 'translate-y-0 opacity-100'
-              : 'translate-y-8 opacity-0',
-          ]"
-        >
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-6">
-            {{ t("transportInfoTitle") }}
-          </h2>
-
-          <div class="bg-white rounded-3xl p-12 shadow-lg">
-            <div class="grid md:grid-cols-2 gap-12">
-              <!-- Public Transportation -->
-              <div class="text-left">
-                <div class="flex items-center mb-6">
-                  <div
-                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4"
-                  >
-                    <Icon
-                      name="heroicons:building-office-2"
-                      class="text-blue-600 !w-6 !h-6"
-                    />
-                  </div>
-                  <h3 class="text-xl font-bold text-stone-800">
-                    {{ t("publicTransport") }}
-                  </h3>
-                </div>
-                <div class="space-y-3 text-stone-600">
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("trainStation") }}</span>
-                  </div>
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("busStop") }}</span>
-                  </div>
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("airportBus") }}</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Self Driving -->
-              <div class="text-left">
-                <div class="flex items-center mb-6">
-                  <div
-                    class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mr-4"
-                  >
-                    <Icon
-                      name="heroicons:truck"
-                      class="text-amber-600 !w-6 !h-6"
-                    />
-                  </div>
-                  <h3 class="text-xl font-bold text-stone-800">
-                    {{ t("selfDriving") }}
-                  </h3>
-                </div>
-                <div class="space-y-3 text-stone-600">
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("highway") }}</span>
-                  </div>
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("parking") }}</span>
-                  </div>
-                  <div class="flex items-center">
-                    <Icon
-                      name="heroicons:check-circle"
-                      class="text-green-500 !w-5 !h-5 mr-3 flex-shrink-0"
-                    />
-                    <span>{{ t("valetService") }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <Footer />
   </div>
@@ -487,14 +370,12 @@ const { t } = useLanguage();
 // 動畫狀態
 const heroSection = ref(null);
 const contactInfoSection = ref(null);
-const contactFormSection = ref(null);
 const quickContactSection = ref(null);
 const quickActionsSection = ref(null);
 const transportSection = ref(null);
 
 const heroAnimated = ref(false);
 const contactInfoAnimated = ref(false);
-const contactFormAnimated = ref(false);
 const quickContactAnimated = ref(false);
 const quickActionsAnimated = ref({
   action1: false,
@@ -526,24 +407,6 @@ onMounted(() => {
       { threshold: 0.2 }
     );
     contactInfoObserver.observe(contactInfoSection.value);
-  }
-
-  // 聯絡表單觀察器
-  if (contactFormSection.value) {
-    const contactFormObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              contactFormAnimated.value = true;
-            }, 200);
-            contactFormObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    contactFormObserver.observe(contactFormSection.value);
   }
 
   // 快速聯絡觀察器
@@ -590,12 +453,14 @@ onMounted(() => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            transportAnimated.value = true;
+            setTimeout(() => {
+              transportAnimated.value = true;
+            }, 400);
             transportObserver.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
     transportObserver.observe(transportSection.value);
   }

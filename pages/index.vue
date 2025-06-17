@@ -23,7 +23,7 @@
             <!-- Project Image -->
             <div ref="imageSection" class="relative">
               <img
-                src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/images/hero/hero-4.jpeg"
                 alt="Interior Design Project"
                 :class="[
                   'w-full h-72 object-cover rounded-2xl transition-all duration-1000 ease-out',
@@ -42,7 +42,7 @@
                 ]"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  src="/images/hero/hero-1.jpeg"
                   alt="Design Process"
                   class="w-full h-full object-cover"
                 />
@@ -207,7 +207,7 @@
           >
             <div class="relative h-48 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80"
+                src="/images/hero/hero-2.jpeg"
                 alt="標準客房"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -423,7 +423,7 @@
             class="relative border-5 shadow-lg border-white rounded-3xl overflow-hidden h-96 w-full"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.1234567890!2d121.1567890123456!3d22.7567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea76543210987%3A0x9876543210fedcba!2z5Y-w5p2x5p2x5paw5aSn6aOv5bqXIOW_sOadk-W4gua1nOeUn-i3r-iZn-iZnSAx5pa5NeiZnw!5e0!3m2!1szh-TW!2stw!4v9876543210987!5m2!1szh-TW!2stw"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.300669390193!2d121.14352527484874!3d22.75422047936284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb915c787b6a9%3A0xe7ab767e383c8d5d!2zOTUw5Y-w5p2x57ij5Y-w5p2x5biC5paw55Sf6LevMTU16Jmf!5e0!3m2!1szh-TW!2stw!4v1750124702574!5m2!1szh-TW!2stw"
               width="100%"
               height="100%"
               style="border: 0"
@@ -442,13 +442,11 @@
                   class="w-5 h-5 text-amber-600 flex-shrink-0"
                 />
                 <div class="min-w-0">
-                  <!-- 台東東新大飯店 -->
                   <p class="text-stone-800 font-medium text-sm truncate">
                     {{ t("hotelName") }}
                   </p>
-                  <!-- 台東市新生路155號 -->
                   <p class="text-stone-500 text-xs truncate">
-                    {{ t("hotelAddress") }}
+                    台東市新生路155號
                   </p>
                 </div>
               </div>
@@ -574,72 +572,106 @@
       </div>
     </section>
 
-    <!-- Latest Project Section -->
+    <!-- Surrounding Attractions Section -->
     <section class="py-16 px-6 lg:px-12 bg-white">
       <div class="max-w-5xl mx-auto">
         <div class="mb-12">
-          <!-- 飯店環境介紹 -->
+          <!-- 周遭景點介紹 -->
           <div
             class="flex flex-col lg:flex-row lg:justify-between lg:items-center space-y-6 lg:space-y-0"
           >
             <h2 class="text-3xl lg:text-4xl font-bold text-stone-800">
-              {{ t("hotelEnvironmentTitle") }}
+              {{ t("surroundingAttractionsTitle") }}
             </h2>
             <!-- 手機版：田字型膠囊按鈕排列，桌面版：水平排列 -->
             <div class="grid grid-cols-2 gap-3 lg:flex lg:space-x-4 lg:gap-0">
               <button
-                class="px-6 py-2 bg-amber-600 text-white rounded-full text-sm font-medium cursor-pointer hover:bg-amber-700 transition-colors"
+                @click="setAttractionCategory('all')"
+                :class="[
+                  'px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors',
+                  selectedAttractionCategory === 'all'
+                    ? 'bg-amber-600 text-white hover:bg-amber-700'
+                    : 'text-stone-600 hover:bg-stone-100',
+                ]"
               >
-                <!-- 全部項目 -->
-                {{ t("allProjects") }}
+                {{ t("allAttractions") }}
               </button>
               <button
-                class="px-6 py-2 text-stone-600 rounded-full text-sm font-medium cursor-pointer hover:bg-stone-100 transition-colors"
+                @click="setAttractionCategory('nature')"
+                :class="[
+                  'px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors',
+                  selectedAttractionCategory === 'nature'
+                    ? 'bg-amber-600 text-white hover:bg-amber-700'
+                    : 'text-stone-600 hover:bg-stone-100',
+                ]"
               >
-                <!-- 客房 -->
-                {{ t("roomsCategory") }}
+                {{ t("natureAttractions") }}
               </button>
               <button
-                class="px-6 py-2 text-stone-600 rounded-full text-sm font-medium cursor-pointer hover:bg-stone-100 transition-colors"
+                @click="setAttractionCategory('culture')"
+                :class="[
+                  'px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors',
+                  selectedAttractionCategory === 'culture'
+                    ? 'bg-amber-600 text-white hover:bg-amber-700'
+                    : 'text-stone-600 hover:bg-stone-100',
+                ]"
               >
-                <!-- 大廳 -->
-                {{ t("lobbyCategory") }}
+                {{ t("cultureAttractions") }}
               </button>
               <button
-                class="px-6 py-2 text-stone-600 rounded-full text-sm font-medium cursor-pointer hover:bg-stone-100 transition-colors"
+                @click="setAttractionCategory('food')"
+                :class="[
+                  'px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors',
+                  selectedAttractionCategory === 'food'
+                    ? 'bg-amber-600 text-white hover:bg-amber-700'
+                    : 'text-stone-600 hover:bg-stone-100',
+                ]"
               >
-                <!-- 商務 -->
-                {{ t("businessCategory") }}
+                {{ t("foodAttractions") }}
               </button>
             </div>
           </div>
         </div>
 
         <div class="relative">
-          <!-- Main Project Image -->
+          <!-- Main Attraction Image -->
           <div class="relative h-[400px] rounded-3xl overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
-              alt="Latest Project"
-              class="w-full h-full object-cover"
+              :src="currentAttraction.image"
+              :alt="currentAttraction.title"
+              class="w-full h-full object-cover transition-opacity duration-500"
             />
-            <!-- Project Info Overlay -->
+            <!-- Attraction Info Overlay -->
             <div
               class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm p-6 rounded-2xl max-w-sm"
             >
-              <!-- 又一宿精緻客房環境 -->
               <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("hotelRoomEnvironmentTitle") }}
+                {{ currentAttraction.title }}
               </h3>
-              <!-- 結合現代舒適與溫馨氛圍的精緻客房，為每位住客提供賓至如歸的住宿體驗，細節中展現品質與用心。 -->
               <p class="text-stone-600 text-sm mb-4">
-                {{ t("hotelRoomEnvironmentDesc") }}
+                {{ currentAttraction.description }}
               </p>
+              <div class="flex items-center space-x-4 mb-4">
+                <div class="flex items-center space-x-1">
+                  <Icon
+                    name="heroicons:map-pin"
+                    class="w-4 h-4 text-amber-600"
+                  />
+                  <span class="text-stone-600 text-xs">{{
+                    currentAttraction.distance
+                  }}</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <Icon name="heroicons:clock" class="w-4 h-4 text-amber-600" />
+                  <span class="text-stone-600 text-xs">{{
+                    currentAttraction.duration
+                  }}</span>
+                </div>
+              </div>
               <button
                 class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
               >
-                <!-- 查看項目 -->
-                {{ t("viewProject") }}
+                {{ t("viewDetails") }}
               </button>
             </div>
           </div>
@@ -872,6 +904,60 @@ const roomCardsAnimated = ref({
   card2: false,
   card3: false,
 });
+
+// 景點切換功能
+const selectedAttractionCategory = ref("all");
+
+// 景點數據
+const attractions = {
+  all: {
+    titleKey: "taitungForestPark",
+    descKey: "taitungForestParkDesc",
+    image:
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
+    distanceKey: "forestParkDistance",
+    durationKey: "forestParkDuration",
+  },
+  nature: {
+    titleKey: "zhipenHotSprings",
+    descKey: "zhipenHotSpringsDesc",
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+    distanceKey: "hotSpringsDistance",
+    durationKey: "hotSpringsDuration",
+  },
+  culture: {
+    titleKey: "taitungRailwayArt",
+    descKey: "taitungRailwayArtDesc",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80",
+    distanceKey: "railwayArtDistance",
+    durationKey: "railwayArtDuration",
+  },
+  food: {
+    titleKey: "taitungNightMarket",
+    descKey: "taitungNightMarketDesc",
+    image:
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80",
+    distanceKey: "nightMarketDistance",
+    durationKey: "nightMarketDuration",
+  },
+};
+
+const currentAttraction = computed(() => {
+  const attraction = attractions[selectedAttractionCategory.value];
+  return {
+    title: t(attraction.titleKey),
+    description: t(attraction.descKey),
+    image: attraction.image,
+    distance: t(attraction.distanceKey),
+    duration: t(attraction.durationKey),
+  };
+});
+
+const setAttractionCategory = (category) => {
+  selectedAttractionCategory.value = category;
+};
 
 const targetStats = {
   guests: 21,

@@ -16,34 +16,34 @@ const translations = reactive({
     contactNow: "立即聯絡",
 
     // 首頁關於區域
-    aboutSectionTitle1: "我們是專業的",
-    aboutSectionTitle2: "精品旅宿 服務團隊",
+    aboutSectionTitle1: "在台東，山與海之間",
+    aboutSectionTitle2: "又一宿．又上的臨時客棧",
     aboutDescription:
-      "又一宿致力於為您提供最優質的住宿體驗。我們專注於創造舒適、溫馨且富有品味的住宿環境。每一個房間都經過精心佈置，結合了舒適性與美學，為旅客打造難忘的住宿回憶。我們相信優質的服務能夠提升住宿品質，讓每一次入住都成為美好的體驗。",
-    service24Hours: "24小時服務",
-    refinedRooms: "精緻客房",
-    diningService: "餐飲服務",
-    businessFacilities: "商務設施",
-    professionalTeamNote: "▷ 專業團隊為您打造舒適溫馨的住宿體驗",
+      "我們不完美，卻誠實地準備好迎接每一位旅人。《又一宿》靈感來自「柳暗花明又一村」，這裡是「又上」團隊出發的小冒險。我們是一間「正在蛻變中的旅店」，像剛畢業的年輕人，還穿著便服，卻已準備面對這個世界。這裡不完美，卻真誠；不豪華，卻有溫度。",
+    service24Hours: "真誠服務",
+    refinedRooms: "舒適客房",
+    diningService: "在地美食指引",
+    businessFacilities: "基本設施",
+    professionalTeamNote: "▷ 歡迎成為我們蛻變過程的見證人",
 
     // 房型區域
-    roomTypesTitle: "精選房型",
+    roomTypesTitle: "客房空間",
     roomTypesSubtitle:
-      "每間客房都經過精心設計，融合舒適與美學，為您提供難忘的住宿體驗",
+      "簡單而溫暖的住宿空間，在我們整修蛻變的過程中，為您提供真誠的休憩體驗",
 
     // 房間卡片
-    popularRecommendation: "熱門推薦",
+    popularRecommendation: "經典選擇",
     standardRoom: "標準客房",
     standardRoomDesc:
-      "舒適寬敞的客房空間，配備現代化設施與精緻寢具，為您提供優質的住宿環境。",
-    upgradeRecommendation: "升級推薦",
-    deluxeRoom: "豪華客房",
+      "簡單舒適的客房空間，配備基本設施。我們正在蛻變中，可能不完美，但每個細節都充滿誠意。",
+    upgradeRecommendation: "舒適推薦",
+    deluxeRoom: "舒適客房",
     deluxeRoomDesc:
-      "更寬敞的空間設計，增設休憩區域與工作空間，適合商務旅客與重視品質的住客。",
-    topEnjoyment: "頂級享受",
-    refinedSuite: "精緻套房",
+      "更寬敞的休憩空間，在過渡期間為您提供溫暖的住宿體驗。真實而不造作的住宿環境。",
+    topEnjoyment: "溫馨體驗",
+    refinedSuite: "溫馨套房",
     refinedSuiteDesc:
-      "獨立客廳與臥室空間，頂級裝潢與設備，為追求極致舒適體驗的賓客提供完美住宿。",
+      "獨立的生活空間，在這個正在蛻變的旅店中，感受最真摯的住宿溫度與人情味。",
     guests: "人",
     perNight: "/晚",
     bookNowAction: "立即預訂",
@@ -51,7 +51,7 @@ const translations = reactive({
     // 交通資訊區域
     transportationTitle: "交通資訊",
     transportationSubtitle: "便利的交通位置，讓您輕鬆抵達又一宿",
-    hotelName: "台東東新大飯店",
+    hotelName: "又一宿",
     hotelAddress: "台東市新生路155號",
 
     // 交通方式
@@ -74,38 +74,38 @@ const translations = reactive({
     roomsCategory: "客房",
     lobbyCategory: "大廳",
     businessCategory: "商務",
-    hotelRoomEnvironmentTitle: "又一宿精緻客房環境",
+    hotelRoomEnvironmentTitle: "又一宿．蛻變中的住宿空間",
     hotelRoomEnvironmentDesc:
-      "結合現代舒適與溫馨氛圍的精緻客房，為每位住客提供賓至如歸的住宿體驗，細節中展現品質與用心。",
+      "在整修過渡期間，我們誠實地為您準備簡單溫暖的住宿空間。這裡可能不完美，但每個角落都充滿真誠與溫度。",
     viewProject: "查看項目",
 
     // 專業服務區域
-    professionalServicesTitle: "專業服務項目",
+    professionalServicesTitle: "我們的服務",
     viewAll: "查看全部",
-    roomServiceTitle: "客房服務",
+    roomServiceTitle: "真誠服務",
     roomServiceDesc:
-      "精心設計的舒適客房，24小時客房服務，確保每一位住客都能享受賓至如歸的住宿體驗。",
-    diningServiceTitle: "餐飲服務",
+      "我們用真誠的心對待每一位旅人，在這個蛻變的過程中，盡力提供溫暖的服務與關懷。",
+    diningServiceTitle: "在地美食指引",
     diningServiceDesc:
-      "精緻早餐與在地美食，專業廚師團隊精心烹調，為住客提供難忘的味蕾饗宴。",
-    conciergeServiceTitle: "禮賓服務",
+      "我們走極簡派，不供應早餐，但會真心推薦台東在地的美食殿堂，讓您品嚐最道地的台東味道。",
+    conciergeServiceTitle: "舒適客房",
     conciergeServiceDesc:
-      "專業禮賓團隊提供行程規劃、交通安排與在地導覽，讓您的旅程更加完美順心。",
-    businessServiceTitle: "商務服務",
+      "簡單乾淨的住宿空間，基本設施一應俱全。在我們整修期間，可能不完美，但每個角落都充滿誠意。",
+    businessServiceTitle: "基本設施",
     businessServiceDesc:
-      "完善的商務設施與會議空間，高速網路與商務中心，滿足商旅人士的各種需求。",
+      "提供住宿所需的基本設施與服務，在這個過渡期間，我們會盡力滿足您的基本需求。",
 
     // 統計數據
-    satisfiedGuests: "滿意住客",
-    serviceAwards: "服務獎項",
-    professionalRooms: "專業客房",
-    yearsExperience: "年服務經驗",
+    satisfiedGuests: "迎接過的旅人",
+    serviceAwards: "蛻變的日子",
+    professionalRooms: "簡單客房",
+    yearsExperience: "新的開始",
 
     // Hero Slider
-    heroSliderTitle: "又一宿精緻客房環境",
+    heroSliderTitle: "又一宿．正在蛻變的旅店",
     heroSliderDesc:
-      "結合現代舒適與溫馨氛圍的精緻客房，為每位住客提供賓至如歸的住宿體驗，細節中展現品質與用心。",
-    heroSliderButton: "查看項目",
+      "在台東山海之間，一間不完美卻真誠的旅店正在蛻變。歡迎來到《又一宿》，成為我們轉變過程的見證人。",
+    heroSliderButton: "了解更多",
 
     // 關於我們頁面
     aboutPageTitle: "關於又一宿",
@@ -370,17 +370,123 @@ const translations = reactive({
     // Footer
     footerBrandName: "又一宿",
     footerDescription:
-      "又一宿是專業的精品旅宿，致力於為旅客創造舒適優雅的住宿體驗。我們結合溫馨服務理念與精緻設施，打造獨特的住宿空間，讓每一次入住都成為美好的回憶。",
+      "在台東山海之間，一間不完美卻真誠的旅店正在蛻變。我們不完美，卻誠實地準備好迎接每一位旅人。這裡不豪華卻溫暖，在蛻變的過程中，與您分享短暫卻真摯的相遇時光。",
+    footerAddress: "台東縣台東市中華路一段348號",
     quickLinks: "快速連結",
-    serviceItems: "服務項目",
-    roomServiceLink: "客房服務",
-    diningServiceLink: "餐飲服務",
-    conciergeServiceLink: "禮賓服務",
-    businessServiceLink: "商務服務",
+    serviceItems: "我們的服務",
+    roomServiceLink: "真誠服務",
+    diningServiceLink: "在地美食指引",
+    conciergeServiceLink: "舒適客房",
+    businessServiceLink: "基本設施",
     copyright: "版權所有",
     privacyPolicy: "隱私政策",
     termsOfService: "服務條款",
     cookiePolicy: "Cookie政策",
+
+    // 周遭景點頁面
+    attractionsPageTitle: "趣遊台東",
+    attractionsPageSubtitle:
+      "探索台東的自然美景與人文風情，讓每一趟旅程都成為難忘的回憶",
+    travelInfoTitle: "旅遊資訊",
+    travelInfoSubtitle:
+      "從市區漫遊到山海線探索，台東的每個角落都有著獨特的魅力等待您發現",
+    travelTipsTitle: "旅遊小貼士",
+
+    // 景點分類
+    allAttractions: "所有景點",
+    downtownTour: "台東漫遊．市區",
+    mountainTour: "台東漫遊．山線",
+    coastTour: "台東漫遊．海線",
+    southTour: "台東漫遊．南迴線",
+
+    // 分類名稱（短版）
+    downtownCategory: "市區",
+    mountainCategory: "山線",
+    coastCategory: "海線",
+    southCategory: "南迴線",
+    otherCategory: "其他",
+
+    // 景點名稱
+    taitungForestPark: "臺東森林公園",
+    taitungLandmark: "臺東國際地標",
+    duoliangStation: "多良火車站",
+    guanshanRiceSchool: "關山米國學校",
+    goldenNeedleMountain: "金針山休閒農業區",
+    chishangBrownBoulevard: "池上伯朗大道",
+    sanxiantai: "三仙台",
+    zhipenHotSprings: "知本溫泉",
+
+    // 景點描述
+    taitungForestParkDesc:
+      "開闊的臺東森林公園距離臺東市僅幾分鐘車程，沿著馬亨亨大道即可到達，是一處令人流連忘返的公園，沒有過多的人工造景，觸目所及盡是讓人心情舒暢的自在氛圍。",
+    taitungLandmarkDesc:
+      "國際地標靜靜佇立海岸，白天，它迎接清晨的第一道曙光，夜晚，暈黃燈光照耀，輝煌燦爛，彷彿期盼著世界的眼光。",
+    duoliangStationDesc:
+      "被譽為「全臺灣最美車站」，除了來欣賞一覽無遺的太平洋海景，也千萬別錯過附近的美食區，當地部落特色美食，搭配獨特的鐵道海景視野。",
+    guanshanRiceSchoolDesc:
+      "來米國學校參觀和體驗，不只為知識充電，美麗的花海更為您的旅程增添一抹鮮艷。",
+    goldenNeedleMountainDesc:
+      "位於太麻里的金針山是座名聞遐邇的賞花名勝，除了金針花季之外，四季造訪皆能觀賞到滿山遍野的美景。",
+    chishangBrownBoulevardDesc:
+      "臺東縣池上鄉的一條田園小路，被譽為是一條「翠綠的天堂路」。兩旁無電線桿，加上筆直的道路，在此可觀賞一望無際的稻田風光。",
+    sanxiantaiDesc:
+      "三仙台是由離岸小島和珊瑚礁海岸構成，島上奇石分布，其中有三塊巨大的岩石，傳說呂洞賓、李鐵拐、何仙姑曾登臨此島。",
+    zhipenHotSpringsDesc:
+      "知本溫泉是台東最知名的溫泉區，泉質優良，周圍環境清幽，是放鬆身心的絕佳去處。",
+
+    // 距離資訊
+    distance5min: "距離酒店 5分鐘車程",
+    distance10min: "距離酒店 10分鐘車程",
+    distance25min: "距離酒店 25分鐘車程",
+    distance45min: "距離酒店 45分鐘車程",
+    distance50min: "距離酒店 50分鐘車程",
+    distance60min: "距離酒店 60分鐘車程",
+    distance70min: "距離酒店 70分鐘車程",
+    distance90min: "距離酒店 90分鐘車程",
+
+    // 旅遊小貼士
+    bestTimeTitle: "最佳遊覽時間",
+    bestTimeDesc:
+      "春秋兩季氣候宜人，夏季可欣賞金針花海，冬季則有溫暖的陽光陪伴",
+    transportTipsTitle: "交通建議",
+    transportTipsDesc:
+      "建議租車自駕或報名在地旅遊團，部分景點可搭乘大眾運輸工具前往",
+    localExperienceTitle: "在地體驗",
+    localExperienceDesc:
+      "品嚐原住民特色料理，體驗部落文化，感受台東獨有的人文風情",
+
+    // 首頁周遭景點
+    surroundingAttractionsTitle: "周遭景點",
+    allAttractions: "全部景點",
+    natureAttractions: "自然景觀",
+    cultureAttractions: "文化古蹟",
+    foodAttractions: "美食小吃",
+    viewDetails: "查看詳情",
+
+    // 景點資訊
+    taitungForestPark: "台東森林公園",
+    taitungForestParkDesc:
+      "擁有豐富的自然生態，是台東市區內最大的森林公園，提供完善的步道系統和休憩設施。",
+    forestParkDistance: "距離飯店 2.5km",
+    forestParkDuration: "步行 30分鐘",
+
+    zhipenHotSprings: "知本溫泉",
+    zhipenHotSpringsDesc:
+      "台東著名的溫泉勝地，擁有優質的碳酸氫鈉泉，周圍環境清幽，是放鬆身心的絕佳去處。",
+    hotSpringsDistance: "距離飯店 15km",
+    hotSpringsDuration: "開車 20分鐘",
+
+    taitungRailwayArt: "台東鐵道藝術村",
+    taitungRailwayArtDesc:
+      "由舊台東火車站改建而成的藝術空間，結合歷史建築與現代藝術，展現台東獨特的文化魅力。",
+    railwayArtDistance: "距離飯店 1.2km",
+    railwayArtDuration: "步行 15分鐘",
+
+    taitungNightMarket: "台東觀光夜市",
+    taitungNightMarketDesc:
+      "匯集台東在地美食的熱鬧夜市，從原住民料理到海鮮小吃，讓您品嚐最道地的台東風味。",
+    nightMarketDistance: "距離飯店 800m",
+    nightMarketDuration: "步行 10分鐘",
   },
   en: {
     // Navigation
@@ -393,35 +499,34 @@ const translations = reactive({
     contactNow: "Contact Now",
 
     // Homepage About Section
-    aboutSectionTitle1: "We are professional",
-    aboutSectionTitle2: "boutique hospitality service team",
+    aboutSectionTitle1: "Between mountains and sea in Taitung",
+    aboutSectionTitle2: "Another Night · YoShang's Temporary Inn",
     aboutDescription:
-      "Another Night is committed to providing you with the highest quality accommodation experience. We focus on creating comfortable, warm and tasteful accommodation environments. Every room is carefully arranged, combining comfort and aesthetics to create unforgettable accommodation memories for travelers. We believe that quality service can enhance accommodation quality and make every stay a wonderful experience.",
-    service24Hours: "24-hour Service",
-    refinedRooms: "Refined Rooms",
-    diningService: "Dining Service",
-    businessFacilities: "Business Facilities",
-    professionalTeamNote:
-      "▷ Professional team creates comfortable and cozy accommodation experience for you",
+      "We're not perfect, but we honestly prepare to welcome every traveler. 'Another Night' is inspired by the poem 'beyond the dark willows and bright flowers lies another village.' This is YoShang team's little adventure. We are an 'inn in transformation,' like a young graduate still in casual clothes, yet ready to face the world. Here is imperfect yet sincere; not luxurious yet warm.",
+    service24Hours: "Sincere Service",
+    refinedRooms: "Comfortable Rooms",
+    diningService: "Local Food Guide",
+    businessFacilities: "Basic Facilities",
+    professionalTeamNote: "▷ Welcome to witness our transformation journey",
 
     // Room Types Section
-    roomTypesTitle: "Selected Room Types",
+    roomTypesTitle: "Room Spaces",
     roomTypesSubtitle:
-      "Every room is carefully designed, blending comfort and aesthetics to provide you with an unforgettable accommodation experience",
+      "Simple and warm accommodation spaces, providing sincere rest experience during our renovation and transformation",
 
     // Room Cards
-    popularRecommendation: "Popular",
+    popularRecommendation: "Classic Choice",
     standardRoom: "Standard Room",
     standardRoomDesc:
-      "Comfortable and spacious room space, equipped with modern facilities and exquisite bedding, providing you with a quality accommodation environment.",
-    upgradeRecommendation: "Upgrade Recommended",
-    deluxeRoom: "Deluxe Room",
+      "Simple and comfortable room space with basic facilities. We're in transformation, might not be perfect, but every detail is filled with sincerity.",
+    upgradeRecommendation: "Comfort Recommended",
+    deluxeRoom: "Comfortable Room",
     deluxeRoomDesc:
-      "More spacious space design with additional lounge and work areas, suitable for business travelers and guests who value quality.",
-    topEnjoyment: "Premium Luxury",
-    refinedSuite: "Refined Suite",
+      "More spacious rest space, providing warm accommodation experience during transition period. Authentic and unpretentious accommodation environment.",
+    topEnjoyment: "Warm Experience",
+    refinedSuite: "Cozy Suite",
     refinedSuiteDesc:
-      "Independent living and bedroom spaces, premium decoration and equipment, providing perfect accommodation for guests pursuing ultimate comfort experience.",
+      "Independent living space, feel the most genuine accommodation warmth and human touch in this transforming inn.",
     guests: " guests",
     perNight: "/night",
     bookNowAction: "Book Now",
@@ -453,38 +558,39 @@ const translations = reactive({
     roomsCategory: "Rooms",
     lobbyCategory: "Lobby",
     businessCategory: "Business",
-    hotelRoomEnvironmentTitle: "Another Night Premium Room Environment",
+    hotelRoomEnvironmentTitle:
+      "Another Night · Accommodation Space in Transformation",
     hotelRoomEnvironmentDesc:
-      "Premium rooms combining modern comfort with cozy atmosphere, providing every guest with a home-away-from-home accommodation experience, showing quality and care in every detail.",
+      "During renovation transition, we honestly prepare simple and warm accommodation spaces for you. It might not be perfect here, but every corner is filled with sincerity and warmth.",
     viewProject: "View Project",
 
     // Professional Services Section
-    professionalServicesTitle: "Professional Service Items",
+    professionalServicesTitle: "Our Services",
     viewAll: "View All",
-    roomServiceTitle: "Room Service",
+    roomServiceTitle: "Sincere Service",
     roomServiceDesc:
-      "Carefully designed comfortable rooms with 24-hour room service, ensuring every guest can enjoy a home-away-from-home accommodation experience.",
-    diningServiceTitle: "Dining Service",
+      "We treat every traveler with sincere heart, doing our best to provide warm service and care during this transformation process.",
+    diningServiceTitle: "Local Food Guide",
     diningServiceDesc:
-      "Exquisite breakfast and local cuisine, professional chef team carefully prepared, providing guests with unforgettable culinary feasts.",
-    conciergeServiceTitle: "Concierge Service",
+      "We go minimalist - no breakfast service, but we'll sincerely recommend Taitung's local food temples for you to taste the most authentic Taitung flavors.",
+    conciergeServiceTitle: "Comfortable Rooms",
     conciergeServiceDesc:
-      "Professional concierge team provides itinerary planning, transportation arrangements and local tours to make your journey more perfect.",
-    businessServiceTitle: "Business Service",
+      "Simple and clean accommodation space with all basic facilities. During renovation, it might not be perfect, but every corner is filled with sincerity.",
+    businessServiceTitle: "Basic Facilities",
     businessServiceDesc:
-      "Complete business facilities and meeting spaces, high-speed internet and business center to meet all business traveler needs.",
+      "Providing basic facilities and services needed for accommodation. During this transition period, we'll do our best to meet your basic needs.",
 
     // Statistics
-    satisfiedGuests: "Satisfied Guests",
-    serviceAwards: "Service Awards",
-    professionalRooms: "Professional Rooms",
-    yearsExperience: "Years of Service Experience",
+    satisfiedGuests: "Travelers Welcomed",
+    serviceAwards: "Days of Transformation",
+    professionalRooms: "Simple Rooms",
+    yearsExperience: "New Beginning",
 
     // Hero Slider
-    heroSliderTitle: "Another Night Premium Room Environment",
+    heroSliderTitle: "Another Night · An Inn in Transformation",
     heroSliderDesc:
-      "Premium rooms combining modern comfort with cozy atmosphere, providing every guest with a home-away-from-home accommodation experience, showing quality and care in every detail.",
-    heroSliderButton: "View Project",
+      "Between mountains and sea in Taitung, an imperfect yet sincere inn is transforming. Welcome to Another Night, become a witness to our transformation journey.",
+    heroSliderButton: "Learn More",
 
     // About Us Page
     aboutPageTitle: "About Another Night",
@@ -782,17 +888,124 @@ const translations = reactive({
     // Footer
     footerBrandName: "Another Night",
     footerDescription:
-      "Another Night is a professional boutique accommodation, dedicated to creating comfortable and elegant accommodation experiences for travelers. We combine warm service concepts with exquisite facilities to create unique accommodation spaces, making every stay a beautiful memory.",
+      "Between mountains and sea in Taitung, Another Night is an inn in transformation. We're not perfect, but we honestly prepare to welcome every traveler. Here is not luxurious yet warm; during our transformation, we share brief yet sincere encounters with you.",
+    footerAddress:
+      "No. 348, Sec. 1, Zhonghua Rd., Taitung City, Taitung County 95043, Taiwan",
     quickLinks: "Quick Links",
-    serviceItems: "Services",
-    roomServiceLink: "Room Service",
-    diningServiceLink: "Dining Service",
-    conciergeServiceLink: "Concierge Service",
-    businessServiceLink: "Business Service",
+    serviceItems: "Our Services",
+    roomServiceLink: "Sincere Service",
+    diningServiceLink: "Local Food Guide",
+    conciergeServiceLink: "Comfortable Rooms",
+    businessServiceLink: "Basic Facilities",
     copyright: "All Rights Reserved",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
     cookiePolicy: "Cookie Policy",
+
+    // Attractions Page
+    attractionsPageTitle: "Explore Taitung",
+    attractionsPageSubtitle:
+      "Discover Taitung's natural beauty and cultural charm, making every journey an unforgettable memory",
+    travelInfoTitle: "Travel Information",
+    travelInfoSubtitle:
+      "From urban exploration to mountain and coastal routes, every corner of Taitung has unique charm waiting for you to discover",
+    travelTipsTitle: "Travel Tips",
+
+    // Attraction Categories
+    allAttractions: "All Attractions",
+    downtownTour: "Taitung Urban Tour",
+    mountainTour: "Taitung Mountain Route",
+    coastTour: "Taitung Coastal Route",
+    southTour: "Taitung South-Link Route",
+
+    // Category Names (Short)
+    downtownCategory: "Urban",
+    mountainCategory: "Mountain",
+    coastCategory: "Coastal",
+    southCategory: "South-Link",
+    otherCategory: "Other",
+
+    // Attraction Names
+    taitungForestPark: "Taitung Forest Park",
+    taitungLandmark: "Taitung International Landmark",
+    duoliangStation: "Duoliang Railway Station",
+    guanshanRiceSchool: "Guanshan Rice Country School",
+    goldenNeedleMountain: "Golden Needle Mountain Recreation Area",
+    chishangBrownBoulevard: "Chishang Brown Boulevard",
+    sanxiantai: "Sanxiantai",
+    zhipenHotSprings: "Zhiben Hot Springs",
+
+    // Attraction Descriptions
+    taitungForestParkDesc:
+      "The spacious Taitung Forest Park is only a few minutes drive from Taitung City. Accessible via Mahenghen Avenue, it's a captivating park with minimal artificial landscaping, offering a refreshing and relaxing atmosphere wherever you look.",
+    taitungLandmarkDesc:
+      "The international landmark stands quietly by the coast. During the day, it welcomes the first ray of dawn, and at night, warm yellow lights illuminate it brilliantly, as if anticipating the world's attention.",
+    duoliangStationDesc:
+      "Known as 'Taiwan's most beautiful railway station,' visitors come to enjoy the panoramic Pacific Ocean views. Don't miss the nearby food area featuring local indigenous cuisine paired with unique railway ocean views.",
+    guanshanRiceSchoolDesc:
+      "Visit Rice Country School for tours and experiences that not only provide educational enrichment but also feature beautiful flower fields that add vibrant colors to your journey.",
+    goldenNeedleMountainDesc:
+      "Located in Taimali, Golden Needle Mountain is a renowned flower-viewing destination. Besides the golden needle flower season, visitors can enjoy magnificent mountain views throughout all four seasons.",
+    chishangBrownBoulevardDesc:
+      "A rural path in Chishang Township, Taitung County, known as the 'Emerald Heaven Road.' With no telephone poles on either side and a straight road, visitors can enjoy endless rice field scenery.",
+    sanxiantaiDesc:
+      "Sanxiantai consists of offshore islands and coral reef coasts, with unique rock formations scattered across the island. Three massive rocks are said to have been visited by the immortals Lu Dongbin, Li Tieguai, and He Xiangu.",
+    zhipenHotSpringsDesc:
+      "Zhiben Hot Springs is Taitung's most famous hot spring area, known for its excellent water quality and serene surroundings, making it an ideal place to relax and rejuvenate.",
+
+    // Distance Information
+    distance5min: "5-minute drive from hotel",
+    distance10min: "10-minute drive from hotel",
+    distance25min: "25-minute drive from hotel",
+    distance45min: "45-minute drive from hotel",
+    distance50min: "50-minute drive from hotel",
+    distance60min: "60-minute drive from hotel",
+    distance70min: "70-minute drive from hotel",
+    distance90min: "90-minute drive from hotel",
+
+    // Travel Tips
+    bestTimeTitle: "Best Visiting Time",
+    bestTimeDesc:
+      "Spring and autumn offer pleasant weather, summer features golden needle flower blooms, and winter provides warm sunshine",
+    transportTipsTitle: "Transportation Tips",
+    transportTipsDesc:
+      "Recommend self-driving or joining local tour groups, some attractions are accessible by public transportation",
+    localExperienceTitle: "Local Experience",
+    localExperienceDesc:
+      "Taste indigenous cuisine, experience tribal culture, and feel Taitung's unique cultural charm",
+
+    // 首頁周遭景點
+    surroundingAttractionsTitle: "Surrounding Attractions",
+    allAttractions: "All Attractions",
+    natureAttractions: "Nature Attractions",
+    cultureAttractions: "Cultural Attractions",
+    foodAttractions: "Food Attractions",
+    viewDetails: "View Details",
+
+    // 景點資訊
+    taitungForestPark: "Taitung Forest Park",
+    taitungForestParkDesc:
+      "Rich natural ecosystem, largest forest park in Taitung City, providing complete trail system and rest facilities.",
+    forestParkDistance: "5 minutes drive from hotel",
+    forestParkDuration: "30 minutes walk",
+
+    zhipenHotSprings: "Zhiben Hot Springs",
+    zhipenHotSpringsDesc:
+      "Taitung's famous hot spring destination, with high-quality carbonated sodium spring, serene surroundings, ideal for relaxation.",
+    hotSpringsDistance: "15 minutes drive from hotel",
+    hotSpringsDuration: "20 minutes drive",
+
+    taitungRailwayArt: "Taitung Railway Art Village",
+    taitungRailwayArtDesc:
+      "Art space transformed from old Taitung Train Station, combining historical architecture with modern art, showcasing Taitung's unique cultural charm.",
+    railwayArtDistance: "1.2 minutes walk from hotel",
+    railwayArtDuration: "15 minutes walk",
+
+    taitungNightMarket: "Taitung Night Market",
+    taitungNightMarketDesc:
+      "Hot night market gathering Taitung local cuisine, from indigenous cuisine to seafood snacks, allowing you to taste the most authentic Taitung flavors.",
+    nightMarketDistance: "800 meters walk from hotel",
+    nightMarketDuration: "10 minutes walk",
   },
 });
 

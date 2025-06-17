@@ -85,20 +85,25 @@ let slideInterval = null;
 
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
+    image: "/images/hero/hero-1.jpeg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=80",
+    image: "/images/hero/hero-2.jpeg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80",
+    image: "/images/hero/hero-3.jpeg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=80",
+    image: "/images/hero/hero-4.jpeg",
+  },
+  {
+    image: "/images/hero/hero-5.jpeg",
+  },
+  {
+    image: "/images/hero/hero-6.jpeg",
+  },
+  {
+    image: "/images/hero/hero-7.jpeg",
   },
 ];
 

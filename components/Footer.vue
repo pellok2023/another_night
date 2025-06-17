@@ -12,31 +12,69 @@
             <p class="text-stone-300 mb-6 leading-relaxed text-lg">
               {{ t("footerDescription") }}
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="w-12 h-12 bg-amber-600 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
-              >
-                <Icon name="heroicons:home" class="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                class="w-12 h-12 bg-amber-600 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
-              >
-                <Icon name="heroicons:envelope" class="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                class="w-12 h-12 bg-amber-600 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
-              >
-                <Icon name="heroicons:phone" class="w-6 h-6" />
-              </a>
-              <a
-                href="#"
-                class="w-12 h-12 bg-amber-600 hover:bg-amber-700 rounded-full flex items-center justify-center transition-colors"
-              >
-                <Icon name="heroicons:map-pin" class="w-6 h-6" />
-              </a>
+
+            <!-- Contact Information -->
+            <div class="space-y-4">
+              <!-- Address -->
+              <div class="flex items-start space-x-3">
+                <Icon
+                  name="heroicons:map-pin"
+                  class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"
+                />
+                <div>
+                  <p class="text-stone-300 text-sm">
+                    {{ t("footerAddress") }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:phone"
+                  class="w-5 h-5 text-amber-600 flex-shrink-0"
+                />
+                <div>
+                  <a
+                    href="tel:+886-89-123456"
+                    class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
+                  >
+                    +886-89-123456
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:envelope"
+                  class="w-5 h-5 text-amber-600 flex-shrink-0"
+                />
+                <div>
+                  <a
+                    href="mailto:info@another-night.com"
+                    class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
+                  >
+                    info@another-night.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Website -->
+              <div class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:globe-alt"
+                  class="w-5 h-5 text-amber-600 flex-shrink-0"
+                />
+                <div>
+                  <a
+                    href="https://another-night.com"
+                    class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
+                  >
+                    www.another-night.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -23,12 +23,12 @@
           <h1
             class="text-3xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-wide"
           >
-            趣遊台東
+            {{ t("attractionsPageTitle") }}
           </h1>
           <p
             class="text-white/95 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed"
           >
-            探索台東的自然美景與人文風情，讓每一趟旅程都成為難忘的回憶
+            {{ t("attractionsPageSubtitle") }}
           </p>
         </div>
       </div>
@@ -39,10 +39,10 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            旅遊資訊
+            {{ t("travelInfoTitle") }}
           </h2>
           <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            從市區漫遊到山海線探索，台東的每個角落都有著獨特的魅力等待您發現
+            {{ t("travelInfoSubtitle") }}
           </p>
         </div>
 
@@ -67,7 +67,7 @@
                 : 'bg-white text-stone-600 hover:bg-amber-50 hover:text-amber-600',
             ]"
           >
-            {{ category.name }}
+            {{ t(category.nameKey) }}
           </button>
         </div>
 
@@ -89,7 +89,7 @@
             <div class="h-48 overflow-hidden">
               <img
                 :src="attraction.image"
-                :alt="attraction.name"
+                :alt="t(attraction.nameKey)"
                 class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
               />
             </div>
@@ -108,14 +108,14 @@
                 </span>
               </div>
               <h3 class="text-xl font-bold text-stone-800 mb-3">
-                {{ attraction.name }}
+                {{ t(attraction.nameKey) }}
               </h3>
               <p class="text-stone-600 text-sm leading-relaxed mb-4">
-                {{ attraction.description }}
+                {{ t(attraction.descKey) }}
               </p>
               <div class="flex items-center text-amber-600">
                 <Icon name="heroicons:map-pin" class="!w-4 !h-4 mr-1" />
-                <span class="text-xs">{{ attraction.distance }}</span>
+                <span class="text-xs">{{ t(attraction.distanceKey) }}</span>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@
           ]"
         >
           <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-6">
-            旅遊小貼士
+            {{ t("travelTipsTitle") }}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
@@ -148,10 +148,10 @@
                 <Icon name="heroicons:sun" class="text-blue-600 !w-8 !h-8" />
               </div>
               <h3 class="text-xl font-bold text-stone-800 mb-3">
-                最佳遊覽時間
+                {{ t("bestTimeTitle") }}
               </h3>
               <p class="text-stone-600">
-                春秋兩季氣候宜人，夏季可欣賞金針花海，冬季則有溫暖的陽光陪伴
+                {{ t("bestTimeDesc") }}
               </p>
             </div>
 
@@ -163,9 +163,11 @@
               >
                 <Icon name="heroicons:map" class="text-green-600 !w-8 !h-8" />
               </div>
-              <h3 class="text-xl font-bold text-stone-800 mb-3">交通建議</h3>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">
+                {{ t("transportTipsTitle") }}
+              </h3>
               <p class="text-stone-600">
-                建議租車自駕或報名在地旅遊團，部分景點可搭乘大眾運輸工具前往
+                {{ t("transportTipsDesc") }}
               </p>
             </div>
 
@@ -177,9 +179,11 @@
               >
                 <Icon name="heroicons:heart" class="text-amber-600 !w-8 !h-8" />
               </div>
-              <h3 class="text-xl font-bold text-stone-800 mb-3">在地體驗</h3>
+              <h3 class="text-xl font-bold text-stone-800 mb-3">
+                {{ t("localExperienceTitle") }}
+              </h3>
               <p class="text-stone-600">
-                品嚐原住民特色料理，體驗部落文化，感受台東獨有的人文風情
+                {{ t("localExperienceDesc") }}
               </p>
             </div>
           </div>
@@ -214,94 +218,86 @@ const selectedCategory = ref("all");
 
 // 景點類別
 const categories = [
-  { id: "all", name: "所有景點" },
-  { id: "downtown", name: "台東漫遊．市區" },
-  { id: "mountain", name: "台東漫遊．山線" },
-  { id: "coast", name: "台東漫遊．海線" },
-  { id: "south", name: "台東漫遊．南迴線" },
+  { id: "all", nameKey: "allAttractions" },
+  { id: "downtown", nameKey: "downtownTour" },
+  { id: "mountain", nameKey: "mountainTour" },
+  { id: "coast", nameKey: "coastTour" },
+  { id: "south", nameKey: "southTour" },
 ];
 
 // 景點資料
 const attractions = [
   {
     id: 1,
-    name: "臺東森林公園",
+    nameKey: "taitungForestPark",
     category: "downtown",
     image:
       "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "開闊的臺東森林公園距離臺東市僅幾分鐘車程，沿著馬亨亨大道即可到達，是一處令人流連忘返的公園，沒有過多的人工造景，觸目所及盡是讓人心情舒暢的自在氛圍。",
-    distance: "距離酒店 5分鐘車程",
+    descKey: "taitungForestParkDesc",
+    distanceKey: "distance5min",
   },
   {
     id: 2,
-    name: "臺東國際地標",
+    nameKey: "taitungLandmark",
     category: "downtown",
     image:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "國際地標靜靜佇立海岸，白天，它迎接清晨的第一道曙光，夜晚，暈黃燈光照耀，輝煌燦爛，彷彿期盼著世界的眼光。",
-    distance: "距離酒店 10分鐘車程",
+    descKey: "taitungLandmarkDesc",
+    distanceKey: "distance10min",
   },
   {
     id: 3,
-    name: "多良火車站",
+    nameKey: "duoliangStation",
     category: "south",
     image:
       "https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "被譽為「全臺灣最美車站」，除了來欣賞一覽無遺的太平洋海景，也千萬別錯過附近的美食區，當地部落特色美食，搭配獨特的鐵道海景視野。",
-    distance: "距離酒店 45分鐘車程",
+    descKey: "duoliangStationDesc",
+    distanceKey: "distance45min",
   },
   {
     id: 4,
-    name: "關山米國學校",
+    nameKey: "guanshanRiceSchool",
     category: "mountain",
     image:
       "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "來米國學校參觀和體驗，不只為知識充電，美麗的花海更為您的旅程增添一抹鮮艷。",
-    distance: "距離酒店 60分鐘車程",
+    descKey: "guanshanRiceSchoolDesc",
+    distanceKey: "distance60min",
   },
   {
     id: 5,
-    name: "金針山休閒農業區",
+    nameKey: "goldenNeedleMountain",
     category: "south",
     image:
       "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "位於太麻里的金針山是座名聞遐邇的賞花名勝，除了金針花季之外，四季造訪皆能觀賞到滿山遍野的美景。",
-    distance: "距離酒店 50分鐘車程",
+    descKey: "goldenNeedleMountainDesc",
+    distanceKey: "distance50min",
   },
   {
     id: 6,
-    name: "池上伯朗大道",
+    nameKey: "chishangBrownBoulevard",
     category: "mountain",
     image:
       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "臺東縣池上鄉的一條田園小路，被譽為是一條「翠綠的天堂路」。兩旁無電線桿，加上筆直的道路，在此可觀賞一望無際的稻田風光。",
-    distance: "距離酒店 90分鐘車程",
+    descKey: "chishangBrownBoulevardDesc",
+    distanceKey: "distance90min",
   },
   {
     id: 7,
-    name: "三仙台",
+    nameKey: "sanxiantai",
     category: "coast",
     image:
       "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "三仙台是由離岸小島和珊瑚礁海岸構成，島上奇石分布，其中有三塊巨大的岩石，傳說呂洞賓、李鐵拐、何仙姑曾登臨此島。",
-    distance: "距離酒店 70分鐘車程",
+    descKey: "sanxiantaiDesc",
+    distanceKey: "distance70min",
   },
   {
     id: 8,
-    name: "知本溫泉",
+    nameKey: "zhipenHotSprings",
     category: "south",
     image:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    description:
-      "知本溫泉是台東最知名的溫泉區，泉質優良，周圍環境清幽，是放鬆身心的絕佳去處。",
-    distance: "距離酒店 25分鐘車程",
+    descKey: "zhipenHotSpringsDesc",
+    distanceKey: "distance25min",
   },
 ];
 
@@ -317,13 +313,13 @@ const filteredAttractions = computed(() => {
 
 // 獲取類別名稱
 const getCategoryName = (category) => {
-  const categoryMap = {
-    downtown: "市區",
-    mountain: "山線",
-    coast: "海線",
-    south: "南迴線",
+  const categoryKeyMap = {
+    downtown: "downtownCategory",
+    mountain: "mountainCategory",
+    coast: "coastCategory",
+    south: "southCategory",
   };
-  return categoryMap[category] || "其他";
+  return t(categoryKeyMap[category] || "otherCategory");
 };
 
 // 獲取類別顏色
