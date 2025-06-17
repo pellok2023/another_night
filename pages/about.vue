@@ -360,7 +360,7 @@ onMounted(() => {
 });
 
 useHead({
-  title: "關於我們 - 又一宿精品旅宿",
+  title: "又一宿 - 正在蛻變的旅宿",
   meta: [
     {
       name: "description",
