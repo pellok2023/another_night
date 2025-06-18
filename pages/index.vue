@@ -669,6 +669,7 @@
                 </div>
               </div>
               <button
+                @click="goToServicesPage"
                 class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
               >
                 {{ t("viewDetails") }}
@@ -688,6 +689,7 @@
             {{ t("professionalServicesTitle") }}
           </h2>
           <button
+            @click="goToAboutPage"
             class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer"
           >
             <!-- 查看全部 -->
@@ -957,6 +959,14 @@ const currentAttraction = computed(() => {
 
 const setAttractionCategory = (category) => {
   selectedAttractionCategory.value = category;
+};
+
+const goToServicesPage = () => {
+  navigateTo("/services");
+};
+
+const goToAboutPage = () => {
+  navigateTo("/about");
 };
 
 const targetStats = {

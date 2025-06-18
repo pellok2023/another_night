@@ -393,7 +393,7 @@ const translations = reactive({
     travelTipsTitle: "旅遊小提示",
 
     // 景點分類
-    allAttractions: "所有景點",
+    allAttractions: "全部景點",
     downtownTour: "台東漫遊．市區",
     mountainTour: "台東漫遊．山線",
     coastTour: "台東漫遊．海線",
@@ -457,7 +457,7 @@ const translations = reactive({
 
     // 首頁周遭景點
     surroundingAttractionsTitle: "周遭景點",
-    allAttractions: "全部景點",
+    allAttractions: "公園景點",
     natureAttractions: "自然景觀",
     cultureAttractions: "文化古蹟",
     foodAttractions: "美食小吃",
