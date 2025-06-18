@@ -4,7 +4,7 @@
     <HeroSlider />
 
     <!-- About Section - 加入主题色 -->
-    <section class="pt-12 pb-16 px-6 lg:px-12">
+    <section id="about-section" class="pt-12 pb-16 px-6 lg:px-12">
       <div class="max-w-5xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-12 items-start">
           <!-- Left Content -->

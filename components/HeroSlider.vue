@@ -49,6 +49,7 @@
             {{ t("heroSliderDesc") }}
           </p>
           <button
+            @click="scrollToAbout"
             class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-xs font-medium transition-colors cursor-pointer"
           >
             {{ t("heroSliderButton") }}
@@ -130,6 +131,16 @@ const stopAutoSlide = () => {
   if (slideInterval) {
     clearInterval(slideInterval);
     slideInterval = null;
+  }
+};
+
+const scrollToAbout = () => {
+  const aboutSection = document.getElementById("about-section");
+  if (aboutSection) {
+    aboutSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }
 };
 

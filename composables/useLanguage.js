@@ -390,7 +390,7 @@ const translations = reactive({
     travelInfoTitle: "旅遊資訊",
     travelInfoSubtitle:
       "從市區漫遊到山海線探索，台東的每個角落都有著獨特的魅力等待您發現",
-    travelTipsTitle: "旅遊小貼士",
+    travelTipsTitle: "旅遊小提示",
 
     // 景點分類
     allAttractions: "所有景點",
