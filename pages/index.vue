@@ -924,15 +924,14 @@ const attractions = {
     titleKey: "zhipenHotSprings",
     descKey: "zhipenHotSpringsDesc",
     image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1488345979593-09db0f85545f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     distanceKey: "hotSpringsDistance",
     durationKey: "hotSpringsDuration",
   },
   culture: {
     titleKey: "taitungRailwayArt",
     descKey: "taitungRailwayArtDesc",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80",
+    image: "/images/hero/hero-2.jpeg",
     distanceKey: "railwayArtDistance",
     durationKey: "railwayArtDuration",
   },
