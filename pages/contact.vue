@@ -143,21 +143,49 @@
 
         <!-- Google Map Section -->
         <div class="mb-16">
-          <div class="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 class="text-lg font-bold text-stone-800 mb-4">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-stone-800 mb-2">
               {{ t("locationMapTitle") }}
             </h3>
-            <div class="h-64 bg-stone-100 rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.1187823!2d121.14539!3d22.755087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f31fd32e36527%3A0x8e5b6b4e8e1f1e90!2z5Y-w5p2x5pyo!5e0!3m2!1szh-TW!2stw!4v1623456789012!5m2!1szh-TW!2stw"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="rounded-2xl"
-              ></iframe>
+            <div class="flex items-center justify-center space-x-2">
+              <Icon name="heroicons:map-pin" class="w-5 h-5 text-amber-600" />
+              <p class="text-stone-600 text-lg">
+                便利的交通位置，讓您輕鬆抵達又一宿
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative border-5 shadow-lg border-white rounded-3xl overflow-hidden h-96 w-full"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.300669390193!2d121.14352527484874!3d22.75422047936284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb915c787b6a9%3A0xe7ab767e383c8d5d!2zOTUw5Y-w5p2x57ij5Y-w5p2x5biC5paw55Sf6LevMTU16Jmf!5e0!3m2!1szh-TW!2stw!4v1750124702574!5m2!1szh-TW!2stw"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            ></iframe>
+            <!-- Map Overlay Info -->
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-2xl shadow-lg max-w-xs"
+            >
+              <div class="flex items-center space-x-3">
+                <Icon
+                  name="heroicons:map-pin"
+                  class="w-5 h-5 text-amber-600 flex-shrink-0"
+                />
+                <div class="min-w-0">
+                  <p class="text-stone-800 font-medium text-sm truncate">
+                    又一宿
+                  </p>
+                  <p class="text-stone-500 text-xs truncate">
+                    台東市新生路155號
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -199,7 +199,7 @@
           <!-- Standard Room -->
           <div
             :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
+              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
               roomCardsAnimated.card1
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-8 opacity-0',
@@ -218,15 +218,19 @@
                 {{ t("popularRecommendation") }}
               </div>
             </div>
-            <div class="p-6">
+            <!-- 內容區域 - 會自動填充空間 -->
+            <div class="flex-1 p-6">
               <!-- 標準客房 -->
               <h3 class="text-xl font-bold text-stone-800 mb-2">
                 {{ t("standardRoom") }}
               </h3>
               <!-- 舒適寬敞的客房空間，配備現代化設施與精緻寢具，為您提供優質的住宿環境。 -->
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
+              <p class="text-stone-600 text-sm leading-relaxed">
                 {{ t("standardRoomDesc") }}
               </p>
+            </div>
+            <!-- 底部固定資訊區域 -->
+            <div class="p-6 pt-0">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center space-x-2">
                   <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
@@ -266,7 +270,7 @@
           <!-- Deluxe Room -->
           <div
             :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
+              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
               roomCardsAnimated.card2
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-8 opacity-0',
@@ -285,15 +289,19 @@
                 {{ t("upgradeRecommendation") }}
               </div>
             </div>
-            <div class="p-6">
+            <!-- 內容區域 - 會自動填充空間 -->
+            <div class="flex-1 p-6">
               <!-- 豪華客房 -->
               <h3 class="text-xl font-bold text-stone-800 mb-2">
                 {{ t("deluxeRoom") }}
               </h3>
               <!-- 更寬敞的空間設計，增設休憩區域與工作空間，適合商務旅客與重視品質的住客。 -->
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
+              <p class="text-stone-600 text-sm leading-relaxed">
                 {{ t("deluxeRoomDesc") }}
               </p>
+            </div>
+            <!-- 底部固定資訊區域 -->
+            <div class="p-6 pt-0">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center space-x-2">
                   <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
@@ -333,7 +341,7 @@
           <!-- Suite Room -->
           <div
             :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out',
+              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
               roomCardsAnimated.card3
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-8 opacity-0',
@@ -352,15 +360,19 @@
                 {{ t("topEnjoyment") }}
               </div>
             </div>
-            <div class="p-6">
+            <!-- 內容區域 - 會自動填充空間 -->
+            <div class="flex-1 p-6">
               <!-- 精緻套房 -->
               <h3 class="text-xl font-bold text-stone-800 mb-2">
                 {{ t("refinedSuite") }}
               </h3>
               <!-- 獨立客廳與臥室空間，頂級裝潢與設備，為追求極致舒適體驗的賓客提供完美住宿。 -->
-              <p class="text-stone-600 text-sm mb-4 leading-relaxed">
+              <p class="text-stone-600 text-sm leading-relaxed">
                 {{ t("refinedSuiteDesc") }}
               </p>
+            </div>
+            <!-- 底部固定資訊區域 -->
+            <div class="p-6 pt-0">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center space-x-2">
                   <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
