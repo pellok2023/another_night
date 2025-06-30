@@ -5,7 +5,14 @@
   >
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <!-- Logo -->
-      <div class="text-3xl font-bold text-stone-800">又一宿</div>
+      <div class="flex items-center space-x-3">
+        <img
+          src="/images/logo/又一宿LOGO.png"
+          alt="又一宿 Logo"
+          class="h-10 w-auto"
+        />
+        <div class="text-3xl font-bold text-stone-800">又一宿</div>
+      </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center space-x-8">
@@ -72,11 +79,14 @@
             {{ currentLanguage === "zh" ? "En" : "Ch" }}
           </span>
         </button>
-        <button
-          class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 rounded-full text-base font-medium transition duration-300 cursor-pointer"
+        <a
+          :href="bookingUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 rounded-full text-base font-medium transition duration-300 cursor-pointer inline-block"
         >
           {{ t("bookNow") }}
-        </button>
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -181,12 +191,15 @@
           </span>
         </button>
 
-        <button
+        <a
+          :href="bookingUrl"
+          target="_blank"
+          rel="noopener noreferrer"
           @click="mobileMenuOpen = false"
-          class="w-full bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full text-base font-medium transition duration-300 mt-4 cursor-pointer"
+          class="w-full bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full text-base font-medium transition duration-300 mt-4 cursor-pointer inline-block text-center"
         >
           {{ t("bookNow") }}
-        </button>
+        </a>
       </div>
     </div>
   </nav>
@@ -196,6 +209,6 @@
 import { ref } from "vue";
 import { useLanguage } from "~/composables/useLanguage";
 
-const { t, currentLanguage, toggleLanguage } = useLanguage();
+const { t, currentLanguage, toggleLanguage, bookingUrl } = useLanguage();
 const mobileMenuOpen = ref(false);
 </script>

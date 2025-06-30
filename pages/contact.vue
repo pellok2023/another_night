@@ -61,12 +61,14 @@
                 />
               </div>
               <div>
-                <h3 class="text-lg font-bold text-stone-800 mb-2">地址</h3>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">
+                  {{ t("addressTitle") }}
+                </h3>
                 <p class="text-stone-600 leading-relaxed">
-                  台東縣台東市中華路一段1號
+                  {{ t("addressText") }}
                 </p>
                 <p class="text-amber-600 text-sm mt-2 font-medium">
-                  近台東火車站，步行5分鐘
+                  {{ t("addressNote") }}
                 </p>
               </div>
             </div>
@@ -83,10 +85,14 @@
                 <Icon name="heroicons:phone" class="text-green-600 !w-6 !h-6" />
               </div>
               <div>
-                <h3 class="text-lg font-bold text-stone-800 mb-2">電話</h3>
-                <p class="text-stone-600 text-lg font-semibold">089-123-456</p>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">
+                  {{ t("phoneTitle") }}
+                </h3>
+                <p class="text-stone-600 text-lg font-semibold">
+                  {{ t("phoneNumber") }}
+                </p>
                 <p class="text-green-600 text-sm mt-2 font-medium">
-                  24小時服務專線
+                  {{ t("phoneNote") }}
                 </p>
               </div>
             </div>
@@ -106,12 +112,14 @@
                 />
               </div>
               <div>
-                <h3 class="text-lg font-bold text-stone-800 mb-2">電子郵件</h3>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">
+                  {{ t("emailTitle") }}
+                </h3>
                 <p class="text-stone-600 text-lg font-semibold">
-                  info@anothernight.com
+                  {{ t("emailAddress") }}
                 </p>
                 <p class="text-blue-600 text-sm mt-2 font-medium">
-                  一般詢問與預訂
+                  {{ t("emailNote") }}
                 </p>
               </div>
             </div>
@@ -131,10 +139,12 @@
                 />
               </div>
               <div>
-                <h3 class="text-lg font-bold text-stone-800 mb-2">服務時間</h3>
-                <p class="text-stone-600">Check-in: 15:00 | Check-out: 11:00</p>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">
+                  {{ t("serviceHoursTitle") }}
+                </h3>
+                <p class="text-stone-600">{{ t("checkInOut") }}</p>
                 <p class="text-purple-600 text-sm mt-2 font-medium">
-                  前台24小時服務
+                  {{ t("frontDesk24h") }}
                 </p>
               </div>
             </div>
@@ -150,7 +160,7 @@
             <div class="flex items-center justify-center space-x-2">
               <Icon name="heroicons:map-pin" class="w-5 h-5 text-amber-600" />
               <p class="text-stone-600 text-lg">
-                便利的交通位置，讓您輕鬆抵達又一宿
+                {{ t("convenientLocationText") }}
               </p>
             </div>
           </div>
@@ -159,7 +169,7 @@
             class="relative border-5 shadow-lg border-white rounded-3xl overflow-hidden h-96 w-full"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.300669390193!2d121.14352527484874!3d22.75422047936284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb915c787b6a9%3A0xe7ab767e383c8d5d!2zOTUw5Y-w5p2x57ij5Y-w5p2x5biC5paw55Sf6LevMTU16Jmf!5e0!3m2!1szh-TW!2stw!4v1750124702574!5m2!1szh-TW!2stw"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1839.6417792958164!2d121.14851553849275!3d22.754855768290753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb926b18b54e7%3A0x61292bf1a51cbb4b!2z5Y-I5LiA5a6_!5e0!3m2!1szh-TW!2stw!4v1750907147460!5m2!1szh-TW!2stw"
               width="100%"
               height="100%"
               style="border: 0"
@@ -169,24 +179,6 @@
               class="w-full h-full"
             ></iframe>
             <!-- Map Overlay Info -->
-            <div
-              class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-2xl shadow-lg max-w-xs"
-            >
-              <div class="flex items-center space-x-3">
-                <Icon
-                  name="heroicons:map-pin"
-                  class="w-5 h-5 text-amber-600 flex-shrink-0"
-                />
-                <div class="min-w-0">
-                  <p class="text-stone-800 font-medium text-sm truncate">
-                    又一宿
-                  </p>
-                  <p class="text-stone-500 text-xs truncate">
-                    台東市新生路155號
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -221,10 +213,12 @@
                   />
                 </div>
                 <div>
-                  <h3 class="text-lg font-bold text-stone-800 mb-2">火車站</h3>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">
+                    {{ t("trainStation") }}
+                  </h3>
                   <div class="space-y-2 text-stone-600">
-                    <p>台東火車站 - 步行約5分鐘</p>
-                    <p>台東新站 - 計程車約10分鐘</p>
+                    <p>{{ t("trainDesc1") }}</p>
+                    <p>{{ t("trainDesc2") }}</p>
                   </div>
                 </div>
               </div>
@@ -245,11 +239,11 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-stone-800 mb-2">
-                    機場交通
+                    {{ t("airportTransport") }}
                   </h3>
                   <div class="space-y-2 text-stone-600">
-                    <p>台東豐年機場 - 計程車約20分鐘</p>
-                    <p>機場接駁服務 - 提前預約</p>
+                    <p>{{ t("airportDesc1") }}</p>
+                    <p>{{ t("airportDesc2") }}</p>
                   </div>
                 </div>
               </div>
@@ -269,10 +263,12 @@
                   />
                 </div>
                 <div>
-                  <h3 class="text-lg font-bold text-stone-800 mb-2">公車</h3>
+                  <h3 class="text-lg font-bold text-stone-800 mb-2">
+                    {{ t("busTransport") }}
+                  </h3>
                   <div class="space-y-2 text-stone-600">
-                    <p>台東轉運站：8101、8102、8109、8110</p>
-                    <p>中華路站：市區公車、觀光巴士</p>
+                    <p>{{ t("busDesc1") }}</p>
+                    <p>{{ t("busDesc2") }}</p>
                   </div>
                 </div>
               </div>
@@ -293,11 +289,11 @@
                 </div>
                 <div>
                   <h3 class="text-lg font-bold text-stone-800 mb-2">
-                    停車資訊
+                    {{ t("parkingInfo") }}
                   </h3>
                   <div class="space-y-2 text-stone-600">
-                    <p>館內提供24小時停車場 - 每日NT$300</p>
-                    <p>周邊收費停車格 - 每小時NT$30</p>
+                    <p>{{ t("parkingDesc1") }}</p>
+                    <p>{{ t("parkingDesc2") }}</p>
                   </div>
                 </div>
               </div>

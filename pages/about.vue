@@ -21,12 +21,12 @@
           <h1
             class="text-3xl md:text-5xl lg:text-5xl font-bold text-white leading-tight mb-6 tracking-wide"
           >
-            不完美，但真誠
+            {{ t("aboutHeroTitle") }}
           </h1>
           <p
             class="text-white/95 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed"
           >
-            在又一宿，我們相信真實的體驗勝過完美的表象
+            {{ t("aboutHeroSubtitle") }}
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@
             <div class="relative">
               <img
                 src="/images/hero/hero-5.jpeg"
-                alt="又一宿飯店外觀"
+                :alt="t('hotelExteriorAlt')"
                 :class="[
                   'w-full h-72 object-cover rounded-2xl transition-all duration-1000 ease-out',
                   imageAnimated.mainImage
@@ -59,17 +59,17 @@
               <h2
                 class="text-3xl lg:text-4xl font-bold text-stone-800 leading-tight mb-6"
               >
-                我們的故事<br />
-                從不完美開始
+                {{ t("aboutStoryTitle") }}<br />
+                {{ t("aboutStorySubtitle") }}
               </h2>
             </div>
 
             <div>
               <p class="text-stone-600 text-base leading-relaxed mb-6">
-                又一宿不是一家完美的旅館，但我們真誠地對待每一位客人。我們相信，真實的體驗來自於人與人之間的連結，而不是完美的設施或服務。
+                {{ t("aboutStoryDesc1") }}
               </p>
               <p class="text-stone-600 text-base leading-relaxed mb-6">
-                在這裡，我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。我們相信，正是這些不完美，讓又一宿變得獨特而真實。
+                {{ t("aboutStoryDesc2") }}
               </p>
             </div>
 
@@ -108,10 +108,10 @@
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            我們的價值觀
+            {{ t("aboutValuesTitle") }}
           </h2>
           <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            在又一宿，我們相信真實的體驗勝過完美的表象
+            {{ t("aboutValuesSubtitle") }}
           </p>
         </div>
 
@@ -136,9 +136,11 @@
                 class="text-blue-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">真誠</h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">
+              {{ t("sincerityTitle") }}
+            </h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              我們相信，真誠的服務勝過完美的表象。我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。
+              {{ t("sincerityDesc") }}
             </p>
           </div>
 
@@ -159,9 +161,11 @@
                 class="text-green-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">自在</h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">
+              {{ t("comfortTitle") }}
+            </h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              我們希望每一位客人都能在又一宿找到屬於自己的自在。我們不追求完美的服務，而是專注於創造一個讓客人感到放鬆、舒適的環境。
+              {{ t("comfortDesc") }}
             </p>
           </div>
 
@@ -182,9 +186,11 @@
                 class="text-purple-600 !w-6 !h-6"
               />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">連結</h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">
+              {{ t("connectionTitle") }}
+            </h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              我們相信，真實的體驗來自於人與人之間的連結。我們不追求完美的設施，而是專注於創造一個讓客人與我們、與其他客人產生連結的空間。
+              {{ t("connectionDesc") }}
             </p>
           </div>
 
@@ -202,9 +208,11 @@
             >
               <Icon name="heroicons:heart" class="text-amber-600 !w-6 !h-6" />
             </div>
-            <h3 class="text-lg font-bold text-stone-800 mb-3">成長</h3>
+            <h3 class="text-lg font-bold text-stone-800 mb-3">
+              {{ t("growthTitle") }}
+            </h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              我們相信，每一次的不完美都是一次成長的機會。我們不追求完美的結果，而是專注於在每一次的服務中學習、改進，為客人創造更好的體驗。
+              {{ t("growthDesc") }}
             </p>
           </div>
         </div>
@@ -250,11 +258,14 @@
             >
               {{ t("contactUs") }}
             </button>
-            <button
-              class="bg-transparent border-3 border-white text-white hover:bg-white hover:text-stone-800 px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105"
+            <a
+              :href="bookingUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-transparent border-3 border-white text-white hover:bg-white hover:text-stone-800 px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105 inline-block"
             >
               {{ t("bookNowAction") }}
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -268,7 +279,7 @@
 <script setup>
 import { nextTick } from "vue";
 
-const { t } = useLanguage();
+const { t, bookingUrl } = useLanguage();
 
 // 動畫狀態
 const heroSection = ref(null);
@@ -360,12 +371,11 @@ onMounted(() => {
 });
 
 useHead({
-  title: "又一宿 - 正在蛻變的旅宿",
+  title: t("aboutPageMetaTitle"),
   meta: [
     {
       name: "description",
-      content:
-        "了解又一宿的品牌故事、企業使命、核心價值與領導團隊，致力於為每位住客創造舒適溫馨的住宿體驗",
+      content: t("aboutPageMetaDesc"),
     },
   ],
 });

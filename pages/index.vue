@@ -192,221 +192,384 @@
           </p>
         </div>
 
-        <div
-          ref="roomCardsSection"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <!-- Standard Room -->
-          <div
+        <!-- Room Cards Carousel Container -->
+        <div class="relative">
+          <!-- Left Arrow Button -->
+          <button
+            @click="slideRoom('prev')"
             :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
-              roomCardsAnimated.card1
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
+              'absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group',
+              'hover:bg-amber-50 border border-amber-100',
+              currentRoomSlide === 0
+                ? 'opacity-50 cursor-not-allowed'
+                : 'hover:scale-105',
             ]"
+            :disabled="currentRoomSlide === 0"
           >
-            <div class="relative h-48 overflow-hidden">
-              <img
-                src="/images/hero/hero-2.jpeg"
-                alt="標準客房"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                <!-- 熱門推薦 -->
-                {{ t("popularRecommendation") }}
-              </div>
-            </div>
-            <!-- 內容區域 - 會自動填充空間 -->
-            <div class="flex-1 p-6">
-              <!-- 標準客房 -->
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("standardRoom") }}
-              </h3>
-              <!-- 舒適寬敞的客房空間，配備現代化設施與精緻寢具，為您提供優質的住宿環境。 -->
-              <p class="text-stone-600 text-sm leading-relaxed">
-                {{ t("standardRoomDesc") }}
-              </p>
-            </div>
-            <!-- 底部固定資訊區域 -->
-            <div class="p-6 pt-0">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center space-x-2">
-                  <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
-                  <!-- 人 -->
-                  <span class="text-stone-600 text-sm"
-                    >2-3{{ t("guests") }}</span
-                  >
-                </div>
-                <div class="flex items-center space-x-2">
-                  <Icon
-                    name="heroicons:squares-2x2"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-sm">25㎡</span>
-                </div>
-              </div>
-              <div class="flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-stone-800"
-                    >NT$2,800</span
-                  >
-                  <!-- /晚 -->
-                  <span class="text-stone-500 text-sm">{{
-                    t("perNight")
-                  }}</span>
-                </div>
-                <button
-                  class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+            <Icon
+              name="heroicons:chevron-left"
+              class="w-6 h-6 text-amber-600 group-hover:text-amber-700 transition-colors"
+            />
+          </button>
+
+          <!-- Right Arrow Button -->
+          <button
+            @click="slideRoom('next')"
+            :class="[
+              'absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group',
+              'hover:bg-amber-50 border border-amber-100',
+              currentRoomSlide >= maxRoomSlide.value
+                ? 'opacity-50 cursor-not-allowed'
+                : 'hover:scale-105',
+            ]"
+            :disabled="currentRoomSlide >= maxRoomSlide.value"
+          >
+            <Icon
+              name="heroicons:chevron-right"
+              class="w-6 h-6 text-amber-600 group-hover:text-amber-700 transition-colors"
+            />
+          </button>
+
+          <!-- Carousel Track -->
+          <div class="overflow-hidden">
+            <div
+              ref="roomCardsSection"
+              :style="{
+                transform: `translateX(-${currentRoomSlide * slideWidth}%)`,
+              }"
+              class="flex transition-transform duration-500 ease-in-out pb-8"
+            >
+              <!-- Standard Room -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 pb-4">
+                <div
+                  :class="[
+                    'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
+                    roomCardsAnimated.card1
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-8 opacity-0',
+                  ]"
                 >
-                  <!-- 立即預訂 -->
-                  {{ t("bookNowAction") }}
-                </button>
+                  <div class="relative h-48 overflow-hidden">
+                    <img
+                      src="/images/rooms/LINE_ALBUM_ㄧ大床_250626_1.jpg"
+                      alt="標準客房"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      <!-- 熱門推薦 -->
+                      {{ t("popularRecommendation") }}
+                    </div>
+                  </div>
+                  <!-- 內容區域 - 會自動填充空間 -->
+                  <div class="flex-1 p-6">
+                    <!-- 標準客房 -->
+                    <h3 class="text-xl font-bold text-stone-800 mb-2">
+                      {{ t("standardRoom") }}
+                    </h3>
+                    <!-- 舒適寬敞的客房空間，配備現代化設施與精緻寢具，為您提供優質的住宿環境。 -->
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                      {{ t("standardRoomDesc") }}
+                    </p>
+                  </div>
+                  <!-- 底部固定資訊區域 -->
+                  <div class="p-6 pt-0">
+                    <div class="flex items-center justify-between mb-4">
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:users"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <!-- 人 -->
+                        <span class="text-stone-600 text-sm"
+                          >2{{ t("guests") }}</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:squares-2x2"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <span class="text-stone-600 text-sm">cozy space</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <span class="text-2xl font-bold text-stone-800"
+                          >NT$2,800</span
+                        >
+                        <!-- /晚 -->
+                        <span class="text-stone-500 text-sm">{{
+                          t("perNight")
+                        }}</span>
+                      </div>
+                      <a
+                        :href="bookingUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors inline-block"
+                      >
+                        <!-- 立即預訂 -->
+                        {{ t("bookNowAction") }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Deluxe Room -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 pb-4">
+                <div
+                  :class="[
+                    'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
+                    roomCardsAnimated.card2
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-8 opacity-0',
+                  ]"
+                >
+                  <div class="relative h-48 overflow-hidden">
+                    <img
+                      src="/images/rooms/LINE_ALBUM_二小床_250626_1.jpg"
+                      alt="豪華客房"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-stone-800 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      <!-- 升級推薦 -->
+                      {{ t("upgradeRecommendation") }}
+                    </div>
+                  </div>
+                  <!-- 內容區域 - 會自動填充空間 -->
+                  <div class="flex-1 p-6">
+                    <!-- 豪華客房 -->
+                    <h3 class="text-xl font-bold text-stone-800 mb-2">
+                      {{ t("deluxeRoom") }}
+                    </h3>
+                    <!-- 更寬敞的空間設計，增設休憩區域與工作空間，適合商務旅客與重視品質的住客。 -->
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                      {{ t("deluxeRoomDesc") }}
+                    </p>
+                  </div>
+                  <!-- 底部固定資訊區域 -->
+                  <div class="p-6 pt-0">
+                    <div class="flex items-center justify-between mb-4">
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:users"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <!-- 人 -->
+                        <span class="text-stone-600 text-sm"
+                          >2{{ t("guests") }}</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:squares-2x2"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <span class="text-stone-600 text-sm">cozy space</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <span class="text-2xl font-bold text-stone-800"
+                          >NT$3,800</span
+                        >
+                        <!-- /晚 -->
+                        <span class="text-stone-500 text-sm">{{
+                          t("perNight")
+                        }}</span>
+                      </div>
+                      <a
+                        :href="bookingUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors inline-block"
+                      >
+                        <!-- 立即預訂 -->
+                        {{ t("bookNowAction") }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Suite Room -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 pb-4">
+                <div
+                  :class="[
+                    'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
+                    roomCardsAnimated.card3
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-8 opacity-0',
+                  ]"
+                >
+                  <div class="relative h-48 overflow-hidden">
+                    <img
+                      src="/images/rooms/LINE_ALBUM_二大床_250626_1.jpg"
+                      alt="套房"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      <!-- 頂級享受 -->
+                      {{ t("topEnjoyment") }}
+                    </div>
+                  </div>
+                  <!-- 內容區域 - 會自動填充空間 -->
+                  <div class="flex-1 p-6">
+                    <!-- 精緻套房 -->
+                    <h3 class="text-xl font-bold text-stone-800 mb-2">
+                      {{ t("refinedSuite") }}
+                    </h3>
+                    <!-- 獨立客廳與臥室空間，頂級裝潢與設備，為追求極致舒適體驗的賓客提供完美住宿。 -->
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                      {{ t("refinedSuiteDesc") }}
+                    </p>
+                  </div>
+                  <!-- 底部固定資訊區域 -->
+                  <div class="p-6 pt-0">
+                    <div class="flex items-center justify-between mb-4">
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:users"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <!-- 人 -->
+                        <span class="text-stone-600 text-sm"
+                          >4{{ t("guests") }}</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:squares-2x2"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <span class="text-stone-600 text-sm">cozy space</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <span class="text-2xl font-bold text-stone-800"
+                          >NT$5,800</span
+                        >
+                        <!-- /晚 -->
+                        <span class="text-stone-500 text-sm">{{
+                          t("perNight")
+                        }}</span>
+                      </div>
+                      <a
+                        :href="bookingUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors inline-block"
+                      >
+                        <!-- 立即預訂 -->
+                        {{ t("bookNowAction") }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Family Room - 第四張卡片 -->
+              <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 pb-4">
+                <div
+                  :class="[
+                    'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
+                    roomCardsAnimated.card4
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-8 opacity-0',
+                  ]"
+                >
+                  <div class="relative h-48 overflow-hidden">
+                    <img
+                      src="/images/rooms/LINE_ALBUM_一大兩小_250626_1.jpg"
+                      alt="家庭房"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div
+                      class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      <!-- 家庭首選 -->
+                      {{ t("familyChoice") }}
+                    </div>
+                  </div>
+                  <!-- 內容區域 - 會自動填充空間 -->
+                  <div class="flex-1 p-6">
+                    <!-- 家庭客房 -->
+                    <h3 class="text-xl font-bold text-stone-800 mb-2">
+                      {{ t("familyRoom") }}
+                    </h3>
+                    <!-- 寬敞的家庭空間設計，適合親子旅遊，配備完善的家庭設施，讓您與家人共享溫馨時光。 -->
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                      {{ t("familyRoomDesc") }}
+                    </p>
+                  </div>
+                  <!-- 底部固定資訊區域 -->
+                  <div class="p-6 pt-0">
+                    <div class="flex items-center justify-between mb-4">
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:users"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <!-- 人 -->
+                        <span class="text-stone-600 text-sm"
+                          >4{{ t("guests") }}</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <Icon
+                          name="heroicons:squares-2x2"
+                          class="w-4 h-4 text-amber-600"
+                        />
+                        <span class="text-stone-600 text-sm">cozy space</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <span class="text-2xl font-bold text-stone-800"
+                          >NT$4,800</span
+                        >
+                        <!-- /晚 -->
+                        <span class="text-stone-500 text-sm">{{
+                          t("perNight")
+                        }}</span>
+                      </div>
+                      <a
+                        :href="bookingUrl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors inline-block"
+                      >
+                        <!-- 立即預訂 -->
+                        {{ t("bookNowAction") }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Deluxe Room -->
-          <div
-            :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
-              roomCardsAnimated.card2
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div class="relative h-48 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80"
-                alt="豪華客房"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-stone-800 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                <!-- 升級推薦 -->
-                {{ t("upgradeRecommendation") }}
-              </div>
-            </div>
-            <!-- 內容區域 - 會自動填充空間 -->
-            <div class="flex-1 p-6">
-              <!-- 豪華客房 -->
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("deluxeRoom") }}
-              </h3>
-              <!-- 更寬敞的空間設計，增設休憩區域與工作空間，適合商務旅客與重視品質的住客。 -->
-              <p class="text-stone-600 text-sm leading-relaxed">
-                {{ t("deluxeRoomDesc") }}
-              </p>
-            </div>
-            <!-- 底部固定資訊區域 -->
-            <div class="p-6 pt-0">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center space-x-2">
-                  <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
-                  <!-- 人 -->
-                  <span class="text-stone-600 text-sm"
-                    >2-4{{ t("guests") }}</span
-                  >
-                </div>
-                <div class="flex items-center space-x-2">
-                  <Icon
-                    name="heroicons:squares-2x2"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-sm">35㎡</span>
-                </div>
-              </div>
-              <div class="flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-stone-800"
-                    >NT$3,800</span
-                  >
-                  <!-- /晚 -->
-                  <span class="text-stone-500 text-sm">{{
-                    t("perNight")
-                  }}</span>
-                </div>
-                <button
-                  class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
-                >
-                  <!-- 立即預訂 -->
-                  {{ t("bookNowAction") }}
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Suite Room -->
-          <div
-            :class="[
-              'bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl cursor-pointer group transition-all duration-1000 ease-out flex flex-col h-full',
-              roomCardsAnimated.card3
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div class="relative h-48 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80"
-                alt="套房"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 left-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium"
-              >
-                <!-- 頂級享受 -->
-                {{ t("topEnjoyment") }}
-              </div>
-            </div>
-            <!-- 內容區域 - 會自動填充空間 -->
-            <div class="flex-1 p-6">
-              <!-- 精緻套房 -->
-              <h3 class="text-xl font-bold text-stone-800 mb-2">
-                {{ t("refinedSuite") }}
-              </h3>
-              <!-- 獨立客廳與臥室空間，頂級裝潢與設備，為追求極致舒適體驗的賓客提供完美住宿。 -->
-              <p class="text-stone-600 text-sm leading-relaxed">
-                {{ t("refinedSuiteDesc") }}
-              </p>
-            </div>
-            <!-- 底部固定資訊區域 -->
-            <div class="p-6 pt-0">
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center space-x-2">
-                  <Icon name="heroicons:users" class="w-4 h-4 text-amber-600" />
-                  <!-- 人 -->
-                  <span class="text-stone-600 text-sm"
-                    >2-6{{ t("guests") }}</span
-                  >
-                </div>
-                <div class="flex items-center space-x-2">
-                  <Icon
-                    name="heroicons:squares-2x2"
-                    class="w-4 h-4 text-amber-600"
-                  />
-                  <span class="text-stone-600 text-sm">50㎡</span>
-                </div>
-              </div>
-              <div class="flex items-center justify-between">
-                <div>
-                  <span class="text-2xl font-bold text-stone-800"
-                    >NT$5,800</span
-                  >
-                  <!-- /晚 -->
-                  <span class="text-stone-500 text-sm">{{
-                    t("perNight")
-                  }}</span>
-                </div>
-                <button
-                  class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
-                >
-                  <!-- 立即預訂 -->
-                  {{ t("bookNowAction") }}
-                </button>
-              </div>
-            </div>
+          <!-- Carousel Dots -->
+          <div class="flex justify-center mt-4 space-x-2">
+            <button
+              v-for="index in totalRoomSlides"
+              :key="index"
+              @click="goToRoomSlide(index - 1)"
+              :class="[
+                'w-3 h-3 rounded-full transition-all duration-300',
+                currentRoomSlide === index - 1
+                  ? 'bg-amber-600 w-8'
+                  : 'bg-stone-300 hover:bg-stone-400',
+              ]"
+            ></button>
           </div>
         </div>
       </div>
@@ -435,7 +598,7 @@
             class="relative border-5 shadow-lg border-white rounded-3xl overflow-hidden h-96 w-full"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.300669390193!2d121.14352527484874!3d22.75422047936284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb915c787b6a9%3A0xe7ab767e383c8d5d!2zOTUw5Y-w5p2x57ij5Y-w5p2x5biC5paw55Sf6LevMTU16Jmf!5e0!3m2!1szh-TW!2stw!4v1750124702574!5m2!1szh-TW!2stw"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1839.6417792958164!2d121.14851553849275!3d22.754855768290753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb926b18b54e7%3A0x61292bf1a51cbb4b!2z5Y-I5LiA5a6_!5e0!3m2!1szh-TW!2stw!4v1750907147460!5m2!1szh-TW!2stw"
               width="100%"
               height="100%"
               style="border: 0"
@@ -445,24 +608,6 @@
               class="w-full h-full"
             ></iframe>
             <!-- Map Overlay Info -->
-            <div
-              class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-3 rounded-2xl shadow-lg max-w-xs"
-            >
-              <div class="flex items-center space-x-3">
-                <Icon
-                  name="heroicons:map-pin"
-                  class="w-5 h-5 text-amber-600 flex-shrink-0"
-                />
-                <div class="min-w-0">
-                  <p class="text-stone-800 font-medium text-sm truncate">
-                    {{ t("hotelName") }}
-                  </p>
-                  <p class="text-stone-500 text-xs truncate">
-                    台東市新生路155號
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -892,7 +1037,7 @@
 <script setup>
 import { nextTick } from "vue";
 
-const { t } = useLanguage();
+const { t, bookingUrl } = useLanguage();
 
 // 統計數據動畫
 const statsSection = ref(null);
@@ -917,7 +1062,14 @@ const roomCardsAnimated = ref({
   card1: false,
   card2: false,
   card3: false,
+  card4: false,
 });
+
+// 房型卡片滑動功能
+const currentRoomSlide = ref(0);
+const totalRoomSlides = ref(2); // 總滑動點數
+const slideWidth = ref(100); // 每次滑動的百分比
+const maxRoomSlide = ref(1); // 最大滑動次數，使用ref而不是computed
 
 // 景點切換功能
 const selectedAttractionCategory = ref("all");
@@ -978,6 +1130,49 @@ const goToServicesPage = () => {
 
 const goToAboutPage = () => {
   navigateTo("/about");
+};
+
+// 房型卡片滑動函數
+const slideRoom = (direction) => {
+  if (direction === "next" && currentRoomSlide.value < maxRoomSlide.value) {
+    currentRoomSlide.value++;
+  } else if (direction === "prev" && currentRoomSlide.value > 0) {
+    currentRoomSlide.value--;
+  }
+};
+
+const goToRoomSlide = (index) => {
+  if (index >= 0 && index <= maxRoomSlide.value) {
+    currentRoomSlide.value = index;
+  }
+};
+
+// 響應式更新滑動寬度和最大滑動次數
+const updateSlideSettings = () => {
+  if (process.client) {
+    const width = window.innerWidth;
+    if (width >= 1024) {
+      // 桌面：顯示3張卡片，共4張，最多滑動1次
+      slideWidth.value = 100 / 3; // 每次滑動1/3寬度
+      totalRoomSlides.value = 2; // 有2個點：0和1
+      maxRoomSlide.value = 1; // 最大滑動到index 1
+    } else if (width >= 768) {
+      // 平板：顯示2張卡片，共4張，最多滑動2次
+      slideWidth.value = 50; // 每次滑動50%
+      totalRoomSlides.value = 3; // 有3個點：0、1、2
+      maxRoomSlide.value = 2; // 最大滑動到index 2
+    } else {
+      // 手機：顯示1張卡片，共4張，最多滑動3次
+      slideWidth.value = 100; // 每次滑動100%
+      totalRoomSlides.value = 4; // 有4個點：0、1、2、3
+      maxRoomSlide.value = 3; // 最大滑動到index 3
+    }
+
+    // 如果當前滑動位置超過最大值，重置到最大值
+    if (currentRoomSlide.value > maxRoomSlide.value) {
+      currentRoomSlide.value = maxRoomSlide.value;
+    }
+  }
 };
 
 const targetStats = {
@@ -1043,6 +1238,14 @@ const startStatsAnimation = () => {
 
 // 設置 Intersection Observer
 onMounted(() => {
+  // 初始化滑動設定
+  updateSlideSettings();
+
+  // 監聽窗口大小變化
+  if (process.client) {
+    window.addEventListener("resize", updateSlideSettings);
+  }
+
   // 確保背景影片播放
   nextTick(() => {
     if (backgroundVideo.value) {
@@ -1117,6 +1320,10 @@ onMounted(() => {
               roomCardsAnimated.value.card3 = true;
             }, 400);
 
+            setTimeout(() => {
+              roomCardsAnimated.value.card4 = true;
+            }, 600);
+
             roomCardsObserver.unobserve(entry.target); // 只執行一次動畫
           }
         });
@@ -1127,6 +1334,13 @@ onMounted(() => {
     );
 
     roomCardsObserver.observe(roomCardsSection.value);
+  }
+});
+
+// 清理監聽器
+onUnmounted(() => {
+  if (process.client) {
+    window.removeEventListener("resize", updateSlideSettings);
   }
 });
 

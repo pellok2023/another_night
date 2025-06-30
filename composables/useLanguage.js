@@ -3,6 +3,10 @@ import { ref, reactive, readonly } from "vue";
 // 全局語言狀態
 const currentLanguage = ref("zh");
 
+// Booking.com 訂房網址
+const BOOKING_URL =
+  "https://www.booking.com/hotel/tw/you-yi-su-ur-lodge-tai-dong-shi.zh-tw.html?aid=356980&label=gog235jc-1FCAso5wFCEnlvdS15aS1zdS11ci1sb2RnZUgwWANo5wGIAQGYATC4AQfIAQzYAQHoAQH4AQOIAgGoAgO4AsL2h8MGwAIB0gIkYmQ5YmEyMzktNDFiZi00ODJkLTgwZTUtZGE1NDUzYmJmNTgx2AIF4AIB&sid=189d856273475abd6719242686a92e93&dest_id=-2637928&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1751251789&srpvid=b0a5624934083aeeb69082641a208d31&type=total&ucfs=1&";
+
 // 語言配置
 const translations = reactive({
   zh: {
@@ -44,6 +48,11 @@ const translations = reactive({
     refinedSuite: "溫馨套房",
     refinedSuiteDesc:
       "獨立的生活空間，在這個正在蛻變的旅店中，感受最真摯的住宿溫度與人情味。",
+    familyChoice: "家庭首選",
+    familyRoom: "家庭客房",
+    familyRoomDesc:
+      "寬敞的家庭空間設計，適合親子旅遊，配備完善的家庭設施，讓您與家人共享溫馨時光。",
+    familyFacilities: "家庭設施",
     guests: "人",
     perNight: "/晚",
     bookNowAction: "立即預訂",
@@ -63,7 +72,7 @@ const translations = reactive({
     airportDesc2: "機場接駁服務 - 提前預約",
     busTransport: "公車",
     busDesc1: "台東轉運站：8101、8102、8109、8110",
-    busDesc2: "新生路站：鼎東客運市區線、觀光巴士",
+    busDesc2: "中華路站：市區公車、觀光巴士",
     parkingInfo: "停車資訊",
     parkingDesc1: "館內提供24小時停車場 - 每日NT$300",
     parkingDesc2: "周邊收費停車格 - 每小時NT$30",
@@ -244,15 +253,15 @@ const translations = reactive({
       "頂級套房享有絕佳城市景觀，配備奢華設施與專屬服務，帶給您無與倫比的住宿體驗。每一個細節都彰顯著品味與優雅。",
 
     // 客房設施區域
-    roomFacilitiesTitle: "客房設施",
+    roomFacilitiesTitle: "服務特色",
     roomFacilitiesSubtitle:
-      "每間客房都配備完善的現代化設施，為您帶來舒適便利的住宿體驗",
-    premiumBeddingTitle: "頂級寢具",
-    premiumBeddingDesc: "精選高品質床墊與寢具，確保您的完美睡眠體驗",
-    smartControlTitle: "智能控制",
-    smartControlDesc: "一鍵控制燈光、溫度與窗簾，享受科技帶來的便利",
-    ecoConceptTitle: "環保理念",
-    ecoConceptDesc: "使用環保材料與節能設備，共同愛護地球環境",
+      "我們用真誠的心意與親切的服務，為每一位住客創造溫暖如家的住宿體驗",
+    warmServiceTitle: "溫暖服務",
+    warmServiceDesc: "如家人般的親切關懷，用真誠的心意為您提供貼心服務",
+    personalCareTitle: "用心照顧",
+    personalCareDesc: "細心關注每一位住客的需求，提供個人化的專屬服務",
+    sincereHospitalityTitle: "真誠待客",
+    sincereHospitalityDesc: "以最真摯的心意迎接每一位住客，創造難忘的住宿回憶",
 
     // 設施服務頁面
     servicesPageTitle: "設施服務",
@@ -319,7 +328,7 @@ const translations = reactive({
     contactInfoDesc:
       "我們期待為您提供最優質的服務體驗。無論是預訂諮詢、特殊需求或任何疑問，我們的專業團隊都樂意為您協助。",
     addressTitle: "地址",
-    addressText: "台東縣台東市中華路一段1號",
+    addressText: "台東縣台東市文化街72號",
     addressNote: "近台東火車站，步行5分鐘",
     phoneTitle: "電話",
     phoneNumber: "089-123-456",
@@ -487,6 +496,37 @@ const translations = reactive({
       "匯集台東在地美食的熱鬧夜市，從原住民料理到海鮮小吃，讓您品嚐最道地的台東風味。",
     nightMarketDistance: "距離飯店 800m",
     nightMarketDuration: "步行 10分鐘",
+
+    // 聯絡頁面額外翻譯
+    convenientLocationText: "便利的交通位置，讓您輕鬆抵達又一宿",
+
+    // 關於我們頁面自定義翻譯
+    aboutHeroTitle: "不完美，但真誠",
+    aboutHeroSubtitle: "在又一宿，我們相信真實的體驗勝過完美的表象",
+    aboutStoryTitle: "我們的故事",
+    aboutStorySubtitle: "從不完美開始",
+    aboutStoryDesc1:
+      "又一宿不是一家完美的旅館，但我們真誠地對待每一位客人。我們相信，真實的體驗來自於人與人之間的連結，而不是完美的設施或服務。",
+    aboutStoryDesc2:
+      "在這裡，我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。我們相信，正是這些不完美，讓又一宿變得獨特而真實。",
+    aboutValuesTitle: "我們的價值觀",
+    aboutValuesSubtitle: "在又一宿，我們相信真實的體驗勝過完美的表象",
+    sincerityTitle: "真誠",
+    sincerityDesc:
+      "我們相信，真誠的服務勝過完美的表象。我們不追求表面的完美，而是專注於創造一個讓客人感到自在、放鬆的空間。",
+    comfortTitle: "自在",
+    comfortDesc:
+      "我們希望每一位客人都能在又一宿找到屬於自己的自在。我們不追求完美的服務，而是專注於創造一個讓客人感到放鬆、舒適的環境。",
+    connectionTitle: "連結",
+    connectionDesc:
+      "我們相信，真實的體驗來自於人與人之間的連結。我們不追求完美的設施，而是專注於創造一個讓客人與我們、與其他客人產生連結的空間。",
+    growthTitle: "成長",
+    growthDesc:
+      "我們相信，每一次的不完美都是一次成長的機會。我們不追求完美的結果，而是專注於在每一次的服務中學習、改進，為客人創造更好的體驗。",
+    hotelExteriorAlt: "又一宿飯店外觀",
+    aboutPageMetaTitle: "又一宿 - 正在蛻變的旅宿",
+    aboutPageMetaDesc:
+      "了解又一宿的品牌故事、企業使命、核心價值與領導團隊，致力於為每位住客創造舒適溫馨的住宿體驗",
   },
   en: {
     // Navigation
@@ -547,7 +587,7 @@ const translations = reactive({
     airportDesc2: "Airport shuttle service - advance booking required",
     busTransport: "Bus",
     busDesc1: "Taitung Bus Terminal: 8101, 8102, 8109, 8110",
-    busDesc2: "Xinsheng Road Station: Dingdong Bus city lines, sightseeing bus",
+    busDesc2: "Zhonghua Road Station: City Bus, Sightseeing Bus",
     parkingInfo: "Parking Information",
     parkingDesc1: "24-hour parking available in hotel - NT$300 per day",
     parkingDesc2: "Surrounding paid parking spaces - NT$30 per hour",
@@ -737,18 +777,18 @@ const translations = reactive({
       "Premium suite with excellent city views, equipped with luxurious facilities and exclusive services, bringing you an unparalleled accommodation experience. Every detail shows taste and elegance.",
 
     // Room Facilities Section
-    roomFacilitiesTitle: "Room Facilities",
+    roomFacilitiesTitle: "Service Features",
     roomFacilitiesSubtitle:
-      "Every room is equipped with complete modern facilities to bring you a comfortable and convenient accommodation experience",
-    premiumBeddingTitle: "Premium Bedding",
-    premiumBeddingDesc:
-      "Selected high-quality mattresses and bedding to ensure your perfect sleep experience",
-    smartControlTitle: "Smart Control",
-    smartControlDesc:
-      "One-touch control of lighting, temperature and curtains, enjoy the convenience brought by technology",
-    ecoConceptTitle: "Eco Concept",
-    ecoConceptDesc:
-      "Using eco-friendly materials and energy-saving equipment to care for the earth's environment together",
+      "We create a warm, home-like accommodation experience for every guest with sincere care and friendly service",
+    warmServiceTitle: "Warm Service",
+    warmServiceDesc:
+      "Family-like caring attention, providing thoughtful service with sincere heart",
+    personalCareTitle: "Personal Care",
+    personalCareDesc:
+      "Carefully attending to each guest's needs, providing personalized exclusive service",
+    sincereHospitalityTitle: "Sincere Hospitality",
+    sincereHospitalityDesc:
+      "Welcoming every guest with the most genuine heart, creating unforgettable accommodation memories",
 
     // Services Page
     servicesPageTitle: "Facilities & Services",
@@ -1006,6 +1046,40 @@ const translations = reactive({
       "Hot night market gathering Taitung local cuisine, from indigenous cuisine to seafood snacks, allowing you to taste the most authentic Taitung flavors.",
     nightMarketDistance: "800 meters walk from hotel",
     nightMarketDuration: "10 minutes walk",
+
+    // 聯絡頁面額外翻譯
+    convenientLocationText:
+      "Convenient location for easy access to Another Night",
+
+    // 關於我們頁面自定義翻譯
+    aboutHeroTitle: "Imperfect, but Sincere",
+    aboutHeroSubtitle:
+      "At Another Night, we believe authentic experiences are better than perfect appearances",
+    aboutStoryTitle: "Our Story",
+    aboutStorySubtitle: "Beginning with Imperfection",
+    aboutStoryDesc1:
+      "Another Night is not a perfect hotel, but we treat every guest with sincerity. We believe that authentic experiences come from human connections, not perfect facilities or services.",
+    aboutStoryDesc2:
+      "Here, we don't pursue superficial perfection, but focus on creating a space where guests feel comfortable and relaxed. We believe it's these imperfections that make Another Night unique and real.",
+    aboutValuesTitle: "Our Values",
+    aboutValuesSubtitle:
+      "At Another Night, we believe authentic experiences are better than perfect appearances",
+    sincerityTitle: "Sincerity",
+    sincerityDesc:
+      "We believe sincere service is better than perfect appearances. We don't pursue superficial perfection, but focus on creating a space where guests feel comfortable and relaxed.",
+    comfortTitle: "Comfort",
+    comfortDesc:
+      "We hope every guest can find their own comfort at Another Night. We don't pursue perfect service, but focus on creating an environment where guests feel relaxed and comfortable.",
+    connectionTitle: "Connection",
+    connectionDesc:
+      "We believe authentic experiences come from human connections. We don't pursue perfect facilities, but focus on creating a space where guests can connect with us and other guests.",
+    growthTitle: "Growth",
+    growthDesc:
+      "We believe every imperfection is an opportunity for growth. We don't pursue perfect results, but focus on learning and improving with each service to create better experiences for guests.",
+    hotelExteriorAlt: "Another Night Hotel Exterior",
+    aboutPageMetaTitle: "Another Night - The Inn in Transformation",
+    aboutPageMetaDesc:
+      "Learn about Another Night's brand story, mission, core values, and leadership team, dedicated to creating comfortable and warm accommodation experiences for every guest",
   },
 });
 
@@ -1029,5 +1103,6 @@ export const useLanguage = () => {
     currentLanguage: readonly(currentLanguage),
     toggleLanguage,
     t,
+    bookingUrl: BOOKING_URL,
   };
 };
