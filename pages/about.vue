@@ -252,17 +252,12 @@
           >
             {{ t("ctaDescription") }}
           </p>
-          <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <button
-              class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105"
-            >
-              {{ t("contactUs") }}
-            </button>
+          <div class="flex justify-center">
             <a
               :href="bookingUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-transparent border-3 border-white text-white hover:bg-white hover:text-stone-800 px-10 py-4 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105 inline-block"
+              class="bg-amber-600 hover:bg-amber-700 text-white px-12 py-5 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105 inline-block"
             >
               {{ t("bookNowAction") }}
             </a>

@@ -303,78 +303,48 @@
       </div>
     </section>
 
-    <!-- Quick Contact -->
-    <section class="py-16 px-6 lg:px-12 bg-white">
-      <div class="max-w-6xl mx-auto">
+    <!-- Contact CTA -->
+    <section
+      class="relative py-20 px-6 lg:px-12 overflow-hidden min-h-[600px] bg-cover bg-center bg-fixed"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      "
+    >
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <!-- Content -->
+      <div
+        ref="ctaSection"
+        class="relative z-10 max-w-5xl mx-auto text-center flex items-center justify-center min-h-[500px]"
+      >
         <div
-          ref="quickContactSection"
           :class="[
-            'text-center mb-12 transition-all duration-1000 ease-out',
-            quickContactAnimated
+            'transition-all duration-1000 ease-out',
+            ctaAnimated
               ? 'translate-y-0 opacity-100'
               : 'translate-y-8 opacity-0',
           ]"
         >
-          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
-            {{ t("quickBookingTitle") }}
+          <h2
+            class="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight"
+          >
+            {{ t("ctaTitle") }}
           </h2>
-          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
-            {{ t("quickBookingDesc") }}
+          <p
+            class="text-white/95 text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
+            {{ t("ctaDescription") }}
           </p>
-        </div>
-
-        <div ref="quickActionsSection" class="grid md:grid-cols-2 gap-8">
-          <!-- Phone Booking -->
-          <div
-            :class="[
-              'bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-1000 ease-out transform hover:-translate-y-2',
-              quickActionsAnimated.action1
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div
-              class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
+          <div class="flex justify-center">
+            <a
+              :href="bookingUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-amber-600 hover:bg-amber-700 text-white px-12 py-5 rounded-full text-xl font-semibold transition-all duration-300 cursor-pointer shadow-xl hover:shadow-2xl transform hover:scale-105 inline-block"
             >
-              <Icon name="heroicons:phone" class="text-green-600 !w-8 !h-8" />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-3">
-              {{ t("phoneBooking") }}
-            </h3>
-            <p class="text-stone-600 mb-6">{{ t("phoneBookingDesc") }}</p>
-            <button
-              class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {{ t("callNow") }}
-            </button>
-          </div>
-
-          <!-- Email Booking -->
-          <div
-            :class="[
-              'bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-1000 ease-out transform hover:-translate-y-2',
-              quickActionsAnimated.action3
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0',
-            ]"
-          >
-            <div
-              class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            >
-              <Icon
-                name="heroicons:envelope"
-                class="text-amber-600 !w-8 !h-8"
-              />
-            </div>
-            <h3 class="text-xl font-bold text-stone-800 mb-3">
-              {{ t("emailBooking") }}
-            </h3>
-            <p class="text-stone-600 mb-6">{{ t("emailBookingDesc") }}</p>
-            <button
-              class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {{ t("sendEmail") }}
-            </button>
+              {{ t("bookNowAction") }}
+            </a>
           </div>
         </div>
       </div>
@@ -389,23 +359,17 @@
 import { ref, onMounted, nextTick } from "vue";
 import { useLanguage } from "~/composables/useLanguage";
 
-const { t } = useLanguage();
+const { t, bookingUrl } = useLanguage();
 
 // 動畫狀態
 const heroSection = ref(null);
 const contactInfoSection = ref(null);
-const quickContactSection = ref(null);
-const quickActionsSection = ref(null);
+const ctaSection = ref(null);
 const transportSection = ref(null);
 
 const heroAnimated = ref(false);
 const contactInfoAnimated = ref(false);
-const quickContactAnimated = ref(false);
-const quickActionsAnimated = ref({
-  action1: false,
-  action2: false,
-  action3: false,
-});
+const ctaAnimated = ref(false);
 const transportAnimated = ref(false);
 
 // 設置動畫
@@ -433,42 +397,20 @@ onMounted(() => {
     contactInfoObserver.observe(contactInfoSection.value);
   }
 
-  // 快速聯絡觀察器
-  if (quickContactSection.value) {
-    const quickContactObserver = new IntersectionObserver(
+  // CTA 區域觀察器
+  if (ctaSection.value) {
+    const ctaObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            quickContactAnimated.value = true;
-            quickContactObserver.unobserve(entry.target);
+            ctaAnimated.value = true;
+            ctaObserver.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.3 }
     );
-    quickContactObserver.observe(quickContactSection.value);
-  }
-
-  // 快速操作觀察器
-  if (quickActionsSection.value) {
-    const quickActionsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            quickActionsAnimated.value.action1 = true;
-            setTimeout(() => {
-              quickActionsAnimated.value.action2 = true;
-            }, 200);
-            setTimeout(() => {
-              quickActionsAnimated.value.action3 = true;
-            }, 400);
-            quickActionsObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    quickActionsObserver.observe(quickActionsSection.value);
+    ctaObserver.observe(ctaSection.value);
   }
 
   // 交通資訊觀察器

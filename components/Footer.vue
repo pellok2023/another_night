@@ -36,10 +36,10 @@
                 />
                 <div>
                   <a
-                    href="tel:+886-89-123456"
+                    href="tel:+886-89-348430"
                     class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
                   >
-                    +886-89-123456
+                    +886-89-348430
                   </a>
                 </div>
               </div>
@@ -52,10 +52,10 @@
                 />
                 <div>
                   <a
-                    href="mailto:info@another-night.com"
+                    href="mailto:urlodge20250701@gmail.com"
                     class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
                   >
-                    info@another-night.com
+                    urlodge20250701@gmail.com
                   </a>
                 </div>
               </div>
