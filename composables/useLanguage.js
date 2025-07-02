@@ -338,7 +338,7 @@ const translations = reactive({
     emailNote: "一般詢問與預訂",
     serviceHoursTitle: "服務時間",
     checkInOut: "Check-in: 15:00 | Check-out: 11:00",
-    frontDesk24h: "前台24小時服務",
+    frontDesk24h: "前台服務時間：08:00-23:00",
     locationMapTitle: "位置地圖",
     contactFormTitle: "聯絡表單",
     nameLabel: "姓名",
