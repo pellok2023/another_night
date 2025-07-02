@@ -294,16 +294,7 @@
                         <span class="text-stone-600 text-sm">cozy space</span>
                       </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <span class="text-2xl font-bold text-stone-800"
-                          >NT$2,800</span
-                        >
-                        <!-- /晚 -->
-                        <span class="text-stone-500 text-sm">{{
-                          t("perNight")
-                        }}</span>
-                      </div>
+                    <div class="flex items-center justify-center">
                       <a
                         :href="bookingUrl"
                         target="_blank"
@@ -373,16 +364,7 @@
                         <span class="text-stone-600 text-sm">cozy space</span>
                       </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <span class="text-2xl font-bold text-stone-800"
-                          >NT$3,800</span
-                        >
-                        <!-- /晚 -->
-                        <span class="text-stone-500 text-sm">{{
-                          t("perNight")
-                        }}</span>
-                      </div>
+                    <div class="flex items-center justify-center">
                       <a
                         :href="bookingUrl"
                         target="_blank"
@@ -452,16 +434,7 @@
                         <span class="text-stone-600 text-sm">cozy space</span>
                       </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <span class="text-2xl font-bold text-stone-800"
-                          >NT$5,800</span
-                        >
-                        <!-- /晚 -->
-                        <span class="text-stone-500 text-sm">{{
-                          t("perNight")
-                        }}</span>
-                      </div>
+                    <div class="flex items-center justify-center">
                       <a
                         :href="bookingUrl"
                         target="_blank"
@@ -531,16 +504,7 @@
                         <span class="text-stone-600 text-sm">cozy space</span>
                       </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <span class="text-2xl font-bold text-stone-800"
-                          >NT$4,800</span
-                        >
-                        <!-- /晚 -->
-                        <span class="text-stone-500 text-sm">{{
-                          t("perNight")
-                        }}</span>
-                      </div>
+                    <div class="flex items-center justify-center">
                       <a
                         :href="bookingUrl"
                         target="_blank"

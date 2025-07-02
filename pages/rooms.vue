@@ -60,27 +60,17 @@
                 />
               </div>
               <div class="lg:w-1/2 p-8 lg:p-10">
-                <div class="flex justify-between items-start mb-6">
-                  <div>
-                    <div class="flex items-center mb-2">
-                      <span
-                        class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
-                      >
-                        {{ t("popularRecommendation") }}
-                      </span>
-                    </div>
-                    <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
-                      {{ t("standardRoom") }}
-                    </h3>
+                <div class="mb-6">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
+                    >
+                      {{ t("popularRecommendation") }}
+                    </span>
                   </div>
-                  <div class="text-right">
-                    <div class="text-3xl font-bold text-amber-600">
-                      NT$ 2,800
-                    </div>
-                    <div class="text-sm text-stone-500">
-                      {{ t("perNight") }}
-                    </div>
-                  </div>
+                  <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
+                    {{ t("standardRoom") }}
+                  </h3>
                 </div>
                 <p class="text-stone-600 text-base leading-relaxed mb-8">
                   {{ t("standardRoomDesc") }}
@@ -148,27 +138,17 @@
                 />
               </div>
               <div class="lg:w-1/2 p-8 lg:p-10">
-                <div class="flex justify-between items-start mb-6">
-                  <div>
-                    <div class="flex items-center mb-2">
-                      <span
-                        class="bg-stone-800 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
-                      >
-                        {{ t("upgradeRecommendation") }}
-                      </span>
-                    </div>
-                    <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
-                      {{ t("deluxeRoom") }}
-                    </h3>
+                <div class="mb-6">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-stone-800 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
+                    >
+                      {{ t("upgradeRecommendation") }}
+                    </span>
                   </div>
-                  <div class="text-right">
-                    <div class="text-3xl font-bold text-amber-600">
-                      NT$ 3,800
-                    </div>
-                    <div class="text-sm text-stone-500">
-                      {{ t("perNight") }}
-                    </div>
-                  </div>
+                  <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
+                    {{ t("deluxeRoom") }}
+                  </h3>
                 </div>
                 <p class="text-stone-600 text-base leading-relaxed mb-8">
                   {{ t("deluxeRoomDesc") }}
@@ -236,27 +216,17 @@
                 />
               </div>
               <div class="lg:w-1/2 p-8 lg:p-10">
-                <div class="flex justify-between items-start mb-6">
-                  <div>
-                    <div class="flex items-center mb-2">
-                      <span
-                        class="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
-                      >
-                        {{ t("topEnjoyment") }}
-                      </span>
-                    </div>
-                    <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
-                      {{ t("refinedSuite") }}
-                    </h3>
+                <div class="mb-6">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
+                    >
+                      {{ t("topEnjoyment") }}
+                    </span>
                   </div>
-                  <div class="text-right">
-                    <div class="text-3xl font-bold text-amber-600">
-                      NT$ 5,800
-                    </div>
-                    <div class="text-sm text-stone-500">
-                      {{ t("perNight") }}
-                    </div>
-                  </div>
+                  <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
+                    {{ t("refinedSuite") }}
+                  </h3>
                 </div>
                 <p class="text-stone-600 text-base leading-relaxed mb-8">
                   {{ t("refinedSuiteDesc") }}
@@ -324,27 +294,17 @@
                 />
               </div>
               <div class="lg:w-1/2 p-8 lg:p-10">
-                <div class="flex justify-between items-start mb-6">
-                  <div>
-                    <div class="flex items-center mb-2">
-                      <span
-                        class="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
-                      >
-                        {{ t("familyChoice") }}
-                      </span>
-                    </div>
-                    <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
-                      {{ t("familyRoom") }}
-                    </h3>
+                <div class="mb-6">
+                  <div class="flex items-center mb-2">
+                    <span
+                      class="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3"
+                    >
+                      {{ t("familyChoice") }}
+                    </span>
                   </div>
-                  <div class="text-right">
-                    <div class="text-3xl font-bold text-amber-600">
-                      NT$ 4,800
-                    </div>
-                    <div class="text-sm text-stone-500">
-                      {{ t("perNight") }}
-                    </div>
-                  </div>
+                  <h3 class="text-2xl lg:text-3xl font-bold text-stone-800">
+                    {{ t("familyRoom") }}
+                  </h3>
                 </div>
                 <p class="text-stone-600 text-base leading-relaxed mb-8">
                   {{ t("familyRoomDesc") }}
