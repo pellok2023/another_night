@@ -178,6 +178,183 @@
       </div>
     </section>
 
+    <!-- Work Exchange Section - 純白底風格 -->
+    <section class="py-16 px-6 lg:px-12 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <!-- 主標題區域 -->
+        <div class="text-center mb-12">
+          <div
+            class="inline-flex items-center space-x-3 bg-amber-100 px-6 py-3 rounded-full border border-amber-200 mb-6"
+          >
+            <div class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+            <span class="text-stone-700 font-medium text-sm">{{
+              t("workExchangeRecruiting")
+            }}</span>
+          </div>
+
+          <h2 class="text-3xl lg:text-4xl font-bold text-stone-800 mb-4">
+            {{ t("workExchangeTitle") }}
+          </h2>
+
+          <p class="text-stone-600 text-lg max-w-2xl mx-auto">
+            {{ t("workExchangeSubtitle") }}
+          </p>
+        </div>
+
+        <!-- 內容區域 -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- 左側：內容資訊 -->
+          <div class="order-1 space-y-6">
+            <!-- 描述文字 -->
+            <div
+              class="bg-amber-50 p-6 rounded-2xl border border-amber-200 shadow-sm"
+            >
+              <p class="text-stone-600 text-base leading-relaxed">
+                {{ t("workExchangeDescription") }}
+              </p>
+            </div>
+
+            <!-- 特色卡片網格 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- 工作內容 -->
+              <div
+                class="group text-center p-4 bg-white border border-amber-200 rounded-xl hover:bg-amber-50 transition duration-300 cursor-pointer min-h-[160px] flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                    <Icon
+                      name="heroicons:briefcase"
+                      class="w-6 h-6 text-amber-600"
+                    />
+                  </div>
+                  <h3
+                    class="font-semibold text-stone-800 text-sm mb-2 leading-tight"
+                  >
+                    {{ t("workExchangeFeatures") }}
+                  </h3>
+                </div>
+                <p class="text-stone-600 text-xs leading-relaxed px-2">
+                  {{ t("workExchangeFeaturesDesc") }}
+                </p>
+              </div>
+
+              <!-- 換宿福利 -->
+              <div
+                class="group text-center p-4 bg-white border border-amber-200 rounded-xl hover:bg-amber-50 transition duration-300 cursor-pointer min-h-[160px] flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                    <Icon
+                      name="heroicons:gift"
+                      class="w-6 h-6 text-amber-600"
+                    />
+                  </div>
+                  <h3
+                    class="font-semibold text-stone-800 text-sm mb-2 leading-tight"
+                  >
+                    {{ t("workExchangeBenefits") }}
+                  </h3>
+                </div>
+                <p class="text-stone-600 text-xs leading-relaxed px-2">
+                  {{ t("workExchangeBenefitsDesc") }}
+                </p>
+              </div>
+
+              <!-- 工作時間 -->
+              <div
+                class="group text-center p-4 bg-white border border-amber-200 rounded-xl hover:bg-amber-50 transition duration-300 cursor-pointer min-h-[160px] flex flex-col justify-between"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                    <Icon
+                      name="heroicons:clock"
+                      class="w-6 h-6 text-amber-600"
+                    />
+                  </div>
+                  <h3
+                    class="font-semibold text-stone-800 text-sm mb-2 leading-tight"
+                  >
+                    {{ t("workExchangeDuration") }}
+                  </h3>
+                </div>
+                <p class="text-stone-600 text-xs leading-relaxed px-2">
+                  {{ t("workExchangeDurationDesc") }}
+                </p>
+              </div>
+            </div>
+
+            <!-- 聯絡按鈕 -->
+            <div class="text-center">
+              <a
+                href="mailto:urlodge20250701@gmail.com"
+                class="inline-flex items-center space-x-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-base font-semibold transition-colors shadow-md hover:shadow-lg"
+              >
+                <Icon name="heroicons:envelope" class="w-5 h-5" />
+                <span>{{ t("workExchangeEmail") }}</span>
+                <Icon name="heroicons:arrow-right" class="w-4 h-4" />
+              </a>
+            </div>
+
+            <!-- 底部提示 -->
+            <div class="text-center">
+              <p class="text-stone-500 text-sm italic">
+                {{ t("workExchangeBottomText") }}
+              </p>
+            </div>
+          </div>
+
+          <!-- 右側：視覺元素 -->
+          <div class="relative order-2">
+            <!-- 主圖片 -->
+            <div class="relative">
+              <img
+                src="/images/hero/hero-5.jpeg"
+                alt="Work Exchange Experience"
+                class="w-full h-80 object-cover rounded-2xl shadow-lg"
+              />
+
+              <!-- 浮動資訊卡片 -->
+              <div
+                class="absolute -top-4 -right-4 bg-amber-600 text-white p-4 rounded-xl shadow-lg"
+              >
+                <div class="text-center">
+                  <Icon name="heroicons:heart" class="w-6 h-6 mx-auto mb-1" />
+                  <p class="text-white text-xs font-semibold">
+                    {{ t("workExchangeCulturalExchange") }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- 底部資訊條 -->
+              <div
+                class="absolute -bottom-4 left-4 right-4 bg-white p-3 rounded-xl shadow-lg border border-stone-200"
+              >
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div
+                      class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                    ></div>
+                    <span class="text-stone-700 text-sm font-medium">{{
+                      t("workExchangeOpenForApplication")
+                    }}</span>
+                  </div>
+                  <div class="text-amber-600 text-sm font-semibold">
+                    {{ t("workExchangeJoinNow") }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Room Types Section -->
     <section class="py-16 px-6 lg:px-12 bg-white">
       <div class="max-w-5xl mx-auto">

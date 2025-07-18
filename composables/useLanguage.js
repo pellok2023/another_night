@@ -30,6 +30,25 @@ const translations = reactive({
     businessFacilities: "基本設施",
     professionalTeamNote: "▷ 歡迎成為我們蛻變過程的見證人",
 
+    // 以工換宿區塊
+    workExchangeTitle: "募集以工換宿",
+    workExchangeSubtitle: "與我們一起創造美好的住宿體驗",
+    workExchangeDescription:
+      "我們正在尋找熱愛旅行、願意分享的夥伴加入我們的團隊。以工換宿不僅是工作，更是一段難忘的人生體驗。在這裡，您將體驗台東的山海之美，感受在地文化，同時為我們的旅宿貢獻您的熱情與技能。",
+    workExchangeFeatures: "工作內容",
+    workExchangeFeaturesDesc: "前台接待、客房整理、環境維護",
+    workExchangeBenefits: "換宿福利",
+    workExchangeBenefitsDesc: "免費住宿、在地體驗、文化交流",
+    workExchangeDuration: "工作時間",
+    workExchangeDurationDesc: "面議",
+    workExchangeContact: "報名請洽",
+    workExchangeEmail: "urlodge20250701@gmail.com",
+    workExchangeRecruiting: "招募中",
+    workExchangeCulturalExchange: "文化交流",
+    workExchangeOpenForApplication: "開放申請中",
+    workExchangeJoinNow: "立即加入",
+    workExchangeBottomText: "期待與您一起創造美好的住宿體驗",
+
     // 房型區域
     roomTypesTitle: "客房空間",
     roomTypesSubtitle:
@@ -548,6 +567,28 @@ const translations = reactive({
     diningService: "Local Food Guide",
     businessFacilities: "Basic Facilities",
     professionalTeamNote: "▷ Welcome to witness our transformation journey",
+
+    // Work Exchange Section
+    workExchangeTitle: "Work Exchange Recruitment",
+    workExchangeSubtitle: "Create wonderful accommodation experiences with us",
+    workExchangeDescription:
+      "We are looking for travel-loving partners who are willing to share to join our team. Work exchange is not just work, but an unforgettable life experience. Here, you will experience the beauty of Taitung's mountains and sea, feel the local culture, while contributing your passion and skills to our accommodation.",
+    workExchangeFeatures: "Work Content",
+    workExchangeFeaturesDesc:
+      "Front desk reception, room cleaning, environment maintenance",
+    workExchangeBenefits: "Exchange Benefits",
+    workExchangeBenefitsDesc:
+      "Free accommodation, local experience, cultural exchange",
+    workExchangeDuration: "Work Hours",
+    workExchangeDurationDesc: "Negotiable",
+    workExchangeContact: "Apply Now",
+    workExchangeEmail: "urlodge20250701@gmail.com",
+    workExchangeRecruiting: "Recruiting",
+    workExchangeCulturalExchange: "Cultural Exchange",
+    workExchangeOpenForApplication: "Open for Application",
+    workExchangeJoinNow: "Join Now",
+    workExchangeBottomText:
+      "Looking forward to creating wonderful accommodation experiences with you",
 
     // Room Types Section
     roomTypesTitle: "Room Spaces",
