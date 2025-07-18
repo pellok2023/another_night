@@ -3,9 +3,9 @@ import { ref, reactive, readonly } from "vue";
 // 全局語言狀態
 const currentLanguage = ref("zh");
 
-// Booking.com 訂房網址
+// Agoda 訂房網址
 const BOOKING_URL =
-  "https://www.booking.com/hotel/tw/you-yi-su-ur-lodge-tai-dong-shi.zh-tw.html?aid=356980&label=gog235jc-1FCAso5wFCEnlvdS15aS1zdS11ci1sb2RnZUgwWANo5wGIAQGYATC4AQfIAQzYAQHoAQH4AQOIAgGoAgO4AsL2h8MGwAIB0gIkYmQ5YmEyMzktNDFiZi00ODJkLTgwZTUtZGE1NDUzYmJmNTgx2AIF4AIB&sid=189d856273475abd6719242686a92e93&dest_id=-2637928&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1751251789&srpvid=b0a5624934083aeeb69082641a208d31&type=total&ucfs=1&";
+  "https://www.agoda.com/zh-tw/ur-lodge/hotel/taitung-tw.html?countryId=140&finalPriceView=1&isShowMobileAppPrice=false&cid=1922895&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-08-1&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&tag=23999ddf-604f-4129-a3f5-5829d6d542f2&los=1&searchrequestid=23244bdd-7d9d-49a5-be32-810418866d1d&ds=gPAAQ9S4XTBkqmCb";
 
 // 語言配置
 const translations = reactive({
@@ -41,7 +41,7 @@ const translations = reactive({
     workExchangeBenefitsDesc: "免費住宿、在地體驗、文化交流",
     workExchangeDuration: "工作時間",
     workExchangeDurationDesc: "面議",
-    workExchangeContact: "報名請洽",
+    workExchangeContact: "若有興趣歡迎填寫表單",
     workExchangeEmail: "urlodge20250701@gmail.com",
     workExchangeRecruiting: "招募中",
     workExchangeCulturalExchange: "文化交流",
@@ -581,7 +581,7 @@ const translations = reactive({
       "Free accommodation, local experience, cultural exchange",
     workExchangeDuration: "Work Hours",
     workExchangeDurationDesc: "Negotiable",
-    workExchangeContact: "Apply Now",
+    workExchangeContact: "If interested, please fill out the form",
     workExchangeEmail: "urlodge20250701@gmail.com",
     workExchangeRecruiting: "Recruiting",
     workExchangeCulturalExchange: "Cultural Exchange",

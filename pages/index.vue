@@ -292,11 +292,16 @@
             <!-- 聯絡按鈕 -->
             <div class="text-center">
               <a
-                href="mailto:urlodge20250701@gmail.com"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfsFbEhO9itK5SEqkpAVCSZmIy5y8Aukjq_wdQKo3gUU1ID3Q/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="inline-flex items-center space-x-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-base font-semibold transition-colors shadow-md hover:shadow-lg"
               >
-                <Icon name="heroicons:envelope" class="w-5 h-5" />
-                <span>{{ t("workExchangeEmail") }}</span>
+                <Icon
+                  name="heroicons:clipboard-document-list"
+                  class="w-5 h-5"
+                />
+                <span>{{ t("workExchangeContact") }}</span>
                 <Icon name="heroicons:arrow-right" class="w-4 h-4" />
               </a>
             </div>
@@ -344,9 +349,14 @@
                       t("workExchangeOpenForApplication")
                     }}</span>
                   </div>
-                  <div class="text-amber-600 text-sm font-semibold">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfsFbEhO9itK5SEqkpAVCSZmIy5y8Aukjq_wdQKo3gUU1ID3Q/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-amber-600 text-sm font-semibold hover:text-amber-700 transition-colors cursor-pointer"
+                  >
                     {{ t("workExchangeJoinNow") }}
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
