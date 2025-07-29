@@ -295,6 +295,7 @@
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfsFbEhO9itK5SEqkpAVCSZmIy5y8Aukjq_wdQKo3gUU1ID3Q/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
+                @click="trackWorkExchangeForm"
                 class="inline-flex items-center space-x-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-base font-semibold transition-colors shadow-md hover:shadow-lg"
               >
                 <Icon
@@ -353,6 +354,7 @@
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfsFbEhO9itK5SEqkpAVCSZmIy5y8Aukjq_wdQKo3gUU1ID3Q/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
+                    @click="trackWorkExchangeForm"
                     class="text-amber-600 text-sm font-semibold hover:text-amber-700 transition-colors cursor-pointer"
                   >
                     {{ t("workExchangeJoinNow") }}
@@ -1189,6 +1191,7 @@
 import { nextTick } from "vue";
 
 const { t, bookingUrl } = useLanguage();
+const { trackWorkExchangeForm } = useGoogleAnalytics();
 
 // 統計數據動畫
 const statsSection = ref(null);

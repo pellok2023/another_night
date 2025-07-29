@@ -71,7 +71,7 @@
       <!-- Language Switcher & CTA Button -->
       <div class="hidden lg:flex items-center space-x-4">
         <button
-          @click="toggleLanguage"
+          @click="handleLanguageToggle"
           class="flex items-center space-x-2 text-stone-600 hover:text-amber-600 transition duration-300 cursor-pointer"
         >
           <Icon name="heroicons:globe-alt" class="w-5 h-5" />
@@ -83,6 +83,7 @@
           :href="bookingUrl"
           target="_blank"
           rel="noopener noreferrer"
+          @click="trackBookingClick('header_desktop')"
           class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 rounded-full text-base font-medium transition duration-300 cursor-pointer inline-block"
         >
           {{ t("bookNow") }}
@@ -182,7 +183,7 @@
 
         <!-- Mobile Language Switcher -->
         <button
-          @click="toggleLanguage"
+          @click="handleMobileLanguageToggle"
           class="w-full flex items-center space-x-2 text-stone-600 hover:text-amber-600 hover:bg-orange-50 transition duration-300 py-2 px-3 rounded-lg cursor-pointer"
         >
           <Icon name="heroicons:globe-alt" class="w-6 h-6" />
@@ -195,7 +196,7 @@
           :href="bookingUrl"
           target="_blank"
           rel="noopener noreferrer"
-          @click="mobileMenuOpen = false"
+          @click="handleMobileBookingClick"
           class="w-full bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full text-base font-medium transition duration-300 mt-4 cursor-pointer inline-block text-center"
         >
           {{ t("bookNow") }}
@@ -208,7 +209,29 @@
 <script setup>
 import { ref } from "vue";
 import { useLanguage } from "~/composables/useLanguage";
+import { useGoogleAnalytics } from "~/composables/useGoogleAnalytics";
 
 const { t, currentLanguage, toggleLanguage, bookingUrl } = useLanguage();
+const { trackBookingClick, trackLanguageSwitch } = useGoogleAnalytics();
 const mobileMenuOpen = ref(false);
+
+// 處理桌面版語言切換
+const handleLanguageToggle = () => {
+  const newLanguage = currentLanguage.value === "zh" ? "en" : "zh";
+  trackLanguageSwitch(newLanguage);
+  toggleLanguage();
+};
+
+// 處理手機版語言切換
+const handleMobileLanguageToggle = () => {
+  const newLanguage = currentLanguage.value === "zh" ? "en" : "zh";
+  trackLanguageSwitch(newLanguage);
+  toggleLanguage();
+};
+
+// 處理手機版訂房按鈕點擊
+const handleMobileBookingClick = () => {
+  trackBookingClick("header_mobile");
+  mobileMenuOpen.value = false;
+};
 </script>

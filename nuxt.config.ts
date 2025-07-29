@@ -25,6 +25,21 @@ export default defineNuxtConfig({
           sizes: "180x180",
         },
       ],
+      script: [
+        {
+          async: true,
+          src: "https://www.googletagmanager.com/gtag/js?id=G-7F99LXMD05",
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7F99LXMD05');
+          `,
+          type: "text/javascript",
+        },
+      ],
     },
   },
 
