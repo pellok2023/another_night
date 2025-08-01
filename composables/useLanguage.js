@@ -15,6 +15,7 @@ const translations = reactive({
     about: "關於我們",
     rooms: "客房介紹",
     services: "周遭景點",
+    blog: "蛻變日記",
     contact: "聯絡我們",
     bookNow: "立即訂房",
     contactNow: "立即聯絡",
@@ -48,6 +49,27 @@ const translations = reactive({
     workExchangeOpenForApplication: "開放申請中",
     workExchangeJoinNow: "立即加入",
     workExchangeBottomText: "期待與您一起創造美好的住宿體驗",
+
+    // 蛻變日記部落格
+    blogTitle: "蛻變日記",
+    blogSubtitle: "記錄又一宿的成長與蛻變故事",
+    blogDescription:
+      "這裡記錄著我們從零開始的每一步，分享台東在地生活、旅宿經營心得，以及與每位旅人相遇的美好故事。",
+    readMore: "閱讀更多",
+    backToBlog: "返回日記",
+    publishedOn: "發布於",
+    author: "又一宿團隊",
+    categories: "分類",
+    tags: "標籤",
+    relatedPosts: "相關文章",
+    noPostsFound: "暫無文章",
+    searchPosts: "搜尋文章...",
+    allCategories: "全部分類",
+    latestPosts: "最新文章",
+    popularPosts: "熱門文章",
+    shareThisPost: "分享這篇文章",
+    nextPost: "下一篇",
+    previousPost: "上一篇",
 
     // 房型區域
     roomTypesTitle: "客房空間",
@@ -553,6 +575,7 @@ const translations = reactive({
     about: "About",
     rooms: "Rooms",
     services: "Attractions",
+    blog: "Transformation Diary",
     contact: "Contact",
     bookNow: "Book Now",
     contactNow: "Contact Now",
@@ -589,6 +612,27 @@ const translations = reactive({
     workExchangeJoinNow: "Join Now",
     workExchangeBottomText:
       "Looking forward to creating wonderful accommodation experiences with you",
+
+    // Transformation Diary Blog
+    blogTitle: "Transformation Diary",
+    blogSubtitle: "Recording Another Night's Growth and Transformation Stories",
+    blogDescription:
+      "Here we record every step from scratch, sharing Taitung local life, accommodation management insights, and beautiful stories of meeting every traveler.",
+    readMore: "Read More",
+    backToBlog: "Back to Diary",
+    publishedOn: "Published on",
+    author: "Another Night Team",
+    categories: "Categories",
+    tags: "Tags",
+    relatedPosts: "Related Posts",
+    noPostsFound: "No posts found",
+    searchPosts: "Search posts...",
+    allCategories: "All Categories",
+    latestPosts: "Latest Posts",
+    popularPosts: "Popular Posts",
+    shareThisPost: "Share this post",
+    nextPost: "Next Post",
+    previousPost: "Previous Post",
 
     // Room Types Section
     roomTypesTitle: "Room Spaces",

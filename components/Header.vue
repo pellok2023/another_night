@@ -57,6 +57,16 @@
           >{{ t("services") }}</NuxtLink
         >
         <NuxtLink
+          to="/blog"
+          :class="[
+            'text-lg transition duration-300',
+            $route.path === '/blog'
+              ? 'text-amber-600 font-semibold'
+              : 'text-stone-600 hover:text-amber-600',
+          ]"
+          >{{ t("blog") }}</NuxtLink
+        >
+        <NuxtLink
           to="/contact"
           :class="[
             'text-lg transition duration-300',
@@ -168,6 +178,17 @@
               : 'text-stone-600 hover:text-amber-600 hover:bg-orange-50',
           ]"
           >{{ t("services") }}</NuxtLink
+        >
+        <NuxtLink
+          to="/blog"
+          @click="mobileMenuOpen = false"
+          :class="[
+            'block text-lg transition duration-300 py-2 px-3 rounded-lg',
+            $route.path === '/blog'
+              ? 'text-amber-600 font-semibold bg-orange-50'
+              : 'text-stone-600 hover:text-amber-600 hover:bg-orange-50',
+          ]"
+          >{{ t("blog") }}</NuxtLink
         >
         <NuxtLink
           to="/contact"
