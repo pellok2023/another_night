@@ -86,7 +86,7 @@ let slideInterval = null;
 
 const slides = [
   {
-    image: "/images/hero/hero-1.jpeg",
+    image: "/images/hero/hero-1a.png",
   },
   {
     image: "/images/hero/hero-2.jpeg",
