@@ -23,6 +23,122 @@
           }"
         ></div>
 
+        <!-- Text Overlay -->
+        <div
+          class="absolute inset-0 bg-black/50 flex items-center justify-center z-10"
+        >
+          <div class="text-center text-white px-4 md:px-8 max-w-5xl mx-auto">
+            <!-- Desktop Version -->
+            <div class="hidden md:block">
+              <h2
+                class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-6 leading-tight"
+              >
+                【我們知道這裡不完美，但我們真心對待每一位來住一宿的朋友】
+              </h2>
+
+              <div
+                class="text-sm md:text-base space-y-3 md:space-y-4 leading-relaxed"
+              >
+                <div class="text-left max-w-3xl mx-auto">
+                  <p class="mb-3 md:mb-4">
+                    我們誠實面對這些不足——<br />
+                    這是一棟年歲不小的老建築，有些條件在短時間內確實難以改善。
+                  </p>
+
+                  <p class="mb-3 md:mb-4">
+                    但在我們做得到的地方，我們會盡最大努力：
+                  </p>
+                </div>
+
+                <ul class="text-left space-y-2 md:space-y-3 max-w-3xl mx-auto">
+                  <li class="flex items-start">
+                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                      >•</span
+                    >
+                    <span class="text-sm md:text-base"
+                      >入住前，我們會主動告知可能的不便</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                      >•</span
+                    >
+                    <span class="text-sm md:text-base"
+                      >房務與清潔我們堅持做到最細</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                      >•</span
+                    >
+                    <span class="text-sm md:text-base"
+                      >備品齊全、遮光窗簾與床墊，都是為了你的好眠</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                      >•</span
+                    >
+                    <span class="text-sm md:text-base"
+                      >迎賓蜂蜜茶與晨光早餐，是我們用心準備的日常儀式</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                      >•</span
+                    >
+                    <span class="text-sm md:text-base"
+                      >位於台東市中心，生活機能便利，步行可達多個景點</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Mobile Version -->
+            <div class="md:hidden -mt-36">
+              <ul class="text-left space-y-3 max-w-sm mx-auto">
+                <li class="flex items-start">
+                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                    >•</span
+                  >
+                  <span class="text-sm">入住前，我們會主動告知可能的不便</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                    >•</span
+                  >
+                  <span class="text-sm">房務與清潔我們堅持做到最細</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                    >•</span
+                  >
+                  <span class="text-sm"
+                    >備品齊全、遮光窗簾與床墊，都是為了你的好眠</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                    >•</span
+                  >
+                  <span class="text-sm"
+                    >迎賓蜂蜜茶與晨光早餐，是我們用心準備的日常儀式</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
+                    >•</span
+                  >
+                  <span class="text-sm"
+                    >位於台東市中心，生活機能便利，步行可達多個景點</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <!-- Navigation Dots -->
         <div
           class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"
@@ -86,7 +202,7 @@ let slideInterval = null;
 
 const slides = [
   {
-    image: "/images/hero/hero-1a.png",
+    image: "/images/hero/hero-1.jpeg",
   },
   {
     image: "/images/hero/hero-2.jpeg",
