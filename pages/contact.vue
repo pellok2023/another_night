@@ -243,7 +243,6 @@
                   </h3>
                   <div class="space-y-2 text-stone-600">
                     <p>{{ t("airportDesc1") }}</p>
-                    <p>{{ t("airportDesc2") }}</p>
                   </div>
                 </div>
               </div>

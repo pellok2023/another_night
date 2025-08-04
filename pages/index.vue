@@ -816,8 +816,6 @@
                 <p class="text-stone-600 text-sm mb-2">
                   {{ t("airportDesc1") }}
                 </p>
-                <!-- 機場接駁服務 - 提前預約 -->
-                <p class="text-stone-600 text-sm">{{ t("airportDesc2") }}</p>
               </div>
             </div>
           </div>

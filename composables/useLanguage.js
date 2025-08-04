@@ -102,21 +102,21 @@ const translations = reactive({
     transportationTitle: "交通資訊",
     transportationSubtitle: "便利的交通位置，讓您輕鬆抵達又一宿",
     hotelName: "又一宿",
-    hotelAddress: "台東市新生路155號",
+    hotelAddress: "台東市文化街72號",
 
     // 交通方式
     trainStation: "火車站",
-    trainDesc1: "台東火車站 - 步行約5分鐘",
-    trainDesc2: "台東新站 - 計程車約10分鐘",
+    trainDesc1: "近台東轉運站 - 步行約3分鐘",
+    trainDesc2: "台東火車站 - 計程車約8分鐘",
     airportTransport: "機場交通",
     airportDesc1: "台東豐年機場 - 計程車約20分鐘",
-    airportDesc2: "機場接駁服務 - 提前預約",
+    airportDesc2: "",
     busTransport: "公車",
-    busDesc1: "台東轉運站：8101、8102、8109、8110",
-    busDesc2: "中華路站：市區公車、觀光巴士",
+    busDesc1: "台東轉運站：市區公車、觀光巴士",
+    busDesc2: "文化街站：步行約2分鐘",
     parkingInfo: "停車資訊",
-    parkingDesc1: "館內提供24小時停車場 - 每日NT$300",
-    parkingDesc2: "周邊收費停車格 - 每小時NT$30",
+    parkingDesc1: "館內無停車場",
+    parkingDesc2: "周邊停車格 - 每小時NT$20，夜間21:00-09:00不收費",
 
     // 飯店環境區域
     hotelEnvironmentTitle: "飯店環境介紹",
@@ -353,8 +353,8 @@ const translations = reactive({
     airportShuttleDesc: "提供機場接送服務，讓您的旅程更加順暢",
     tourGuide: "旅遊諮詢",
     tourGuideDesc: "專業的旅遊諮詢服務，為您規劃完美的台東之旅",
-    valetParking: "代客停車",
-    valetParkingDesc: "專業的代客停車服務，讓您無後顧之憂",
+    valetParking: "停車指引",
+    valetParkingDesc: "提供周邊停車格資訊與夜間免費停車指引",
 
     // 服務時間
     serviceHours: "服務時間",
@@ -370,7 +370,7 @@ const translations = reactive({
       "我們期待為您提供最優質的服務體驗。無論是預訂諮詢、特殊需求或任何疑問，我們的專業團隊都樂意為您協助。",
     addressTitle: "地址",
     addressText: "台東縣台東市文化街72號",
-    addressNote: "近台東火車站，步行5分鐘",
+    addressNote: "近台東轉運站，步行3分鐘",
     phoneTitle: "電話",
     phoneNumber: "089-348430",
     phoneNote: "24小時服務專線",
@@ -409,19 +409,19 @@ const translations = reactive({
     sendEmail: "發送郵件",
     transportInfoTitle: "交通資訊",
     publicTransport: "大眾運輸",
-    trainStation: "台東火車站 - 步行5分鐘",
-    busStop: "公車站牌「中華路口」- 步行2分鐘",
+    trainStation: "近台東轉運站 - 步行3分鐘",
+    busStop: "公車站牌「文化街」- 步行2分鐘",
     airportBus: "機場巴士 - 約20分鐘",
     selfDriving: "自行開車",
     highway: "台9線往台東市區 - 5分鐘",
-    parking: "專屬停車場 - 24小時開放",
-    valetService: "代客泊車服務 - 需事先預約",
+    parking: "周邊停車格 - 夜間免費",
+    valetService: "停車指引服務 - 歡迎詢問",
 
     // Footer
     footerBrandName: "又一宿",
     footerDescription:
       "在台東山海之間，一間不完美卻真誠的旅店正在蛻變。我們不完美，卻誠實地準備好迎接每一位旅人。這裡不豪華卻溫暖，在蛻變的過程中，與您分享短暫卻真摯的相遇時光。",
-    footerAddress: "台東縣台東市中華路一段348號",
+    footerAddress: "台東市文化街72號",
     quickLinks: "快速連結",
     serviceItems: "我們的服務",
     roomServiceLink: "真誠服務",
@@ -669,13 +669,14 @@ const translations = reactive({
     trainDesc2: "Taitung New Station - 10 minutes by taxi",
     airportTransport: "Airport Transport",
     airportDesc1: "Taitung Fengnian Airport - 20 minutes by taxi",
-    airportDesc2: "Airport shuttle service - advance booking required",
+    airportDesc2: "",
     busTransport: "Bus",
     busDesc1: "Taitung Bus Terminal: 8101, 8102, 8109, 8110",
     busDesc2: "Zhonghua Road Station: City Bus, Sightseeing Bus",
     parkingInfo: "Parking Information",
-    parkingDesc1: "24-hour parking available in hotel - NT$300 per day",
-    parkingDesc2: "Surrounding paid parking spaces - NT$30 per hour",
+    parkingDesc1: "No parking available in hotel",
+    parkingDesc2:
+      "Surrounding parking spaces - NT$20 per hour, free from 21:00-09:00",
 
     // Hotel Environment Section
     hotelEnvironmentTitle: "Hotel Environment Introduction",
@@ -943,9 +944,9 @@ const translations = reactive({
     tourGuide: "Travel Consultation",
     tourGuideDesc:
       "Professional travel consultation service to plan your perfect Taitung trip",
-    valetParking: "Valet Parking",
+    valetParking: "Parking Guide",
     valetParkingDesc:
-      "Professional valet parking service for your peace of mind",
+      "Provide information on surrounding parking spaces and free night parking guidance",
 
     // Service Hours
     serviceHours: "Service Hours",
@@ -960,8 +961,8 @@ const translations = reactive({
     contactInfoDesc:
       "We look forward to providing you with the highest quality service experience. Whether it's booking inquiries, special requests, or any questions, our professional team is happy to assist you.",
     addressTitle: "Address",
-    addressText: "No. 1, Zhonghua Road Section 1, Taitung City, Taitung County",
-    addressNote: "5-minute walk from Taitung Train Station",
+    addressText: "No. 72, Wenhua Street, Taitung City, Taitung County",
+    addressNote: "3-minute walk from Taitung Transfer Station",
     phoneTitle: "Phone",
     phoneNumber: "089-348430",
     phoneNote: "24-hour service hotline",
@@ -1002,20 +1003,20 @@ const translations = reactive({
     sendEmail: "Send Email",
     transportInfoTitle: "Transportation Information",
     publicTransport: "Public Transportation",
-    trainStation: "Taitung Train Station - 5-minute walk",
-    busStop: "Bus stop 'Zhonghua Road Junction' - 2-minute walk",
+    trainStation: "Near Taitung Transfer Station - 3-minute walk",
+    busStop: "Bus stop 'Wenhua Street' - 2-minute walk",
     airportBus: "Airport bus - about 20 minutes",
     selfDriving: "Self-driving",
     highway: "Provincial Highway 9 to Taitung City - 5 minutes",
-    parking: "Dedicated parking lot - 24 hours open",
-    valetService: "Valet parking service - advance reservation required",
+    parking: "Surrounding parking spaces - free at night",
+    valetService: "Parking guidance service - welcome to inquire",
 
     // Footer
     footerBrandName: "Another Night",
     footerDescription:
       "Between mountains and sea in Taitung, Another Night is an inn in transformation. We're not perfect, but we honestly prepare to welcome every traveler. Here is not luxurious yet warm; during our transformation, we share brief yet sincere encounters with you.",
     footerAddress:
-      "No. 348, Sec. 1, Zhonghua Rd., Taitung City, Taitung County 95043, Taiwan",
+      "No. 72, Wenhua St., Taitung City, Taitung County 95043, Taiwan",
     quickLinks: "Quick Links",
     serviceItems: "Our Services",
     roomServiceLink: "Sincere Service",
