@@ -474,14 +474,30 @@ useHead(() => ({
 // 動態載入 markdown 文件
 const loadMarkdownPosts = async () => {
   try {
-    console.log("開始載入 markdown 文件...");
+    console.log("開始自動偵測 markdown 文件...");
 
-    // 定義要載入的 markdown 文件列表
-    const markdownFiles = [
-      "2024-01-15-birth-of-another-night.md",
-      "2024-01-10-taitung-food-exploration.md",
-      "2024-01-05-service-philosophy.md",
-    ];
+    // 嘗試獲取目錄列表
+    let markdownFiles = [];
+
+    try {
+      // 首先嘗試獲取目錄內容
+      const directoryResponse = await $fetch("/api/blog/files");
+      if (directoryResponse && Array.isArray(directoryResponse.files)) {
+        markdownFiles = directoryResponse.files.filter(
+          (file) => file.endsWith(".md") && file !== "README.md"
+        );
+        console.log("自動偵測到的文件:", markdownFiles);
+      }
+    } catch (error) {
+      console.log("無法自動偵測文件，使用備用方案");
+      // 如果無法自動偵測，使用已知的文件列表作為備用
+      markdownFiles = [
+        "2025-07-31.md",
+        "2024-01-15-birth-of-another-night.md",
+        "2024-01-10-taitung-food-exploration.md",
+        "2024-01-05-service-philosophy.md",
+      ];
+    }
 
     const posts = [];
 
