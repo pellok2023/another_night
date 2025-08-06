@@ -107,7 +107,7 @@ const translations = reactive({
     // 交通方式
     trainStation: "火車站",
     trainDesc1: "近台東轉運站 - 步行約3分鐘",
-    trainDesc2: "台東火車站 - 計程車約8分鐘",
+    trainDesc2: "台東火車站 - 計程車約15分鐘",
     airportTransport: "機場交通",
     airportDesc1: "台東豐年機場 - 計程車約20分鐘",
     airportDesc2: "",
@@ -666,7 +666,7 @@ const translations = reactive({
     // Transportation Methods
     trainStation: "Train Station",
     trainDesc1: "Taitung Railway Station - 5 minutes walk",
-    trainDesc2: "Taitung New Station - 10 minutes by taxi",
+    trainDesc2: "Taitung Railway Station - 15 minutes by taxi",
     airportTransport: "Airport Transport",
     airportDesc1: "Taitung Fengnian Airport - 20 minutes by taxi",
     airportDesc2: "",
