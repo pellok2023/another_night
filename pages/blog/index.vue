@@ -489,8 +489,13 @@ const loadMarkdownPosts = async () => {
     for (let i = 0; i < markdownFiles.length; i++) {
       const filename = markdownFiles[i];
       try {
-        // 讀取 markdown 文件內容
-        const response = await $fetch(`/content/blog/${filename}`);
+        // 直接從 public 目錄讀取 markdown 文件內容
+        const response = await $fetch(`/content/blog/${filename}`, {
+          method: "GET",
+          headers: {
+            Accept: "text/plain",
+          },
+        });
         console.log(`載入文件 ${filename}:`, response);
 
         if (response) {
