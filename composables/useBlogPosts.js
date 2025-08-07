@@ -88,6 +88,12 @@ const parseMarkdownFile = (content, filename, id) => {
 export const useBlogPosts = () => {
   // 載入文章資料
   const loadPosts = async () => {
+    // 只在客戶端執行
+    if (!process.client) {
+      console.log("服務器端跳過載入文章");
+      return;
+    }
+
     try {
       // 定義要載入的 markdown 文件列表
       const markdownFiles = [
