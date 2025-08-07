@@ -24,6 +24,7 @@ export default defineNuxtConfig({
           href: "/apple-touch-icon.png",
           sizes: "180x180",
         },
+        { rel: "canonical", href: "https://www.urlodge.com/" },
       ],
       script: [
         {
@@ -53,5 +54,12 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@nuxt/ui",
+    "@nuxtjs/sitemap",
   ],
+
+  runtimeConfig: {
+    public: {
+      siteUrl: "https://www.urlodge.com",
+    },
+  },
 });
