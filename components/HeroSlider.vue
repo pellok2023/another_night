@@ -64,7 +64,7 @@
                       >•</span
                     >
                     <span class="text-sm md:text-base"
-                      >房務與清潔我們堅持做到最細</span
+                      >房務與清潔是我們一直關注和努力的服務項目</span
                     >
                   </li>
                   <li class="flex items-start">
@@ -108,7 +108,7 @@
                   <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
                     >•</span
                   >
-                  <span class="text-sm">房務與清潔我們堅持做到最細</span>
+                  <span class="text-sm">房務與清潔是我們一直關注和努力的服務項目</span>
                 </li>
                 <li class="flex items-start">
                   <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
