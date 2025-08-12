@@ -97,6 +97,8 @@ export const useBlogPosts = () => {
     try {
       // 定義要載入的 markdown 文件列表
       const markdownFiles = [
+        "2025-08-08.md",
+        "2025-08-07.md",
         "2025-07-31.md",
         "2024-01-15-birth-of-another-night.md",
         "2024-01-10-taitung-food-exploration.md",
