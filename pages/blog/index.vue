@@ -97,7 +97,14 @@
                       : 'text-stone-600 hover:bg-amber-50',
                   ]"
                 >
-                  {{ t("allCategories") }}
+                  <span class="flex justify-between items-center w-full">
+                    <span>{{ t("allCategories") }}</span>
+                    <span
+                      class="bg-amber-100 text-amber-600 text-xs px-2 py-1 rounded-full"
+                    >
+                      {{ blogPosts.length }}
+                    </span>
+                  </span>
                 </button>
                 <button
                   v-for="category in categories"
@@ -110,7 +117,69 @@
                       : 'text-stone-600 hover:bg-amber-50',
                   ]"
                 >
-                  {{ category }}
+                  <span class="flex justify-between items-center w-full">
+                    <span>{{ category }}</span>
+                    <span
+                      :class="[
+                        'text-xs px-2 py-1 rounded-full',
+                        selectedCategory === category
+                          ? 'bg-amber-200 text-amber-700'
+                          : 'bg-amber-100 text-amber-600',
+                      ]"
+                    >
+                      {{ categoryPostCounts[category] }}
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tags Cloud -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200 mb-6"
+            >
+              <h3 class="text-lg font-semibold text-stone-800 mb-4">
+                {{ t("tags") }}
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <button
+                  @click="clearTagSelection"
+                  :class="[
+                    'px-3 py-1 rounded-full text-xs font-medium transition duration-300 cursor-pointer border',
+                    !selectedTag
+                      ? 'bg-amber-600 text-white border-amber-600'
+                      : 'bg-white text-amber-600 border-amber-300 hover:bg-amber-50',
+                  ]"
+                >
+                  {{ t("allTags") }}
+                </button>
+                <button
+                  v-for="tag in tags"
+                  :key="tag"
+                  @click="selectTag(tag)"
+                  :class="[
+                    'px-3 py-1 rounded-full text-xs font-medium transition duration-300 cursor-pointer border',
+                    selectedTag === tag
+                      ? 'bg-amber-600 text-white border-amber-600'
+                      : 'bg-white text-amber-600 border-amber-300 hover:bg-amber-50',
+                  ]"
+                  :style="{
+                    fontSize: `${Math.max(
+                      0.75,
+                      Math.min(
+                        1,
+                        0.75 +
+                          (tagPostCounts[tag] /
+                            Math.max(...Object.values(tagPostCounts))) *
+                            0.25
+                      )
+                    )}rem`,
+                  }"
+                >
+                  {{ tag }}
+                  <span class="ml-1 text-xs opacity-75"
+                    >({{ tagPostCounts[tag] }})</span
+                  >
                 </button>
               </div>
             </div>
@@ -442,7 +511,9 @@ const {
   getAllPosts,
   getPostById,
   getAllCategories,
+  getAllTags,
   getPostsByCategory,
+  getPostsByTag,
   searchPosts,
   getRelatedPosts,
   getPreviousAndNextPosts,
@@ -455,6 +526,7 @@ const heroAnimated = ref(false);
 // Blog data
 const searchQuery = ref("");
 const selectedCategory = ref(null);
+const selectedTag = ref(null);
 const postsPerPage = ref(6);
 const selectedPost = ref(null);
 
@@ -500,6 +572,31 @@ const categories = computed(() => {
   return getAllCategories.value;
 });
 
+// Category post counts
+const categoryPostCounts = computed(() => {
+  const counts = {};
+  categories.value.forEach((category) => {
+    counts[category] = blogPosts.value.filter(
+      (post) => post.category === category
+    ).length;
+  });
+  return counts;
+});
+
+// Tags
+const tags = computed(() => {
+  return getAllTags.value;
+});
+
+// Tag post counts
+const tagPostCounts = computed(() => {
+  const counts = {};
+  tags.value.forEach((tag) => {
+    counts[tag] = getPostsByTag(tag).length;
+  });
+  return counts;
+});
+
 // Latest posts
 const latestPosts = computed(() => {
   return getAllPosts.value.slice(0, 3);
@@ -514,6 +611,11 @@ const filteredPosts = computed(() => {
     filtered = filtered.filter(
       (post) => post.category === selectedCategory.value
     );
+  }
+
+  // Filter by tag
+  if (selectedTag.value) {
+    filtered = filtered.filter((post) => post.tags.includes(selectedTag.value));
   }
 
   // Filter by search query
@@ -581,6 +683,24 @@ const backToBlogList = () => {
 
 const loadMore = () => {
   postsPerPage.value += 6;
+};
+
+// Tag selection handlers
+const selectTag = (tag) => {
+  if (selectedTag.value === tag) {
+    selectedTag.value = null; // 取消選中
+  } else {
+    selectedTag.value = tag; // 選中新標籤
+  }
+  // 清除分類選擇
+  selectedCategory.value = null;
+  // 重置分頁
+  postsPerPage.value = 6;
+};
+
+const clearTagSelection = () => {
+  selectedTag.value = null;
+  postsPerPage.value = 6;
 };
 
 // Share methods
