@@ -1231,31 +1231,28 @@ const attractions = {
   all: {
     titleKey: "taitungForestPark",
     descKey: "taitungForestParkDesc",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
+    image: "/images/viewpoint/park.jpg",
     distanceKey: "forestParkDistance",
     durationKey: "forestParkDuration",
   },
   nature: {
     titleKey: "zhipenHotSprings",
     descKey: "zhipenHotSpringsDesc",
-    image:
-      "https://images.unsplash.com/photo-1488345979593-09db0f85545f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/images/viewpoint/spa.jpg",
     distanceKey: "hotSpringsDistance",
     durationKey: "hotSpringsDuration",
   },
   culture: {
-    titleKey: "taitungRailwayArt",
-    descKey: "taitungRailwayArtDesc",
-    image: "/images/hero/hero-2.jpeg",
-    distanceKey: "railwayArtDistance",
-    durationKey: "railwayArtDuration",
+    titleKey: "duoliangStation",
+    descKey: "duoliangStationDesc",
+    image: "/images/viewpoint/trainspot.jpg",
+    distanceKey: "duoliangStationDistance",
+    durationKey: "duoliangStationDuration",
   },
   food: {
     titleKey: "taitungNightMarket",
     descKey: "taitungNightMarketDesc",
-    image:
-      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80",
+    image: "/images/viewpoint/nightmarket.jpg",
     distanceKey: "nightMarketDistance",
     durationKey: "nightMarketDuration",
   },

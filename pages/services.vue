@@ -231,26 +231,24 @@ const attractions = [
     id: 1,
     nameKey: "taitungForestPark",
     category: "downtown",
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/viewpoint/park.jpg",
     descKey: "taitungForestParkDesc",
     distanceKey: "distance5min",
   },
   {
     id: 2,
-    nameKey: "taitungLandmark",
-    category: "downtown",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    descKey: "taitungLandmarkDesc",
-    distanceKey: "distance10min",
+    nameKey: "zhipenHotSprings",
+    category: "south",
+    image: "/images/viewpoint/spa.jpg",
+    descKey: "zhipenHotSpringsDesc",
+    distanceKey: "distance25min",
   },
+
   {
     id: 3,
     nameKey: "duoliangStation",
     category: "south",
-    image:
-      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/viewpoint/trainspot.jpg",
     descKey: "duoliangStationDesc",
     distanceKey: "distance45min",
   },
@@ -258,46 +256,25 @@ const attractions = [
     id: 4,
     nameKey: "guanshanRiceSchool",
     category: "mountain",
-    image:
-      "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/viewpoint/school.jpg",
     descKey: "guanshanRiceSchoolDesc",
     distanceKey: "distance60min",
   },
   {
     id: 5,
-    nameKey: "goldenNeedleMountain",
-    category: "south",
-    image:
-      "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    descKey: "goldenNeedleMountainDesc",
-    distanceKey: "distance50min",
-  },
-  {
-    id: 6,
     nameKey: "chishangBrownBoulevard",
     category: "mountain",
-    image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/viewpoint/brown.jpg",
     descKey: "chishangBrownBoulevardDesc",
     distanceKey: "distance90min",
   },
   {
-    id: 7,
+    id: 6,
     nameKey: "sanxiantai",
     category: "coast",
-    image:
-      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/viewpoint/sansai.jpg",
     descKey: "sanxiantaiDesc",
     distanceKey: "distance70min",
-  },
-  {
-    id: 8,
-    nameKey: "zhipenHotSprings",
-    category: "south",
-    image:
-      "https://images.unsplash.com/photo-1488345979593-09db0f85545f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    descKey: "zhipenHotSpringsDesc",
-    distanceKey: "distance25min",
   },
 ];
 

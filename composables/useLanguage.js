@@ -532,11 +532,20 @@ const translations = reactive({
     railwayArtDistance: "距離飯店 1.2km",
     railwayArtDuration: "步行 15分鐘",
 
+    taitungRailwayArtDistance: "距離飯店 1.2km",
+    taitungRailwayArtDuration: "步行 15分鐘",
+
     taitungNightMarket: "台東觀光夜市",
     taitungNightMarketDesc:
       "匯集台東在地美食的熱鬧夜市，從原住民料理到海鮮小吃，讓您品嚐最道地的台東風味。",
     nightMarketDistance: "距離飯店 800m",
     nightMarketDuration: "步行 10分鐘",
+
+    duoliangStation: "多良火車站",
+    duoliangStationDesc:
+      "被譽為『全台灣最美火車站』，位於台東縣太麻里鄉，擁有絕美的太平洋海景，是攝影愛好者的天堂。",
+    duoliangStationDistance: "距離飯店 45km",
+    duoliangStationDuration: "開車 45分鐘",
 
     // 聯絡頁面額外翻譯
     convenientLocationText: "便利的交通位置，讓您輕鬆抵達又一宿",
@@ -1127,11 +1136,20 @@ const translations = reactive({
     railwayArtDistance: "1.2 minutes walk from hotel",
     railwayArtDuration: "15 minutes walk",
 
+    taitungRailwayArtDistance: "1.2km from hotel",
+    taitungRailwayArtDuration: "15 minutes walk",
+
     taitungNightMarket: "Taitung Night Market",
     taitungNightMarketDesc:
       "Hot night market gathering Taitung local cuisine, from indigenous cuisine to seafood snacks, allowing you to taste the most authentic Taitung flavors.",
     nightMarketDistance: "800 meters walk from hotel",
     nightMarketDuration: "10 minutes walk",
+
+    duoliangStation: "Duoliang Station",
+    duoliangStationDesc:
+      "Known as 'Taiwan's Most Beautiful Train Station', located in Taimali Township, Taitung County, with stunning Pacific Ocean views, a paradise for photography enthusiasts.",
+    duoliangStationDistance: "45km from hotel",
+    duoliangStationDuration: "45 minutes drive",
 
     // 聯絡頁面額外翻譯
     convenientLocationText:
