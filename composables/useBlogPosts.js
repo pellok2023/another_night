@@ -88,44 +88,35 @@ const parseMarkdownFile = (content, filename, id) => {
 export const useBlogPosts = () => {
   // 載入文章資料
   const loadPosts = async () => {
-    // 只在客戶端執行
-    if (!process.client) {
-      console.log("服務器端跳過載入文章");
-      return;
-    }
-
     try {
-      // 定義要載入的 markdown 文件列表
-      const markdownFiles = [
-        "2025-08-08.md",
-        "2025-08-07.md",
-        "2025-07-31.md",
-        "2024-01-15-birth-of-another-night.md",
-        "2024-01-10-taitung-food-exploration.md",
-        "2024-01-05-service-philosophy.md",
-      ];
+      // 使用 import.meta.glob 在構建時讀取所有 markdown 文件
+      const modules = import.meta.glob('/public/content/blog/*.md', { 
+        query: '?raw',
+        import: 'default',
+        eager: true 
+      });
 
       const posts = [];
+      let id = 1;
 
-      for (let i = 0; i < markdownFiles.length; i++) {
-        const filename = markdownFiles[i];
+      for (const [path, content] of Object.entries(modules)) {
         try {
-          // 直接從 public 目錄讀取 markdown 文件內容
-          const response = await $fetch(`/content/blog/${filename}`);
-          console.log(`載入文件 ${filename}:`, response);
-
-          if (response) {
+          // 從路徑中提取文件名
+          const filename = path.split('/').pop();
+          
+          if (content && filename && !filename.toLowerCase().includes('readme')) {
             // 解析 frontmatter 和內容
-            const post = parseMarkdownFile(response, filename, i + 1);
+            const post = parseMarkdownFile(content, filename, id);
             posts.push(post);
+            id++;
           }
         } catch (error) {
-          console.error(`載入文件 ${filename} 失敗:`, error);
+          console.error(`解析文件 ${path} 失敗:`, error);
         }
       }
 
       console.log("載入完成，文章數量:", posts.length);
-      blogPosts.value = posts;
+      blogPosts.value = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
     } catch (error) {
       console.error("載入文章失敗:", error);
       blogPosts.value = [];
