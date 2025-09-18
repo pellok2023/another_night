@@ -85,41 +85,33 @@
             </div>
 
             <!-- 價格展示 -->
-            <div class="space-y-4 mb-6">
+            <div class="grid grid-cols-2 gap-4 mb-6">
               <div
-                class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-2xl shadow-sm text-center"
+                class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-2xl shadow-sm text-center"
               >
-                <div class="flex items-center justify-center space-x-3 mb-3">
-                  <div
-                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center"
-                  >
-                    <Icon name="heroicons:user" class="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-stone-800 text-lg">單人入住</h4>
-                    <p class="text-stone-600 text-xs">舒適住宿體驗</p>
-                  </div>
+                <div
+                  class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3"
+                >
+                  <Icon name="heroicons:user" class="w-5 h-5 text-white" />
                 </div>
-                <div class="text-3xl font-bold text-amber-600 mb-1">$888</div>
-                <div class="text-sm text-stone-500">含早餐 / 晚</div>
+                <h4 class="font-bold text-stone-800 text-sm mb-1">單人入住</h4>
+                <p class="text-stone-600 text-xs mb-3">舒適住宿體驗</p>
+                <div class="text-2xl font-bold text-amber-600 mb-1">$888</div>
+                <div class="text-xs text-stone-500">含早餐 / 晚</div>
               </div>
 
               <div
-                class="bg-gradient-to-r from-pink-50 to-pink-100 p-6 rounded-2xl shadow-sm text-center"
+                class="bg-gradient-to-r from-pink-50 to-pink-100 p-4 rounded-2xl shadow-sm text-center"
               >
-                <div class="flex items-center justify-center space-x-3 mb-3">
-                  <div
-                    class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center"
-                  >
-                    <Icon name="heroicons:heart" class="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-stone-800 text-lg">雙人房</h4>
-                    <p class="text-stone-600 text-xs">浪漫情侶首選</p>
-                  </div>
+                <div
+                  class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-3"
+                >
+                  <Icon name="heroicons:heart" class="w-5 h-5 text-white" />
                 </div>
-                <div class="text-3xl font-bold text-amber-600 mb-1">$1080</div>
-                <div class="text-sm text-stone-500">含早餐 / 晚</div>
+                <h4 class="font-bold text-stone-800 text-sm mb-1">雙人房</h4>
+                <p class="text-stone-600 text-xs mb-3">浪漫情侶首選</p>
+                <div class="text-2xl font-bold text-amber-600 mb-1">$1080</div>
+                <div class="text-xs text-stone-500">含早餐 / 晚</div>
               </div>
             </div>
 
