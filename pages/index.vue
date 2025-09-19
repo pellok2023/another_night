@@ -66,14 +66,15 @@
             </div>
 
             <!-- 立即預訂按鈕 -->
-            <div class="text-center lg:text-left">
+            <div class="text-center lg:text-left space-y-3">
               <a
                 href="tel:089-348430"
-                class="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 transform hover:scale-105"
+                class="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 transform hover:scale-105 w-full lg:w-auto justify-center"
               >
                 <Icon name="heroicons:phone" class="w-6 h-6" />
                 <span>立即致電預訂</span>
               </a>
+              <p class="text-white/80 text-sm">多線服務，讓您更容易接通</p>
             </div>
           </div>
 
@@ -128,7 +129,9 @@
                     <Icon name="heroicons:phone" class="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p class="font-medium text-stone-800">089-348430</p>
+                    <p class="font-medium text-stone-800">
+                      089-348430 / 0910-350450 / 0905-200560
+                    </p>
                     <p class="text-xs text-stone-600">訂房專線</p>
                   </div>
                 </div>
