@@ -116,8 +116,7 @@ const translations = reactive({
     busDesc1: "台東轉運站：市區公車、觀光巴士",
     busDesc2: "文化街站：步行約2分鐘",
     parkingInfo: "停車資訊",
-    parkingDesc1: "館內無停車場",
-    parkingDesc2: "周邊停車格 - 每小時NT$20，夜間21:00-09:00不收費",
+    parkingDesc1: "館內無停車場，請至周邊停車場停放(點擊下方圖片放大)",
 
     // 飯店環境區域
     hotelEnvironmentTitle: "飯店環境介紹",

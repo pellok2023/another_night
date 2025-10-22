@@ -3,191 +3,6 @@
     <!-- Hero Slider -->
     <HeroSlider />
 
-    <!-- 淡季優惠活動區域 -->
-    <section
-      class="relative py-16 px-6 lg:px-12 overflow-hidden min-h-[600px] flex items-center"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      "
-    >
-      <!-- 深色遮罩層 -->
-      <div class="absolute inset-0 bg-black/60"></div>
-
-      <!-- 優惠角標 -->
-      <div
-        class="absolute top-8 right-8 bg-red-500 text-white px-6 py-3 rounded-full shadow-lg transform rotate-12 z-10"
-      >
-        <span class="text-sm font-bold">限時優惠</span>
-      </div>
-
-      <div class="relative z-10 max-w-6xl mx-auto w-full">
-        <div class="grid lg:grid-cols-2 gap-8 items-center">
-          <!-- 左側：標題和介紹 -->
-          <div class="text-center lg:text-left">
-            <div
-              class="inline-flex items-center space-x-2 bg-red-500/90 px-4 py-2 rounded-full mb-6"
-            >
-              <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span class="text-white font-medium text-sm"
-                >淡季超值優惠來囉</span
-              >
-            </div>
-
-            <h2
-              class="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
-            >
-              YouTube & Facebook<br />
-              <span class="text-amber-300">粉絲專屬福利</span>
-            </h2>
-
-            <p class="text-white/90 text-lg mb-8 leading-relaxed">
-              即日起至 9/26，入住台東又一宿享超划算價格！<br />
-              遠離塵囂，來場舒心小旅行！
-            </p>
-
-            <!-- 通關密語 - 大字體顯示 -->
-            <div
-              class="bg-amber-400/95 backdrop-blur-sm p-6 rounded-3xl border-2 border-dashed border-amber-300 mb-8"
-            >
-              <div class="text-center">
-                <h3 class="font-bold text-amber-900 mb-2 text-lg">
-                  訂房通關密語
-                </h3>
-                <div class="text-3xl lg:text-4xl font-bold text-amber-900 mb-2">
-                  又上財經學院
-                </div>
-                <p class="text-sm text-amber-800">
-                  訂房時告知此密語即可享有專屬優惠
-                </p>
-              </div>
-            </div>
-
-            <!-- 立即預訂按鈕 -->
-            <div class="text-center lg:text-left space-y-3">
-              <a
-                href="tel:089-348430"
-                class="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 transform hover:scale-105 w-full lg:w-auto justify-center"
-              >
-                <Icon name="heroicons:phone" class="w-6 h-6" />
-                <span>立即致電預訂</span>
-              </a>
-              <p class="text-white/80 text-sm">多線服務，讓您更容易接通</p>
-            </div>
-          </div>
-
-          <!-- 右側：詳細資訊 -->
-          <div class="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl">
-            <div class="text-center mb-6">
-              <h3 class="text-2xl font-bold text-stone-800 mb-2">優惠價格</h3>
-              <p class="text-stone-600 text-sm">含早餐住宿方案</p>
-            </div>
-
-            <!-- 價格展示 -->
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div
-                class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-2xl shadow-sm text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3"
-                >
-                  <Icon name="heroicons:user" class="w-5 h-5 text-white" />
-                </div>
-                <h4 class="font-bold text-stone-800 text-sm mb-1">單人入住</h4>
-                <p class="text-stone-600 text-xs mb-3">舒適住宿體驗</p>
-                <div class="text-2xl font-bold text-amber-600 mb-1">$888</div>
-                <div class="text-xs text-stone-500">含早餐 / 晚</div>
-              </div>
-
-              <div
-                class="bg-gradient-to-r from-pink-50 to-pink-100 p-4 rounded-2xl shadow-sm text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-3"
-                >
-                  <Icon name="heroicons:heart" class="w-5 h-5 text-white" />
-                </div>
-                <h4 class="font-bold text-stone-800 text-sm mb-1">雙人房</h4>
-                <p class="text-stone-600 text-xs mb-3">浪漫情侶首選</p>
-                <div class="text-2xl font-bold text-amber-600 mb-1">$1080</div>
-                <div class="text-xs text-stone-500">含早餐 / 晚</div>
-              </div>
-            </div>
-
-            <!-- 聯絡資訊 -->
-            <div class="bg-stone-50 p-6 rounded-2xl mb-6">
-              <h4 class="font-bold text-stone-800 mb-4 text-center">
-                聯絡資訊
-              </h4>
-              <div class="space-y-3">
-                <div class="flex items-center space-x-3">
-                  <div
-                    class="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center"
-                  >
-                    <Icon name="heroicons:phone" class="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p class="font-medium text-stone-800">
-                      089-348430 / 0910-350450 / 0905-200560
-                    </p>
-                    <p class="text-xs text-stone-600">訂房專線</p>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                  <div
-                    class="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center"
-                  >
-                    <Icon name="heroicons:map-pin" class="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p class="font-medium text-stone-800">台東市文化街72號</p>
-                    <p class="text-xs text-stone-600">又一宿位置</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 溫馨提醒 -->
-            <div
-              class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-2xl border border-orange-200"
-            >
-              <h4
-                class="font-bold text-orange-800 mb-3 flex items-center justify-center"
-              >
-                <Icon
-                  name="heroicons:exclamation-triangle"
-                  class="w-5 h-5 mr-2"
-                />
-                溫馨提醒
-              </h4>
-              <ul class="text-sm text-orange-700 space-y-2">
-                <li class="flex items-start">
-                  <span
-                    class="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"
-                  ></span>
-                  優惠僅限即日起至9/26入住
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"
-                  ></span>
-                  請於訂房時告知通關密語才能享有專屬優惠
-                </li>
-                <li class="flex items-start">
-                  <span
-                    class="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"
-                  ></span>
-                  數量有限，快揪親朋好友搶訂
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- About Section - 加入主题色 -->
     <section id="about-section" class="pt-12 pb-16 px-6 lg:px-12">
       <div class="max-w-5xl mx-auto">
@@ -1054,10 +869,15 @@
                 <p class="text-stone-600 text-sm mb-2">
                   {{ t("parkingDesc1") }}
                 </p>
-                <!-- 周邊收費停車格 - 每小時NT$30 -->
-                <p class="text-stone-600 text-sm">
-                  {{ t("parkingDesc2") }}
-                </p>
+                <!-- 停車場圖片 -->
+                <div class="mt-3">
+                  <img
+                    src="/assets/image/urlodge_location_park.jpg"
+                    alt="停車場位置圖"
+                    class="w-full h-64 object-cover rounded-xl shadow-sm cursor-pointer hover:opacity-90 transition-opacity"
+                    @click="openParkingImageModal"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -1367,6 +1187,31 @@
 
     <!-- Footer -->
     <Footer></Footer>
+
+    <!-- 停車圖片放大模態框 -->
+    <div
+      v-if="showParkingImageModal"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      @click="closeParkingImageModal"
+    >
+      <div class="relative max-w-4xl max-h-[90vh] mx-4">
+        <!-- 關閉按鈕 -->
+        <button
+          @click="closeParkingImageModal"
+          class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+        >
+          <Icon name="heroicons:x-mark" class="w-8 h-8" />
+        </button>
+        
+        <!-- 放大圖片 -->
+        <img
+          src="/assets/image/urlodge_location_park.jpg"
+          alt="停車場位置圖 - 放大檢視"
+          class="w-full h-full object-contain rounded-lg shadow-2xl"
+          @click.stop
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -1410,6 +1255,9 @@ const maxRoomSlide = ref(1); // 最大滑動次數，使用ref而不是computed
 
 // 景點切換功能
 const selectedAttractionCategory = ref("all");
+
+// 停車圖片放大模態框
+const showParkingImageModal = ref(false);
 
 // 景點數據
 const attractions = {
@@ -1464,6 +1312,23 @@ const goToServicesPage = () => {
 
 const goToAboutPage = () => {
   navigateTo("/about");
+};
+
+// 停車圖片模態框控制
+const openParkingImageModal = () => {
+  showParkingImageModal.value = true;
+  // 防止背景滾動
+  if (process.client) {
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+const closeParkingImageModal = () => {
+  showParkingImageModal.value = false;
+  // 恢復背景滾動
+  if (process.client) {
+    document.body.style.overflow = 'auto';
+  }
 };
 
 // 房型卡片滑動函數
@@ -1578,6 +1443,7 @@ onMounted(() => {
   // 監聽窗口大小變化
   if (process.client) {
     window.addEventListener("resize", updateSlideSettings);
+    window.addEventListener("keydown", handleKeydown);
   }
 
   // 確保背景影片播放
@@ -1675,8 +1541,16 @@ onMounted(() => {
 onUnmounted(() => {
   if (process.client) {
     window.removeEventListener("resize", updateSlideSettings);
+    window.removeEventListener("keydown", handleKeydown);
   }
 });
+
+// 鍵盤事件處理
+const handleKeydown = (event) => {
+  if (event.key === 'Escape' && showParkingImageModal.value) {
+    closeParkingImageModal();
+  }
+};
 
 useHead({
   title: "又一宿 - 正在蛻變的旅宿",
