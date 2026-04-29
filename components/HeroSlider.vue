@@ -80,14 +80,6 @@
                       >•</span
                     >
                     <span class="text-sm md:text-base"
-                      >迎賓蜂蜜茶與晨光早餐，是我們用心準備的日常儀式</span
-                    >
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
-                      >•</span
-                    >
-                    <span class="text-sm md:text-base"
                       >位於台東市中心，生活機能便利，步行可達多個景點</span
                     >
                   </li>
@@ -116,14 +108,6 @@
                   >
                   <span class="text-sm"
                     >備品齊全、遮光窗簾與床墊，都是為了你的好眠</span
-                  >
-                </li>
-                <li class="flex items-start">
-                  <span class="text-amber-400 mr-3 flex-shrink-0 mt-0.5"
-                    >•</span
-                  >
-                  <span class="text-sm"
-                    >迎賓蜂蜜茶與晨光早餐，是我們用心準備的日常儀式</span
                   >
                 </li>
                 <li class="flex items-start">
