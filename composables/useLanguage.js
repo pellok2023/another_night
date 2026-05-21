@@ -3,6 +3,10 @@ import { ref, reactive, readonly } from "vue";
 // 全局語言狀態
 const currentLanguage = ref("zh");
 
+// LINE 官方帳號
+const LINE_URL = "https://lin.ee/z2irExA";
+const LINE_ID = "@426wbyti";
+
 // Booking.com 訂房網址
 const BOOKING_URL =
   "https://www.booking.com/hotel/tw/you-yi-su-ur-lodge.zh-tw.html?aid=356980&label=gog235jc-10CAso5wFCEnlvdS15aS1zdS11ci1sb2RnZUgwWANo5wGIAQGYATO4AQfIAQzYAQPoAQH4AQGIAgGoAgG4AqSdnMQGwAIB0gIkNDZlN2M1MGQtODYyZS00N2VhLWE5MjgtZThiZTYwZGVlODQx2AIB4AIB&sid=dc73b73946ab8f09da0dd00a322ee9b9&dest_id=-2637928&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1753681579&srpvid=9fe2289383a709a4&type=total&ucfs=1&";
@@ -377,6 +381,8 @@ const translations = reactive({
     emailTitle: "電子郵件",
     emailAddress: "urlodge20250701@gmail.com",
     emailNote: "一般詢問與預訂",
+    lineTitle: "LINE",
+    lineNote: "加入好友，即時諮詢與預訂",
     serviceHoursTitle: "服務時間",
     checkInOut: "Check-in: 15:00 | Check-out: 11:00",
     frontDesk24h: "前台服務時間：8:00-11:00，15:00-21:00",
@@ -979,6 +985,8 @@ const translations = reactive({
     emailTitle: "Email",
     emailAddress: "urlodge20250701@gmail.com",
     emailNote: "General inquiries and reservations",
+    lineTitle: "LINE",
+    lineNote: "Add us as a friend for instant inquiries and booking",
     serviceHoursTitle: "Service Hours",
     checkInOut: "Check-in: 15:00 | Check-out: 11:00",
     frontDesk24h: "Front desk service: 8:00-11:00, 15:00-21:00",
@@ -1209,5 +1217,7 @@ export const useLanguage = () => {
     toggleLanguage,
     t,
     bookingUrl: BOOKING_URL,
+    lineUrl: LINE_URL,
+    lineId: LINE_ID,
   };
 };

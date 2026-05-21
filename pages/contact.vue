@@ -125,6 +125,36 @@
             </div>
           </div>
 
+          <!-- LINE Card -->
+          <a
+            :href="lineUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 block hover:ring-2 hover:ring-[#06C755]/30"
+          >
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-[#06C755]/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <Icon
+                  name="simple-icons:line"
+                  class="text-[#06C755] !w-6 !h-6"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-stone-800 mb-2">
+                  {{ t("lineTitle") }}
+                </h3>
+                <p class="text-stone-600 text-lg font-semibold">
+                  {{ lineId }}
+                </p>
+                <p class="text-[#06C755] text-sm mt-2 font-medium">
+                  {{ t("lineNote") }}
+                </p>
+              </div>
+            </div>
+          </a>
+
           <!-- Service Hours Card -->
           <div
             class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -358,7 +388,7 @@
 import { ref, onMounted, nextTick } from "vue";
 import { useLanguage } from "~/composables/useLanguage";
 
-const { t, bookingUrl } = useLanguage();
+const { t, bookingUrl, lineUrl, lineId } = useLanguage();
 
 // 動畫狀態
 const heroSection = ref(null);

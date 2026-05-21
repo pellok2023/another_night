@@ -59,6 +59,24 @@
                   </a>
                 </div>
               </div>
+
+              <!-- LINE -->
+              <div class="flex items-center space-x-3">
+                <Icon
+                  name="simple-icons:line"
+                  class="w-5 h-5 text-[#06C755] flex-shrink-0"
+                />
+                <div>
+                  <a
+                    :href="lineUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-stone-300 text-sm hover:text-amber-600 transition-colors"
+                  >
+                    {{ lineId }}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -172,5 +190,5 @@
 </template>
 
 <script setup>
-const { t } = useLanguage();
+const { t, lineUrl, lineId } = useLanguage();
 </script>
